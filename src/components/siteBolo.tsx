@@ -28,9 +28,11 @@ const recipeBoloChoco = {
 
 function RecipeBoloChoco() {
   return (
+    <>
+    <div className="logo"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeBoloChoco.titulo}</h1>
-      <h2>Ingredients</h2>
+      <h2>Ingredientes</h2>
       <ul>
         {recipeBoloChoco.ingredientes.map((ingredientes, index) => (
           <li key={index}>{ingredientes}</li>
@@ -43,6 +45,7 @@ function RecipeBoloChoco() {
         ))}
       </ol>
     </div>
+    </>
   );
 }
 

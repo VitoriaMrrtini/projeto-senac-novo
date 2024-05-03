@@ -21,9 +21,11 @@ const recipeQueijoPaoData = {
 
 function RecipeQueijoPao() {
   return (
+    <>
+    <div className="logo"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeQueijoPaoData.titulo}</h1>
-      <h2>Ingredients</h2>
+      <h2>Ingredientes</h2>
       <ul>
         {recipeQueijoPaoData.ingredientes.map((ingredientes, index) => (
           <li key={index}>{ingredientes}</li>
@@ -36,6 +38,7 @@ function RecipeQueijoPao() {
         ))}
       </ol>
     </div>
+    </>
   );
 }
 
