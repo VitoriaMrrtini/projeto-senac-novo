@@ -28,7 +28,7 @@ const SiteInicio = () => {
                 <button>Procurar</button>
             </div>
         </div>
-        <nav>
+        <nav className='cabecarios'>
             <div className='cabecarios'>
 
                     <div className='cabecario1'>
