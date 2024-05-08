@@ -1,13 +1,13 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-body {
-    background-color: #ffced6;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-}
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body {
+        background-color: #ffced6;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    } */
 .recipe {
     max-width: 800px;
     margin: 0 auto;
@@ -41,23 +41,23 @@ li {
     margin-bottom: 10px;
 }
 
-.logo {
-    background-color: #ffced6;
+.logo2 {
     width: 100%;
     text-align: center;
     display: flex;
     margin-bottom: 20px;
     margin-left: 0px;
+    justify-content: center;
+    background-color: #FFCED6;
 
 }
-.logo img {
+.logo2 img {
     display: flex;
     align-items: center;
     margin-left: 100px;
     max-width: 1000px;
     height: auto;
     background-color: #ffced6;
-    margin-left: 700px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 

@@ -13,13 +13,13 @@ const SiteInicio = () => {
         <div className="logo">
                 <div className="menu">
                     <ul className="menu01">
-                        <li><a href="#">☰</a>
+                        <a><a href="#">☰</a>
                             <div className="menu01-menu">
                                 <a href="">Serviço 1</a>
                                 <a href="">Serviço 2</a>
                                 <a href="">Serviço 3</a>
                         </div>
-                    </li>      
+                    </a>      
                 </ul>
             </div> 
                 <img src="src/assets/logo.png" alt="logo" />
@@ -33,77 +33,89 @@ const SiteInicio = () => {
 
                     <div className='cabecario1'>
                         <ul className="cafea">
-                            <li><a href="#">Café da manhã</a>
+                            <a><a href="#">Café da manhã</a>
                                 <div className="cafea-menu">
-                                    <a href="">Serviço 1</a>
-                                    <a href="">Serviço 2</a>
-                                    <a href="">Serviço 3</a>
+                                    <a href="">Bolos</a>
+                                    <a href="">Salgados assados </a>
+                                    <a href="">Serviço </a>
                                  </div>
-                            </li>      
+                            </a>      
                         </ul>
                      </div>
 
                     <div className='cabecario3'>
                         <ul className="almoco">
-                            <li><a href="#">Almoço</a>
+                            <a><a href="#">Almoço</a>
                                 <div className="almoco-menu">
                                     <a href="">Serviço 1</a>
                                     <a href="">Serviço 2</a>
                                     <a href="">Serviço 3</a>
                                 </div>
-                            </li>
+                            </a>
                         </ul>
                     </div>
 
                      <div className='cabecario4'>
                      <ul className="cafe-da-tarde">
-                            <li><a href="#">Café da tarde</a>
+                            <a><a href="#">Café da tarde</a>
                                 <div className="cafe-tarde-menu">
                                     <a href="">Serviço 1</a>
                                     <a href="">Serviço 2</a>
                                     <a href="">Serviço 3</a>
                                 </div>
-                            </li>
+                            </a>
                         </ul>
                      </div>
 
                      <div className='cabecario5'>
                      <ul className="lanche-da-tarde">
-                        <li><a href="#">Lanche da tarde</a>
+                        <a><a href="#">Lanche da tarde</a>
                             <div className="lanche-tarde-menu">
                                 <a href="">Serviço 1</a>
                                 <a href="">Serviço 2</a>
                                 <a href="">Serviço 3</a>
                             </div>
-                        </li>
+                        </a>
                      </ul>                   
                      </div>
 
                     <div className='cabecario6'>
                     <ul className="jantar">
-                        <li><a href="#">Jantar</a>
+                        <a><a href="#">Jantar</a>
                             <div className="janta-menu">
                                 <a href="">Serviço 1</a>
                                 <a href="">Serviço 2</a>
                                 <a href="">Serviço 3</a>
                             </div>
-                        </li>
+                        </a>
                     </ul>                     
                     </div>
 
                     <div className='cabecario7'>
                     <ul className="doces">
-                        <li><a href="#">Doces</a>
+                        <a><a href="#">Doces</a>
                             <div className="doces-menu">
-                                <a href="">Serviço 1</a>
-                                <a href="">Serviço 2</a>
-                                <a href="">Serviço 3</a>
+                                <a href="">Bolos caseiros</a>
+                                <a href="">Cookies e biscoitos </a>
+                                <a href="">Sobremesas geladas </a>
+                                <a href="">Doces regionais </a>
+                                <a href="">Tortas e tartes </a>
+                                <a href="">Doces gourmet </a>
+                                <a href="">Doces festivos </a>
+                                <a href="">Doces exóticos </a>
+                                <a href="">Doces saudáveis </a>
+                                <a href="">Doces simples e rápidos </a>
+
                             </div>    
-                        </li>
+                        </a>
                     </ul>
                     </div>
             </div>
-        </nav>    
+        </nav>  
+
+        <div className='banner'>
+            <img src = "src/assets/banner.png" ></img>
+        </div>  
             <main>
                 <section className="receitas">
                     <div className="receita1">

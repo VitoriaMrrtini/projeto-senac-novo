@@ -41,24 +41,24 @@ const recipeTortaFrango = {
 
 function RecipeTortaFrango() {
   return (
-    <>
-    <div className="logo"><img src="src/assets/logo.png"/></div>
-    <div className="recipe">
-      <h1>{recipeTortaFrango.titulo}</h1>
-      <h2>Ingredientes</h2>
-      <ul>
-      {recipeTortaFrango.ingredientes.map((ingredientes, index) => (
-        <li key={index}>{ingredientes}</li>
-      ))}
-      </ul>
-      <h2>Instruções</h2>
-      <ol>
-        {recipeTortaFrango.Instruções.map((Instruções, index) => (
-          <li key={index}>{Instruções}</li>
+    <div className="body">
+      <div className="logo2"><img src="src/assets/logo.png"/></div>
+      <div className="recipe">
+        <h1>{recipeTortaFrango.titulo}</h1>
+        <h2>Ingredientes</h2>
+        <ul>
+        {recipeTortaFrango.ingredientes.map((ingredientes, index) => (
+          <li key={index}>{ingredientes}</li>
         ))}
-      </ol>
+        </ul>
+        <h2>Instruções</h2>
+        <ol>
+          {recipeTortaFrango.Instruções.map((Instruções, index) => (
+            <li key={index}>{Instruções}</li>
+          ))}
+        </ol>
+      </div>
     </div>
-    </>
   );
 }
 
