@@ -1,3 +1,4 @@
+import "./sitePizza.css"
 const recipePizzaCaseira = {
   titulo: 'Pizza Caseira',
   ingredientes: [
@@ -38,7 +39,7 @@ const recipePizzaCaseira = {
 function RecipePizzaCaseira() {
   return (
     <>
-    <div className="logo"><img src="src/assets/logo.png"/></div>
+    <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipePizzaCaseira.titulo}</h1>
       <h2>Ingredientes</h2>

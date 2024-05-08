@@ -1,3 +1,4 @@
+import "./siteQueijo.css"
 const recipeQueijoPaoData = {
     titulo: 'Pão de Queijo',
     ingredientes: [
@@ -22,7 +23,7 @@ const recipeQueijoPaoData = {
 function RecipeQueijoPao() {
   return (
     <>
-    <div className="logo"><img src="src/assets/logo.png"/></div>
+    <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeQueijoPaoData.titulo}</h1>
       <h2>Ingredientes</h2>

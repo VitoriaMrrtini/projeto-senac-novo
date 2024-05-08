@@ -1,3 +1,4 @@
+import "./siteBolo.css"
 const recipeBoloChoco = {
     titulo: 'Bolo de Chocolate',
   ingredientes: [
@@ -29,7 +30,7 @@ const recipeBoloChoco = {
 function RecipeBoloChoco() {
   return (
     <>
-    <div className="logo"><img src="src/assets/logo.png"/></div>
+    <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeBoloChoco.titulo}</h1>
       <h2>Ingredientes</h2>
