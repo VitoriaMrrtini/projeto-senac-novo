@@ -427,3 +427,28 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
+.animação{
+    display: block;
+    position: relative;
+    padding: 1px;
+  }
+  .animação::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 0.1em;
+    background-color: hotpink;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .animação:hover::after,
+  .animação:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+  .animação:focus {
+    text-underline-offset: 0.4em;
+  }

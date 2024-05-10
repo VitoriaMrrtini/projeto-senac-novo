@@ -13,11 +13,11 @@ const SiteInicio = () => {
         <div className="logo">
                 <div className="menu">
                     <ul className="menu01">
-                        <a><a href="#">☰</a>
+                        <a><a>☰</a>
                             <div className="menu01-menu">
-                                <a href="">Serviço 1</a>
-                                <a href="">Serviço 2</a>
-                                <a href="">Serviço 3</a>
+                                <a className="animação">Serviço 1</a>
+                                <a className="animação">Serviço 2</a>
+                                <a className="animação">Serviço 3</a>
                         </div>
                     </a>      
                 </ul>
@@ -33,11 +33,11 @@ const SiteInicio = () => {
 
                     <div className='cabecario1'>
                         <ul className="cafea">
-                            <a><a href="#">Café da manhã</a>
+                            <a><a className="animação">Café da manhã</a>
                                 <div className="cafea-menu">
-                                    <a href="">Bolos</a>
-                                    <a href="">Salgados assados </a>
-                                    <a href="">Serviço </a>
+                                    <a className="animação">Bolos</a>
+                                    <a className="animação">Salgados assados </a>
+                                    <a className="animação">Serviço </a>
                                  </div>
                             </a>      
                         </ul>
@@ -45,11 +45,11 @@ const SiteInicio = () => {
 
                     <div className='cabecario3'>
                         <ul className="almoco">
-                            <a><a href="#">Almoço</a>
+                            <a><a className="animação">Almoço</a>
                                 <div className="almoco-menu">
-                                    <a href="">Serviço 1</a>
-                                    <a href="">Serviço 2</a>
-                                    <a href="">Serviço 3</a>
+                                    <a className="animação">Serviço 1</a>
+                                    <a className="animação">Serviço 2</a>
+                                    <a className="animação">Serviço 3</a>
                                 </div>
                             </a>
                         </ul>
@@ -57,11 +57,11 @@ const SiteInicio = () => {
 
                      <div className='cabecario4'>
                      <ul className="cafe-da-tarde">
-                            <a><a href="#">Café da tarde</a>
+                            <a><a className="animação">Café da tarde</a>
                                 <div className="cafe-tarde-menu">
-                                    <a href="">Serviço 1</a>
-                                    <a href="">Serviço 2</a>
-                                    <a href="">Serviço 3</a>
+                                    <a className="animação">Serviço 1</a>
+                                    <a className="animação">Serviço 2</a>
+                                    <a className="animação">Serviço 3</a>
                                 </div>
                             </a>
                         </ul>
@@ -69,11 +69,11 @@ const SiteInicio = () => {
 
                      <div className='cabecario5'>
                      <ul className="lanche-da-tarde">
-                        <a><a href="#">Lanche da tarde</a>
+                        <a><a className="animação">Lanche da tarde</a>
                             <div className="lanche-tarde-menu">
-                                <a href="">Serviço 1</a>
-                                <a href="">Serviço 2</a>
-                                <a href="">Serviço 3</a>
+                                <a className="animação">Serviço 1</a>
+                                <a className="animação">Serviço 2</a>
+                                <a className="animação">Serviço 3</a>
                             </div>
                         </a>
                      </ul>                   
@@ -81,11 +81,11 @@ const SiteInicio = () => {
 
                     <div className='cabecario6'>
                     <ul className="jantar">
-                        <a><a href="#">Jantar</a>
+                        <a><a className="animação">Jantar</a>
                             <div className="janta-menu">
-                                <a href="">Serviço 1</a>
-                                <a href="">Serviço 2</a>
-                                <a href="">Serviço 3</a>
+                                <a className="animação">Serviço 1</a>
+                                <a className="animação">Serviço 2</a>
+                                <a className="animação">Serviço 3</a>
                             </div>
                         </a>
                     </ul>                     
@@ -93,18 +93,18 @@ const SiteInicio = () => {
 
                     <div className='cabecario7'>
                     <ul className="doces">
-                        <a><a href="#">Doces</a>
+                        <a><a className="animação">Doces</a>
                             <div className="doces-menu">
-                                <a href="">Bolos caseiros</a>
-                                <a href="">Cookies e biscoitos </a>
-                                <a href="">Sobremesas geladas </a>
-                                <a href="">Doces regionais </a>
-                                <a href="">Tortas e tartes </a>
-                                <a href="">Doces gourmet </a>
-                                <a href="">Doces festivos </a>
-                                <a href="">Doces exóticos </a>
-                                <a href="">Doces saudáveis </a>
-                                <a href="">Doces simples e rápidos </a>
+                                <a className="animação">Bolos caseiros</a>
+                                <a className="animação">Cookies e biscoitos </a>
+                                <a className="animação">Sobremesas geladas </a>
+                                <a className="animação">Doces regionais </a>
+                                <a className="animação">Tortas e tartes </a>
+                                <a className="animação">Doces gourmet </a>
+                                <a className="animação">Doces festivos </a>
+                                <a className="animação">Doces exóticos </a>
+                                <a className="animação">Doces saudáveis </a>
+                                <a className="animação">Doces simples e rápidos </a>
 
                             </div>    
                         </a>
