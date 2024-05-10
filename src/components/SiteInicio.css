@@ -103,6 +103,9 @@
     width: 250px;
     height: 300px;
     margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
 }
 
 
@@ -120,6 +123,9 @@
     width: 250px;
     height: 300px;
     margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
 }
 
 
@@ -137,6 +143,8 @@
     width: 250px;
     height: 300px;
     margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .receita4 {
@@ -153,6 +161,8 @@
     display: flex;
     width: 250px;
     height: 300px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .receita h2 {
@@ -282,7 +292,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 500px;
+    height: 120px;
     border-radius: 20px;
 }
 
@@ -304,7 +314,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 500px;
+    height: 120px;
     border-radius: 20px;
 }
 
@@ -327,7 +337,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 500px;
+    height: 120px;
     border-radius: 20px;
 
 }
@@ -350,7 +360,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 500px;
+    height: 120px;
     border-radius: 20px;
 
 }
@@ -372,8 +382,8 @@ a{
     margin-top: none;
     background-color: rgb(255, 255, 255);
     font-size: 18px;
-    width: 300px;
-    height: 500px;
+    width: 450px;
+    height: 120px;
     border-radius: 20px;
 
 }
@@ -394,10 +404,9 @@ a{
     margin-top: none;
     background-color: rgb(255, 255, 255);
     width: 300px;
-    height: 500px;
+    height: 120px;
     font-size: 18px;
     border-radius: 20px;
-
 }
 
 .doces-menu a{
@@ -457,4 +466,95 @@ a:-webkit-any-link {
   }
   .animação:focus {
     text-underline-offset: 0.4em;
+
   }
+
+main{
+    background-color: #fff0f7;
+    margin-bottom: 100px;
+}
+.receitas2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.receita5 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita5 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+
+.receita6{
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita6 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+
+.receita7 {
+    margin-bottom: 1000px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita7 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.receita8 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+
+.receita8 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
