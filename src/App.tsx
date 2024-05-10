@@ -6,6 +6,8 @@ import RecipeBoloChoco from './components/siteBolo.tsx';
 import RecipeQueijoPao from './components/siteQueijo.tsx';
 import RecipeTortaFrango from './components/siteTorta.tsx';
 import RecipePizzaCaseira from './components/sitePizza.tsx';
+import RecipeFeijoada from './components/siteFeijoada.tsx';
+
 
 function App(){
   return(
@@ -18,6 +20,7 @@ function App(){
               <Route path='/siteQueijo' element={<RecipeQueijoPao/>}/>
               <Route path='/siteTorta' element={<RecipeTortaFrango/>}/>
               <Route path='/sitePizza' element={<RecipePizzaCaseira/>}/>
+              <Route path='/siteFeijoada' element={<RecipeFeijoada/>}/>
             </Routes>
     </BrowserRouter>
     </>

@@ -130,20 +130,20 @@ const SiteInicio = () => {
                 </section>
                 <section className='receitas2'>
                 <div className="receita5">
-                    <a href="/siteBolo">
-                    <img src="src/assets/bolo-de-chocolate.png" alt="Bolo de Cenoura"/></a>
+                    <a href="/siteFeijoada">
+                    <img src="src/assets/feijoada.png" alt="Feijoada"/></a>
                     </div>
                     <div className="receita6">
-                    <a href="/siteQueijo">
-                        <img src="src/assets/pao-de-queijo.png" alt="Pão de Queijo"/></a>
+                    <a href="/siteStrogonoff">
+                        <img src="src/assets/strogonoff.png" alt="Strogonoff"/></a>
                     </div>
                     <div className="receita7">
-                    <a href="/siteTorta">
-                        <img src="src/assets/torta-de-frango.png" alt="Torta de Frango"/></a>
+                    <a href="/siteSushi">
+                        <img src="src/assets/sushi.png" alt="Sushi"/></a>
                     </div>
                     <div className="receita8">
-                    <a href="/sitePizza">
-                        <img src="src/assets/pizza-caseira.png" alt="Pizza Caseira"/></a>
+                    <a href="/siteLasanha">
+                        <img src="src/assets/lasanha.png" alt="Lasanha"/></a>
                     </div>
                     </section>
             </main>
