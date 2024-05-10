@@ -9,6 +9,14 @@
     width: 500px;
     height: 100px;
 }
+.menu-icon{
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu-icon:hover {
+    transform: scale(1.1);
+}
 .menu01-menu{
     position: absolute;
     display: none;
@@ -72,7 +80,14 @@
     border: none;
     cursor: pointer;
     height: 30px;
+    transition: all 0.3s ease;
 }
+
+.caixa button:hover {
+    background-color: #ff8dd1; 
+    transform: scale(1.1);
+}
+
 .main {
     background-color: lightpink;
     padding: 20px;

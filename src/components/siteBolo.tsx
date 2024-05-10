@@ -30,6 +30,7 @@ const recipeBoloChoco = {
 function RecipeBoloChoco() {
   return (
     <>
+    <div className="fundo">
     <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeBoloChoco.titulo}</h1>
@@ -45,6 +46,7 @@ function RecipeBoloChoco() {
           <li key={index}>{Instruções}</li>
         ))}
       </ol>
+    </div>
     </div>
     </>
   );
