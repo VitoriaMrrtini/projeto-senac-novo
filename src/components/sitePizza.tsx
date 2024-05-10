@@ -39,6 +39,7 @@ const recipePizzaCaseira = {
 function RecipePizzaCaseira() {
   return (
     <>
+    <div className="fundo">
     <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipePizzaCaseira.titulo}</h1>
@@ -54,6 +55,7 @@ function RecipePizzaCaseira() {
           <li key={index}>{Instruções}</li>
         ))}
       </ol>
+    </div>
     </div>
     </>
   );
