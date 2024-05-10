@@ -128,6 +128,7 @@ const SiteInicio = () => {
                         <img src="src/assets/pizza-caseira.png" alt="Pizza Caseira"/></a>
                     </div>
                 </section>
+
                 <section className='receitas2'>
                 <div className="receita5">
                     <a href="/siteFeijoada">
@@ -142,6 +143,25 @@ const SiteInicio = () => {
                         <img src="src/assets/sushi.png" alt="Sushi"/></a>
                     </div>
                     <div className="receita8">
+                    <a href="/siteLasanha">
+                        <img src="src/assets/lasanha.png" alt="Lasanha"/></a>
+                    </div>
+                    </section>
+
+                    <section className='receitas3'>
+                <div className="receita9">
+                    <a href="/siteBrownie">
+                    <img src="src/assets/brownie.png" alt="Brownie"/></a>
+                    </div>
+                    <div className="receita10">
+                    <a href="/siteStrogonoff">
+                        <img src="src/assets/strogonoff.png" alt="Strogonoff"/></a>
+                    </div>
+                    <div className="receita11">
+                    <a href="/siteSushi">
+                        <img src="src/assets/sushi.png" alt="Sushi"/></a>
+                    </div>
+                    <div className="receita12">
                     <a href="/siteLasanha">
                         <img src="src/assets/lasanha.png" alt="Lasanha"/></a>
                     </div>

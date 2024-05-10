@@ -1054,3 +1054,260 @@ a:-webkit-any-link {
   .animação:focus {
     text-underline-offset: 0.4em;
   }
+  .receita5 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita5 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+
+.receita6{
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita6 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+
+.receita7 {
+    margin-bottom: 1000px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita7 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.receita8 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+
+.receita8 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+#root{
+    background-color: #fff;
+}
+
+.menu{
+    display: flex;
+    margin-left: 20px;
+    font-size: 30px;
+    width: 500px;
+    height: 100px;
+}
+.menu-icon{
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+.menu01-menu{
+    position: absolute;
+    display: none;
+    margin-top: none;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+
+.menu01-menu a{
+    display: block;
+    color: black;
+    margin-top: 10px;
+}
+
+
+.menu01:hover .menu01-menu{
+    display: block;
+
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+    background-color: #FFCED6;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo img{
+    width: 450px;
+    height: auto;
+}
+
+.caixa{
+    margin-left: 50px; 
+    margin-right: 20px; 
+    display: flex; 
+    align-items: center;
+}
+
+.caixa input[type="text"] {
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ccc; 
+    border-radius: 100px;
+    width: 300px; 
+    height: 25px;
+}
+.caixa button {
+    padding: 5px 10px;
+    border-radius: 100px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff8dd1; 
+    transform: scale(1.1);
+}
+
+.main {
+    background-color: lightpink;
+    padding: 20px;
+}
+
+
+.receitas3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 750px;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 350px;
+
+}
+
+.receita9 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita9 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+
+}
+
+
+.receita10{
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita10 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+
+}
+
+
+.receita11 {
+    margin-bottom: 1000px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+.receita11 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    margin-left: 35px;
+    border-radius: 20px;
+
+}
+
+.receita12 {
+    margin-bottom: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+
+}
+
+.receita12 img{
+    display: flex;
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+
+}
