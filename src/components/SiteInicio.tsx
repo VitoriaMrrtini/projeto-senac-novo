@@ -36,8 +36,8 @@ const SiteInicio = () => {
                             <a><a className="animação">Café da manhã</a>
                                 <div className="cafea-menu">
                                     <a className="animação">Bolos</a>
-                                    <a className="animação">Salgados assados </a>
-                                    <a className="animação">Serviço </a>
+                                    <a className="animação">Pães e derivados </a>
+                                    <a className="animação">Bebidas quentes</a>
                                  </div>
                             </a>      
                         </ul>
@@ -47,9 +47,9 @@ const SiteInicio = () => {
                         <ul className="almoco">
                             <a><a className="animação">Almoço</a>
                                 <div className="almoco-menu">
-                                    <a className="animação">Serviço 1</a>
-                                    <a className="animação">Serviço 2</a>
-                                    <a className="animação">Serviço 3</a>
+                                    <a className="animação">Massas  </a>
+                                    <a className="animação">Saladas </a>
+                                    <a className="animação">Prato principal  </a>
                                 </div>
                             </a>
                         </ul>
@@ -59,9 +59,9 @@ const SiteInicio = () => {
                      <ul className="cafe-da-tarde">
                             <a><a className="animação">Café da tarde</a>
                                 <div className="cafe-tarde-menu">
-                                    <a className="animação">Serviço 1</a>
-                                    <a className="animação">Serviço 2</a>
-                                    <a className="animação">Serviço 3</a>
+                                    <a className="animação">Bolos caseiros</a>
+                                    <a className="animação">Biscoitos </a>
+                                    <a className="animação">Sanduíches </a>
                                 </div>
                             </a>
                         </ul>
@@ -71,9 +71,9 @@ const SiteInicio = () => {
                      <ul className="lanche-da-tarde">
                         <a><a className="animação">Lanche da tarde</a>
                             <div className="lanche-tarde-menu">
-                                <a className="animação">Serviço 1</a>
-                                <a className="animação">Serviço 2</a>
-                                <a className="animação">Serviço 3</a>
+                                <a className="animação">Sanduíches naturais</a>
+                                <a className="animação">Chips de vegetais</a>
+                                <a className="animação">Smoothies ou sucos naturais</a>
                             </div>
                         </a>
                      </ul>                   
@@ -83,9 +83,9 @@ const SiteInicio = () => {
                     <ul className="jantar">
                         <a><a className="animação">Jantar</a>
                             <div className="janta-menu">
-                                <a className="animação">Serviço 1</a>
-                                <a className="animação">Serviço 2</a>
-                                <a className="animação">Serviço 3</a>
+                                <a className="animação">Acompanhamento de carboidratos</a>
+                                <a className="animação">Prato principal com proteína</a>
+                                <a className="animação">Legumes ou vegetais cozidos, grelhados ou salteados</a>
                             </div>
                         </a>
                     </ul>                     
@@ -95,17 +95,9 @@ const SiteInicio = () => {
                     <ul className="doces">
                         <a><a className="animação">Doces</a>
                             <div className="doces-menu">
-                                <a className="animação">Bolos caseiros</a>
-                                <a className="animação">Cookies e biscoitos </a>
                                 <a className="animação">Sobremesas geladas </a>
-                                <a className="animação">Doces regionais </a>
-                                <a className="animação">Tortas e tartes </a>
                                 <a className="animação">Doces gourmet </a>
-                                <a className="animação">Doces festivos </a>
-                                <a className="animação">Doces exóticos </a>
                                 <a className="animação">Doces saudáveis </a>
-                                <a className="animação">Doces simples e rápidos </a>
-
                             </div>    
                         </a>
                     </ul>
@@ -136,6 +128,24 @@ const SiteInicio = () => {
                         <img src="src/assets/pizza-caseira.png" alt="Pizza Caseira"/></a>
                     </div>
                 </section>
+                <section className='receitas2'>
+                <div className="receita5">
+                    <a href="/siteBolo">
+                    <img src="src/assets/bolo-de-chocolate.png" alt="Bolo de Cenoura"/></a>
+                    </div>
+                    <div className="receita6">
+                    <a href="/siteQueijo">
+                        <img src="src/assets/pao-de-queijo.png" alt="Pão de Queijo"/></a>
+                    </div>
+                    <div className="receita7">
+                    <a href="/siteTorta">
+                        <img src="src/assets/torta-de-frango.png" alt="Torta de Frango"/></a>
+                    </div>
+                    <div className="receita8">
+                    <a href="/sitePizza">
+                        <img src="src/assets/pizza-caseira.png" alt="Pizza Caseira"/></a>
+                    </div>
+                    </section>
             </main>
             <footer className="footer">
                 <div className="container-footer">
