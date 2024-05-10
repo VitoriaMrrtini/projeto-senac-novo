@@ -13,7 +13,7 @@ const SiteInicio = () => {
         <div className="logo">
                 <div className="menu">
                     <ul className="menu01">
-                        <a><a>☰</a>
+                        <a><a className="menu-icon">&#9776;</a>
                             <div className="menu01-menu">
                                 <a className="animação">Serviço 1</a>
                                 <a className="animação">Serviço 2</a>

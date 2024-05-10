@@ -41,6 +41,7 @@ const recipeTortaFrango = {
 
 function RecipeTortaFrango() {
   return (
+    <div className="fundo">
     <div className="body">
       <div className="logo2"><img src="src/assets/logo.png"/></div>
       <div className="recipe">
@@ -58,6 +59,7 @@ function RecipeTortaFrango() {
           ))}
         </ol>
       </div>
+    </div>
     </div>
   );
 }

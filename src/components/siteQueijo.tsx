@@ -23,6 +23,7 @@ const recipeQueijoPaoData = {
 function RecipeQueijoPao() {
   return (
     <>
+    <div className="fundo">
     <div className="logo2"><img src="src/assets/logo.png"/></div>
     <div className="recipe">
       <h1>{recipeQueijoPaoData.titulo}</h1>
@@ -38,6 +39,7 @@ function RecipeQueijoPao() {
           <li key={index}>{Instruções}</li>
         ))}
       </ol>
+    </div>
     </div>
     </>
   );
