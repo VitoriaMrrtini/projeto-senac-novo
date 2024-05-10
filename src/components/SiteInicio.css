@@ -282,6 +282,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
+    height: 500px;
     border-radius: 20px;
 }
 
@@ -303,6 +304,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
+    height: 500px;
     border-radius: 20px;
 }
 
@@ -325,6 +327,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -347,6 +350,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -369,6 +373,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -389,6 +394,7 @@ a{
     margin-top: none;
     background-color: rgb(255, 255, 255);
     width: 300px;
+    height: 500px;
     font-size: 18px;
     border-radius: 20px;
 
@@ -430,7 +436,7 @@ a:-webkit-any-link {
 .animação{
     display: block;
     position: relative;
-    padding: 1px;
+    padding: 0px;
   }
   .animação::after {
     content: '';
