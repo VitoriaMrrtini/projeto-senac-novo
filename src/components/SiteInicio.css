@@ -417,13 +417,13 @@ a{
 .banner :hover{
     cursor: pointer;
 }
-a:-webkit-any-link {
-    color: #ff69b4;
+.menu a:-webkit-any-link {
+    color: black;
     cursor: pointer;
     text-decoration: none;
 }
-.menu a:-webkit-any-link {
-    color: black;
+a:-webkit-any-link {
+    color: #ff69b4;
     cursor: pointer;
     text-decoration: none;
 }
