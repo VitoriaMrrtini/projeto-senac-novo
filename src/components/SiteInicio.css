@@ -25,7 +25,6 @@
     width: 100px;
     height: 100px;
     font-size: 18px;
-    border-radius: 20px;
 }
 
 
@@ -607,7 +606,6 @@ main{
     background-color: rgb(255, 255, 255);
     width: 100px;
     font-size: 18px;
-    border-radius: 20px;
 }
 
 
@@ -1158,7 +1156,6 @@ a:-webkit-any-link {
     background-color: rgb(255, 255, 255);
     width: 100px;
     font-size: 18px;
-    border-radius: 20px;
 }
 
 
@@ -1171,7 +1168,6 @@ a:-webkit-any-link {
 
 .menu01:hover .menu01-menu{
     display: block;
-
 }
 
 .logo {
@@ -1312,4 +1308,55 @@ button:hover {
     border-radius: 20px;
 
 }
+.menu01-menu {
+    position: absolute;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
 
+.menu01-menu a {
+    display: block;
+    color: black;
+    margin-top: 10px;
+}
+
+.menu01-menu:hover {
+    transform: scale(1.1); /* Altera a escala ao passar o cursor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+}
+.menu01:hover .menu01-menu {
+    display: block;
+}
+
+.receita1 img,
+.receita2 img,
+.receita3 img,
+.receita4 img,
+.receita5 img,
+.receita6 img,
+.receita7 img,
+.receita8 img,
+.receita9 img,
+.receita10 img,
+.receita11 img,
+.receita12 img {
+  transition: transform 0.3s ease;
+}
+
+.receita1 img:hover,
+.receita2 img:hover,
+.receita3 img:hover,
+.receita4 img:hover,
+.receita5 img:hover,
+.receita6 img:hover,
+.receita7 img:hover,
+.receita8 img:hover,
+.receita9 img:hover,
+.receita10 img:hover,
+.receita11 img:hover,
+.receita12 img:hover {
+  transform: scale(1.1); /* Escala 10% maior ao passar o mouse */
+}
