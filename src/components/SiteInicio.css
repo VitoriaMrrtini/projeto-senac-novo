@@ -234,6 +234,30 @@
     background-color: #FFCED6;
 }
 
+/*h4{
+    font-size: 50px; 
+    text-align: center;   
+    font-family: 'stars e love bottom heairy'; 
+    color: #FFBD59;
+    text-shadow: 2px 2px 4px #ff40b6;
+}*/
+
+p{
+    font-size: 30px;
+    text-align: center;   
+    font-family: 'stars e love bottom heairy'; 
+    text-shadow: 2px 2px 4px #ff40b6;
+
+}
+
+.list-unstyled{
+    text-align: center;
+}
+
+li{
+    background-color: #ffbd59;
+}
+
 .cabecarios{
     background-color: rgb(255, 214, 100);
     display: flex;

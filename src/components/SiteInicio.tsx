@@ -135,11 +135,9 @@ const SiteInicio = () => {
                 <div className="container-footer">
                     <div className="row">
                         <div className="col-md-4">
-                            <h4>Sobre Nós</h4>
                             <p>Explore uma variedade de receitas deliciosas e inspire-se na cozinha com o nosso site. Descubra novas maneiras de preparar pratos incríveis e compartilhe suas próprias criações culinárias.</p>
                         </div>
                         <div className="col-md-4">
-                            <h4>Links Úteis</h4>
                             <ul className="list-unstyled">
                                 <li><a href="#">Receitas</a></li>
                                 <li><a href="#">Sobre</a></li>
@@ -147,7 +145,7 @@ const SiteInicio = () => {
                             </ul>
                         </div>
                         <div className="col-md-4">
-                            <h4>Conecte-se Conosco</h4>
+                            <h6>Conecte-se Conosco</h6>
                             <ul className="list-inline">
                                 <li><a href="#">Facebook</a></li>
                                 <li><a href="#">Twitter</a></li>
