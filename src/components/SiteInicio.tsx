@@ -151,19 +151,19 @@ const SiteInicio = () => {
                     <section className='receitas3'>
                 <div className="receita9">
                     <a href="/siteBrownie">
-                    <img src="src/assets/brownie.png" alt="Brownie"/></a>
+                    <img src="src/assets/brownie.png" alt="Brownie de chocolate"/></a>
                     </div>
                     <div className="receita10">
-                    <a href="/siteStrogonoff">
-                        <img src="src/assets/strogonoff.png" alt="Strogonoff"/></a>
+                    <a href="/siteTrufaCoco">
+                        <img src="src/assets/trufaCoco.png" alt="TrufaCoco"/></a>
                     </div>
                     <div className="receita11">
-                    <a href="/siteSushi">
-                        <img src="src/assets/sushi.png" alt="Sushi"/></a>
+                    <a href="/siteCoxinha">
+                        <img src="src/assets/coxinha.png" alt="Coxinha"/></a>
                     </div>
                     <div className="receita12">
-                    <a href="/siteLasanha">
-                        <img src="src/assets/lasanha.png" alt="Lasanha"/></a>
+                    <a href="/sitePamonha">
+                        <img src="src/assets/pamonha.png" alt="Pamonha"/></a>
                     </div>
                     </section>
             </main>

@@ -10,6 +10,10 @@ import RecipeFeijoada from './components/siteFeijoada.tsx';
 import RecipeStrogonoff from './components/siteStrogonoff.tsx';
 import RecipeSushi from './components/siteSushi.tsx';
 import RecipeLasanha from './components/siteLasanha.tsx';
+import RecipeTrufaCoco from './components/siteTrufaCoco.tsx';
+import RecipeCoxinha from './components/siteCoxinha.tsx';
+import RecipePamonha from './components/sitePamonha.tsx';
+
 
 function App(){
   return(
@@ -26,6 +30,11 @@ function App(){
               <Route path='/siteStrogonoff' element={<RecipeStrogonoff/>}/>
               <Route path='/siteSushi' element={<RecipeSushi/>}/>
               <Route path='/siteLasanha' element={<RecipeLasanha/>}/>
+              <Route path='/siteTrufaCoco' element={<RecipeTrufaCoco/>}/>
+              <Route path='/siteCoxinha' element={<RecipeCoxinha/>}/>
+              <Route path='/siteCoxinha' element={<RecipeCoxinha/>}/>
+              <Route path='/sitePamonha' element={<RecipePamonha/>}/>
+
             </Routes>
     </BrowserRouter>
     </>
