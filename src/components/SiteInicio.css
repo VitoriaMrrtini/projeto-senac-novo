@@ -438,7 +438,6 @@ a{
 }
 
 .banner{
-    margin-top: 50px;
     margin-bottom: 10px;
     margin-left: 300px;
     margin-right: 50px;
@@ -466,7 +465,6 @@ a:-webkit-any-link {
   }
   .animação::after {
     content: '';
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 50%;
@@ -489,9 +487,11 @@ a:-webkit-any-link {
 main{
     background-color: #fff0f7;
     margin-bottom: 100px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 10px;
     margin-right: 10px;
+    height: 2000px;
+
 }
 .receitas2 {
     display: flex;
@@ -501,6 +501,7 @@ main{
     margin-top: 50px;
     margin-right: 100px;
     margin-left: 100px;
+    height: 10px;
 }
 
 .receita5 {
@@ -670,7 +671,7 @@ button:hover {
 }
 
 .main {
-    background-color: lightpink;
+    background-color: #FFF1F3;
     padding: 20px;
 }
 
@@ -878,7 +879,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 100px;
+    height: 500px;
     border-radius: 20px;
 }
 
@@ -900,7 +901,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 100px;
+    height: 500px;
     border-radius: 20px;
 }
 
@@ -923,7 +924,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 100px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -946,7 +947,7 @@ a{
     background-color: rgb(255, 255, 255);
     font-size: 18px;
     width: 300px;
-    height: 100px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -968,8 +969,8 @@ a{
     margin-top: none;
     background-color: rgb(255, 255, 255);
     font-size: 18px;
-    width: 450px;
-    height: 100px;
+    width: 300px;
+    height: 500px;
     border-radius: 20px;
 
 }
@@ -990,7 +991,7 @@ a{
     margin-top: none;
     background-color: rgb(255, 255, 255);
     width: 300px;
-    height: 100px;
+    height: 500px;
     font-size: 18px;
     border-radius: 20px;
 
@@ -1231,11 +1232,10 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 10px;
-    margin-top: 750px;
+    margin-top: 470px;
     margin-right: 100px;
     margin-left: 100px;
-    height: 350px;
-
+    height: 0px;
 }
 
 .receita9 {
@@ -1311,3 +1311,4 @@ button:hover {
     border-radius: 20px;
 
 }
+

@@ -1,6 +1,6 @@
 import "./sitePamonha.css"
 const recipePamonha = {
-  titulo: 'Pamonha de Doce',
+  titulo: 'Pamonha Doce',
   ingredientes: [
     '6 espigas de milho verde',
     '1 xícara de leite',

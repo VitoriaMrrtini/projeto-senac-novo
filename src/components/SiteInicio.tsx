@@ -109,6 +109,7 @@ const SiteInicio = () => {
             <img src = "src/assets/banner.png" ></img>
         </div>  
             <main>
+
                 <section className="receitas">
                     <div className="receita1">
                         <a href="/siteBolo">
@@ -148,7 +149,7 @@ const SiteInicio = () => {
                     </div>
                     </section>
 
-                    <section className='receitas3'>
+                <section className='receitas3'>
                 <div className="receita9">
                     <a href="/siteBrownie">
                     <img src="src/assets/brownie.png" alt="Brownie de chocolate"/></a>
@@ -164,7 +165,7 @@ const SiteInicio = () => {
                     <div className="receita12">
                     <a href="/sitePamonha">
                         <img src="src/assets/pamonha.png" alt="Pamonha"/></a>
-                    </div>
+                </div>
                     </section>
             </main>
             <footer className="footer">
