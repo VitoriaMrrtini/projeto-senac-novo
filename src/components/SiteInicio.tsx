@@ -15,9 +15,9 @@ const SiteInicio = () => {
                     <ul className="menu01">
                         <a><a className="menu-icon">&#9776;</a>
                             <div className="menu01-menu">
-                                <a className="animação">Serviço 1</a>
-                                <a className="animação">Serviço 2</a>
-                                <a className="animação">Serviço 3</a>
+                                <a href="/userConfi" className="animação">Configurações</a>
+                                <a href="/userProfile" className="animação">Perfil</a>
+                                <a href="/"className="animação">Sair</a>
                         </div>
                     </a>      
                 </ul>

@@ -1,0 +1,61 @@
+.profileUser {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tituloPerfil {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.nameUser h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.descriptionUser {
+  margin-bottom: 20px;
+}
+
+.descriptionUser h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.descriptionUser p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.dadoUser h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.dadoUser ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dadoUser li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.profileUser img {
+  width: 400px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
