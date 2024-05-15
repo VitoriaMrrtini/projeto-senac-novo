@@ -17,6 +17,8 @@ import RecipeBrownie from './components/siteBrownie.tsx';
 import UserProfile from './components/userProfile.tsx';
 import UserConfi from './components/userConfi.tsx';
 import SiteCafeManha from './components/SiteCafeManha.tsx'
+import SiteAlmoco from './components/SiteAlmoco.tsx';
+import SiteCafeTarde from './components/SiteCafeTarde.tsx';
 
 function App(){
   return(
@@ -41,6 +43,8 @@ function App(){
               <Route path='/userProfile' element={<UserProfile/>}/>
               <Route path='/userConfi' element={<UserConfi/>}/>
               <Route path='/SiteCafeManha' element={<SiteCafeManha/>}/>
+              <Route path='/SiteAlmoco' element={<SiteAlmoco/>}/>
+              <Route path='/SiteCafeTarde' element={<SiteCafeTarde/>}/>
             </Routes>
     </BrowserRouter>
     </>
