@@ -234,14 +234,6 @@
     background-color: #FFCED6;
 }
 
-/*h4{
-    font-size: 50px; 
-    text-align: center;   
-    font-family: 'stars e love bottom heairy'; 
-    color: #FFBD59;
-    text-shadow: 2px 2px 4px #ff40b6;
-}*/
-
 p{
     font-size: 20px;
     text-align: center;   
@@ -251,14 +243,11 @@ p{
 
 }
 
-<<<<<<< HEAD
 .list-unstyled li{
     font-size: 25px;  
     margin-right: 1650px;
   
 }
-=======
->>>>>>> 7473582d712d3f417d7593a4618fc654d8e4eea4
 
 .list-unstyled  h3{
     font-size: 20px;
