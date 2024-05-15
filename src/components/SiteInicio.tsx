@@ -140,8 +140,8 @@ const SiteInicio = () => {
                         <div className="col-md-4">
                             <ul className="list-unstyled">
                                 <li><a href="#">Receitas</a></li>
-                                <li><a href="#">Sobre</a></li>
-                                <li><a href="#">Contato</a></li>
+                                <li><a href="#">Dúvidas</a></li>
+                                <li><a href="#">Entre em contato!</a></li>
                             </ul>
                         </div>
                         <div className="col-md-4">
