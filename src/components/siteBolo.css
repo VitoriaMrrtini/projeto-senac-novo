@@ -53,3 +53,23 @@ li {
     background-color: #ffced6;
     margin: 10px;
 }
+
+.videoBolo{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.videoBolo iframe{
+    width: 1200px;
+    height: 700px;
+    border-radius: 50px;
+}
+
+.tituloBolo{
+    background-color: #ffced6;
+    font-family: 'stars e love bottom heairy'; 
+    text-shadow: 2px 2px 4px #ffd664;
+    margin-top: 100px;
+}
