@@ -40,7 +40,7 @@ const SiteInicio = () => {
 
                      <div className='cabecario4'>
                      <ul className="cafe-da-tarde">
-                            <a><a href='' className="animação">Café da tarde</a>
+                            <a><a href='/SiteCafeTarde' className="animação">Café da tarde</a>
                             </a>
                         </ul>
                      </div>
