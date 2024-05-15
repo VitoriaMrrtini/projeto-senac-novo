@@ -27,7 +27,7 @@ const SiteInicio = () => {
 
                     <div className='cabecario1'>
                         <ul className="cafea">
-                            <a className="animação">Café da manhã</a>
+                            <a href="/SiteCafeManha"className="animação">Café da manhã</a>
                         </ul>
                      </div>
 
