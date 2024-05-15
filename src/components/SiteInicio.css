@@ -243,7 +243,7 @@
 }*/
 
 p{
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;   
     font-family: 'stars e love bottom heairy'; 
     text-shadow: 2px 2px 4px #ff40b6;
@@ -251,12 +251,28 @@ p{
 }
 
 .list-unstyled{
-    text-align: center;
+
 }
 
-li{
-    background-color: #ffbd59;
+.list-unstyled li{
+    font-size: 25px;  
+    margin-right: 1650px;
+  
 }
+
+.list-unstyled  h3{
+    font-size: 20px;
+    margin-right: 50px;
+    font-family: 'stars e love bottom heairy' ;
+    margin-top: 5px;
+    margin-right: 1700px;
+ 
+}
+
+/*.list-unstyled a{
+        
+}*/
+
 
 .cabecarios{
     background-color: rgb(255, 214, 100);
