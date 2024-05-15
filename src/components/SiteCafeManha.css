@@ -1,156 +1,169 @@
 #root {
-    background-color: #fff;
+  background-color: #fff;
 }
 
-.menu {
-    display: flex;
-    margin-left: 20px;
-    font-size: 30px;
-    width: 500px;
-    height: 100px;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.menu-icon:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.menu01-menu {
-    position: absolute;
-    display: none;
-    background-color: rgb(255, 255, 255);
-    width: 100px;
-    font-size: 18px;
-    transition: all 0.3s ease; /* Adiciona uma transição suave */
-}
-
-.menu01-menu a {
-    display: block;
-    color: black;
-    margin-top: 10px;
-}
-
-.menu01-menu:hover {
-    transform: scale(1.1); /* Altera a escala ao passar o cursor */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
-}
-
-.menu01:hover .menu01-menu {
-    display: block;
-}
-
-.logo {
-    display: flex;
+@media screen and (max-width: 768px) {
+  .cabecarios,
+  .menu {
+    flex-direction: column;
     align-items: center;
-    background-color: #ffced6;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-}
+  }
 
-.logo img {
-    width: 450px;
+  .menu {
+    margin-left: 0;
+    width: auto;
     height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+  }
+
+  .menu01-menu {
+    width: 80px;
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  .cabecarios-list {
+    flex-wrap: wrap;
+  }
+
+  .cabecario {
+    margin: 5px;
+  }
+  .caixa {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .caixa input[type="text"] {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
 }
 
 .caixa {
-    margin-left: 50px;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .caixa input[type="text"] {
-    margin: 0 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 100px;
-    width: 300px;
-    height: 25px;
+  margin: 0 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  width: 250px;
+  max-width: 300px;
+  height: 25px;
 }
 
 .caixa button {
-    padding: 5px 10px;
-    border-radius: 100px;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    cursor: pointer;
-    height: 30px;
-    transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  transition: all 0.3s ease;
+  font-size: 14px;
 }
 
 button:hover {
-    background-color: #ff8dd1;
-    transform: scale(1.1);
+  background-color: #ff8dd1;
+  transform: scale(1.1);
 }
 
 .main {
-    background-color: lightpink;
-    padding: 20px;
+  background-color: lightpink;
+  padding: 20px;
 }
 
 .receitas-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    height: auto;
-  }
-  
-.receita {
-    width: auto;
-    text-align: center;
-}
-  
-.receita img {
-    display: flex;
-    width: 250px;
-    height: 300px;
-    margin-left: 35px;
-    border-radius: 20px;
-    margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  height: auto;
 }
 
-.receita img{
+.cabecarios {
+  background-color: #ffd664;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cabecarios-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cabecario {
+  text-align: center;
+}
+
+.receita {
+  width: auto;
+  text-align: center;
+}
+
+.receita img {
+  display: flex;
+  width: 250px;
+  height: 300px;
+  margin-left: 35px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.receita img {
   transition: transform 0.3s ease;
 }
 
-.receita img:hover{
-transform: scale(1.1);
+.receita img:hover {
+  transform: scale(1.1);
 }
 
 .animação {
-    display: block;
-    position: relative;
-    padding: 0px;
+  display: block;
+  position: relative;
+  padding: 0px;
 }
 
 .animação::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 0.1em;
-    background-color: hotpink;
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 0.1em;
+  background-color: hotpink;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
 }
 
 .animação:hover::after,
 .animação:focus::after {
-    opacity: 1;
-    transform: translate3d(0, 0.2em, 0);
-    cursor: pointer;
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
 }
 
 .animação:focus {
-    text-underline-offset: 0.4em;
+  text-underline-offset: 0.4em;
+}
+a:hover {
+  cursor: pointer;
 }

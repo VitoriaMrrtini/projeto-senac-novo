@@ -59,3 +59,9 @@
   border-radius: 50%;
   margin-bottom: 20px;
 }
+p {
+  font-size: 15px;
+  text-align: center;
+  font-family: 'stars e love bottom heairy';
+  text-shadow: none;
+}

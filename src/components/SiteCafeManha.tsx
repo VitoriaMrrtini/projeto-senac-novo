@@ -23,75 +23,57 @@ const SiteCafeManha = () => {
         </div>
       </div>
       <nav className="cabecarios">
-        <div className="cabecarios">
-          <div className="cabecario1">
-            <ul className="cafea">
-              <a className="animação">Café da manhã</a>
-            </ul>
-          </div>
-
-          <div className="cabecario3">
-            <ul className="almoco">
-              <a>
-                <a className="animação">Almoço</a>
-              </a>
-            </ul>
-          </div>
-
-          <div className="cabecario4">
-            <ul className="cafe-da-tarde">
-              <a>
-                <a className="animação">Café da tarde</a>
-              </a>
-            </ul>
-          </div>
-
-          <div className="cabecario5">
-            <ul className="lanche-da-tarde">
-              <a>
-                <a className="animação">Lanche da tarde</a>
-              </a>
-            </ul>
-          </div>
-
-          <div className="cabecario6">
-            <ul className="jantar">
-              <a>
-                <a className="animação">Jantar</a>
-              </a>
-            </ul>
-          </div>
-
-          <div className="cabecario7">
-            <ul className="doces">
-              <a>
-                <a className="animação">Doces</a>
-              </a>
-            </ul>
-          </div>
-        </div>
+        <ul className="cabecarios-list">
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Café da manhã
+            </a>
+          </li>
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Almoço
+            </a>
+          </li>
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Café da tarde
+            </a>
+          </li>
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Lanche da tarde
+            </a>
+          </li>
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Jantar
+            </a>
+          </li>
+          <li className="cabecario">
+            <a href="#" className="animação">
+              Doces
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <main className="receitas-container">
-  <div className="receita">
-    <a href="/siteBolo">
-      <img src="src/assets/bolo-de-chocolate.png" alt="Bolo de Cenoura" />
-    </a>
-  </div>
-  <div className="receita">
-    <a href="/siteQueijo">
-      <img src="src/assets/pao-de-queijo.png" alt="Pão de Queijo" />
-    </a>
-  </div>
-  <div className="receita">
-    <a href="/siteTorta">
-      <img src="src/assets/torta-de-frango.png" alt="Torta de Frango" />
-    </a>
-  </div>
-
-
-</main>
-
+        <div className="receita">
+          <a href="/siteBolo">
+            <img src="src/assets/bolo-de-chocolate.png" alt="Bolo de Cenoura" />
+          </a>
+        </div>
+        <div className="receita">
+          <a href="/siteQueijo">
+            <img src="src/assets/pao-de-queijo.png" alt="Pão de Queijo" />
+          </a>
+        </div>
+        <div className="receita">
+          <a href="/siteTorta">
+            <img src="src/assets/torta-de-frango.png" alt="Torta de Frango" />
+          </a>
+        </div>
+      </main>
 
       <footer className="footer">
         <div className="container-footer">

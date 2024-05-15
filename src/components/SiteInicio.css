@@ -250,10 +250,6 @@ p{
 
 }
 
-.list-unstyled{
-
-}
-
 .list-unstyled li{
     font-size: 25px;  
     margin-right: 1650px;
@@ -275,7 +271,7 @@ p{
 
 
 .cabecarios{
-    background-color: rgb(255, 214, 100);
+    background-color: #ffd664;
     display: flex;
     align-items: center;
     justify-content: center;
