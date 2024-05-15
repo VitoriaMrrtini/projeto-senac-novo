@@ -33,35 +33,35 @@ const SiteInicio = () => {
 
                     <div className='cabecario3'>
                         <ul className="almoco">
-                            <a><a className="animação">Almoço</a>
+                            <a><a href='/SiteAlmoco' className="animação">Almoço</a>
                             </a>
                         </ul>
                     </div>
 
                      <div className='cabecario4'>
                      <ul className="cafe-da-tarde">
-                            <a><a className="animação">Café da tarde</a>
+                            <a><a href='' className="animação">Café da tarde</a>
                             </a>
                         </ul>
                      </div>
 
                      <div className='cabecario5'>
                      <ul className="lanche-da-tarde">
-                        <a><a className="animação">Lanche da tarde</a>
+                        <a><a href='' className="animação">Lanche da tarde</a>
                         </a>
                      </ul>                   
                      </div>
 
                     <div className='cabecario6'>
                     <ul className="jantar">
-                        <a><a className="animação">Jantar</a>
+                        <a><a href='' className="animação">Jantar</a>
                         </a>
                     </ul>                     
                     </div>
 
                     <div className='cabecario7'>
                     <ul className="doces">
-                        <a><a className="animação">Doces</a>
+                        <a><a href='' className="animação">Doces</a>
                         </a>
                     </ul>
                     </div>
