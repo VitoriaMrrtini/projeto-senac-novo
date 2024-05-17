@@ -1,20 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./SiteDoce.css";
 import axios from "axios";
 
+interface image{
+  img: string;
+}
+
 const SiteDoce = () => {
   
+  const [imgs, setImgs] = useState<image[]>([]);
+
   useEffect(() => {
     axios.get("http://localhost:8080/doces")
     .then((res) => {
       if (res.data.length > 0){
-        setImg(res.data[0]);
+        setImgs(res.data);
       }
-    })
-    .catch((error) => {
+    }).catch((error) => {
       console.error("Erro ao buscar dados dos doces:", error);
     });
-}, []);
+  }, []);
 
   return (
     <>
@@ -73,7 +78,7 @@ const SiteDoce = () => {
       </nav>
 
       <main className="receitas-container">
-        <div className="receita">
+        {/* <div className="receita">
           <a href="/siteBolo">
             <img src="src/assets/bolo-de-chocolate.png" alt="Bolo de Cenoura" />
           </a>
@@ -88,7 +93,27 @@ const SiteDoce = () => {
             <img src="src/assets/torta-de-frango.png" alt="Torta de Frango" />
           </a>
         </div>
-      </main>
+
+         <div className="receita">
+          <a href="/siteTorta">
+            <img src="https://static.itdg.com.br/images/360-240/2887f8e671abd581779918adeac1db98/shutterstock-2151535997.jpg" alt="Torta de Frango" />
+          </a>
+        </div> 
+
+         <div className="receita">
+          <a href="/siteTorta">
+            <img alt="Torta de Frango" />
+          </a>
+        </div> */}
+
+        {imgs.map((img) => (
+          <div className="receita">
+            <a href="/siteTorta">
+              <img src={img.img} alt="Torta de Frango" />
+            </a>
+          </div>
+        ))}
+      </main>        
 
       <footer className="footer">
                 <div className="container-footer">
