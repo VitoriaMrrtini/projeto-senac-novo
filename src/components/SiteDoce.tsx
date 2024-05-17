@@ -1,6 +1,21 @@
+import { useEffect } from "react";
 import "./SiteDoce.css";
+import axios from "axios";
 
 const SiteDoce = () => {
+  
+  useEffect(() => {
+    axios.get("http://localhost:8080/doces")
+    .then((res) => {
+      if (res.data.length > 0){
+        setImg(res.data[0]);
+      }
+    })
+    .catch((error) => {
+      console.error("Erro ao buscar dados dos doces:", error);
+    });
+}, []);
+
   return (
     <>
       <div className="logo">
