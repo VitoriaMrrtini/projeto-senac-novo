@@ -1420,3 +1420,7 @@ button:hover {
 .receita12 img:hover {
   transform: scale(1.1); /* Escala 10% maior ao passar o mouse */
 }
+
+li::marker{
+    color: #FFCED6;
+}
