@@ -16,7 +16,7 @@ const SiteAlmoco = () => {
             </a>
           </ul>
         </div>
-        <img src="src/assets/logo.png" alt="logo" />
+        <a href="/SiteInicio"><img src="src/assets/logo.png" alt="logo" /></a>
         <div className="caixa">
           <input type="text" />
           <button>Procurar</button>
@@ -25,32 +25,32 @@ const SiteAlmoco = () => {
       <nav className="cabecarios">
         <ul className="cabecarios-list">
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteCafeManha" className="animação">
               Café da manhã
             </a>
           </li>
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteAlmoco" className="animação">
               Almoço
             </a>
           </li>
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteCafeTarde" className="animação">
               Café da tarde
             </a>
           </li>
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteLanche" className="animação">
               Lanche da tarde
             </a>
           </li>
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteJantar" className="animação">
               Jantar
             </a>
           </li>
           <li className="cabecario">
-            <a href="#" className="animação">
+            <a href="/SiteDoce" className="animação">
               Doces
             </a>
           </li>

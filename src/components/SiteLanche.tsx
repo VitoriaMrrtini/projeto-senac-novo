@@ -1,6 +1,6 @@
-import "./SiteCafeTarde.css";
+import "./SiteLanche.css";
 
-const SiteCafeTarde = () => {
+const SiteLanche = () => {
   return (
     <>
       <div className="logo">
@@ -100,4 +100,4 @@ const SiteCafeTarde = () => {
   );
 };
 
-export default SiteCafeTarde;
+export default SiteLanche;

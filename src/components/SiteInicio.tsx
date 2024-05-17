@@ -16,7 +16,7 @@ const SiteInicio = () => {
                     </a>      
                 </ul>
             </div> 
-                <img src="src/assets/logo.png" alt="logo" />
+                <a href="/SiteInicio"><img src="src/assets/logo.png" alt="logo"/></a>
             <div className='caixa'>
                 <input type="text" />
                 <button>Procurar</button>
@@ -47,21 +47,21 @@ const SiteInicio = () => {
 
                      <div className='cabecario5'>
                      <ul className="lanche-da-tarde">
-                        <a><a href='' className="animação">Lanche da tarde</a>
+                        <a><a href='/SiteLanche' className="animação">Lanche da tarde</a>
                         </a>
                      </ul>                   
                      </div>
 
                     <div className='cabecario6'>
                     <ul className="jantar">
-                        <a><a href='' className="animação">Jantar</a>
+                        <a><a href='/SiteJantar' className="animação">Jantar</a>
                         </a>
                     </ul>                     
                     </div>
 
                     <div className='cabecario7'>
                     <ul className="doces">
-                        <a><a href='' className="animação">Doces</a>
+                        <a><a href='/SiteDoce' className="animação">Doces</a>
                         </a>
                     </ul>
                     </div>

@@ -19,6 +19,9 @@ import UserConfi from './components/userConfi.tsx';
 import SiteCafeManha from './components/SiteCafeManha.tsx'
 import SiteAlmoco from './components/SiteAlmoco.tsx';
 import SiteCafeTarde from './components/SiteCafeTarde.tsx';
+import SiteLanche from './components/SiteLanche.tsx';
+import SiteJantar from './components/SiteJanta.tsx';
+import SiteDoce from './components/SiteDoce.tsx';
 
 function App(){
   return(
@@ -45,6 +48,9 @@ function App(){
               <Route path='/SiteCafeManha' element={<SiteCafeManha/>}/>
               <Route path='/SiteAlmoco' element={<SiteAlmoco/>}/>
               <Route path='/SiteCafeTarde' element={<SiteCafeTarde/>}/>
+              <Route path='/SiteLanche' element={<SiteLanche/>}/>
+              <Route path='/SiteJantar' element={<SiteJantar/>}/>
+              <Route path='/SiteDoce' element={<SiteDoce/>}/>
             </Routes>
     </BrowserRouter>
     </>
