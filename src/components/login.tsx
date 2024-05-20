@@ -4,9 +4,11 @@ import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+
 function Login() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+  const [loggedInUser, setLoggedInUser] = useState(null);
 
   const navigate = useNavigate();
 
@@ -26,6 +28,8 @@ function Login() {
         const pass = res.data[0].senha;
 
         if(user === usr && password === pass){
+            setLoggedInUser(res.data[0]);
+            alert("Login bem-sucedido");
             navigate("/SiteInicio");
         }else{
             setUser("");
