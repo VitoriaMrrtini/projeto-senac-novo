@@ -1,29 +1,27 @@
+import { useEffect, useState } from "react";
 import "./userProfile.css";
 
-const UserProfile = () => {
+function UserProfile({ user }) {
+  // Não é necessário usar useLocation aqui
+  
+  if (!user) {
+    return <div>Usuário não encontrado</div>;
+  }
+
   return (
     <div className="profileUser">
       <h2 className="tituloPerfil">Perfil do Usuário</h2>
-      <img src="src/assets/fotofemea.jpg"></img>
+      <img src="src/assets/fotofemea.jpg" alt="Foto de perfil"></img>
       <div className="nameUser">
-        <h3>Lethycia</h3>
+        <p>Nome: {user.nome}</p>
       </div>
       <div className="descriptionUser">
-        <h3>Dados</h3>
-        <p>16 anos</p>
-        <p>Feminino</p>
-        <p>Campo Mourão</p>
-      </div>
-      <div className="dadoUser">
-        <h3>Dados</h3>
-        <ul>
-          <li>E-mail</li>
-          <li>Telefone</li>
-          <li>Redes Sociais</li>
-        </ul>
+        <h1>Dados</h1>
+        <p>Email: {user.email}</p>
+        <p>Idade: {user.idade}</p>
+        <p>Gênero: {user.genero}</p>
       </div>
     </div>
   );
-};
-
+}
 export default UserProfile;
