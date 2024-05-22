@@ -1,11 +1,28 @@
-import { useEffect, useState } from "react";
-import "./userProfile.css";
+import './userProfile.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function UserProfile({ user }) {
-  // Não é necessário usar useLocation aqui
-  
+interface User{
+  nome: string;
+  email: string;
+  idade: string;
+  genero: string;
+}
+
+function UserProfile() {
+  const [user, setUser] = useState<User>();
+
+  useEffect(() => {
+    axios.get(`http://localhost:8080/users?id=${localStorage.getItem("userID")}`)
+      .then((res) => {
+        setUser(res.data[0]); 
+      }).catch((err) => {
+        console.error('Erro ao buscar dados do usuário:', err);
+      });
+  }, []);
+
   if (!user) {
-    return <div>Usuário não encontrado</div>;
+    return <div>Carregando...</div>;
   }
 
   return (
@@ -24,4 +41,5 @@ function UserProfile({ user }) {
     </div>
   );
 }
+
 export default UserProfile;

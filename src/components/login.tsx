@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
-  const [loggedInUser, setLoggedInUser] = useState(null);
 
   const navigate = useNavigate();
 
@@ -24,12 +23,13 @@ function Login() {
     axios.get(`http://localhost:8080/users?nome=${user}`)
       .then((res) => {
 
+        const id = res.data[0].id;
         const usr = res.data[0].nome;
         const pass = res.data[0].senha;
 
         if(user === usr && password === pass){
-            setLoggedInUser(res.data[0]);
             alert("Login bem-sucedido");
+            localStorage.setItem("userID", id);
             navigate("/SiteInicio");
         }else{
             setUser("");
