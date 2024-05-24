@@ -1,7 +1,8 @@
+/* Root element styling */
 #root {
   background-color: #fff;
 }
-
+/* Menu styling */
 .menu {
   display: flex;
   margin-left: 20px;
@@ -14,54 +15,50 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.menu-icon:hover {
-  transform: scale(1.1);
-}
-.menu01-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: #ffffff;
-  width: 100px;
-  height: 100px;
-  font-size: 18px;
-}
-
-.menu01-menu a {
+.content-menu a {
   display: block;
-  color: black;
-  margin-top: 10px;
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 0; /* Espaçamento interno nos itens do menu */
+  transition: color 0.3s; /* Transição suave para a cor do texto */
 }
 
-.menu01:hover .menu01-menu {
-  display: block;
+/* Estilos para os itens do menu quando hover */
+.content-menu a:hover {
+  color: #ff69b4; /* Altera a cor do texto ao passar o mouse */
 }
 
+/* Estilos para exibir o submenu quando o menu é clicado */
+.menu:hover .content-menu {
+  display: block; /* Exibe o submenu ao passar o mouse */
+  opacity: 1; /* Torna o submenu totalmente visível */
+}
+
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
   background-color: #ffced6;
   padding: 10px;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
-
 .logo img {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: auto;
 }
 
-.caixa {
+/* Estilizando a caixa de pesquisa */
+.caixa.search-box {
   margin-left: 50px;
   margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
-.caixa input[type="text"] {
+/* Estilizando a entrada de texto da caixa de pesquisa */
+.caixa.search-box input[type="text"] {
   margin: 0 10px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -69,7 +66,9 @@
   width: 300px;
   height: 25px;
 }
-.caixa button {
+
+/* Estilizando o botão da caixa de pesquisa */
+.caixa.search-box button {
   padding: 5px 10px;
   border-radius: 100px;
   background-color: #ff69b4;
@@ -80,966 +79,200 @@
   transition: all 0.3s ease;
 }
 
-.caixa button:hover {
+/* Estilizando o botão da caixa de pesquisa quando passa o mouse */
+.caixa.search-box button:hover {
   background-color: #ff8dd1;
   transform: scale(1.1);
 }
 
-.main {
-  background-color: lightpink;
-  padding: 20px;
+
+/* Estilizando a barra de navegação */
+.cabecarios {
+  background-color: #ffd780;
+  padding: 10px; 
 }
 
-.receitas {
+/* Estilizando os itens da lista de navegação */
+.cabecarios-list {
+  list-style: none; 
+  display: flex; 
+  justify-content: space-around; 
+}
+
+/* Estilizando os links de navegação */
+.cabecario a {
+  position: relative; 
+  text-decoration: none;
+  color: black; 
+  font-weight: bold; 
+  padding: 5px 10px; 
+  border-radius: 5px;
+  transition: color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilizando a linha sublinhada */
+.cabecario a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; 
+  width: 0;
+  height: 2px;
+  background-color: #FF69B4;
+  transition: width 0.3s;
+}
+
+
+.cabecario a:hover::after {
+  width: 100%;
+}
+
+/* Estilos para o conteúdo principal */
+.main {
+  background-color: #fff0f7;
+  padding: 20px;
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Estilos para as receitas */
+.receitas-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 10px;
-  margin-top: 750px;
-  margin-right: 100px;
-  margin-left: 100px;
-  height: 350px;
+  margin: 20px;
 }
 
-.receita1 {
-  margin-bottom: 200px;
+.receita {
   padding: 10px;
   box-sizing: border-box;
-  width: 250px;
-  height: 300px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
-.receita1 img {
-  display: flex;
-  width: 250px;
+
+.receita:hover {
+  transform: scale(1.1);
+}
+
+.receita img {
+  width: 200px;
   height: 300px;
-  margin-left: 35px;
+  max-width: 100%;
+  max-height: 200px;
   border-radius: 20px;
-  margin-top: 50px;
 }
 
-.receita2 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-  height: 350px;
-}
-.receita2 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita3 {
-  margin-bottom: 1000px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita3 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita4 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-
-.receita4 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita h2 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-.receita p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
+/* Footer styling */
 .footer {
   background-color: #ff69b4;
   color: white;
   padding: 20px 0;
+  text-align: center; /* Centraliza o conteúdo do footer */
 }
 
-.footer h4 {
-  margin-bottom: 10px;
-  margin-left: 100px;
+.footer h6,
+.footer ul,
+.footer p {
+  margin: 10px; /* Reduz as margens internas para uma aparência mais compacta */
 }
 
 .footer ul {
   padding: 0;
-  margin-left: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer ul li {
   list-style: none;
-}
-
-.footer p {
-  margin-left: 50px;
+  margin: 0 10px;
 }
 
 .footer ul li a {
   color: white;
   text-decoration: none;
-  margin-left: -50px;
 }
 
 .footer ul li a:hover {
-  text-decoration: underline;
+  text-decoration: none; /* Remove a linha sublinhada ao passar o mouse */
 }
 
+.footer img {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+.footer img:hover {
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
+
+
+/* General text styling */
 .text-center {
   text-align: center;
 }
-
 .container-footer {
   background-color: #ffced6;
 }
-
-p {
-  font-size: 20px;
-  text-align: center;
-  font-family: "stars e love bottom heairy";
-  text-shadow: 2px 2px 4px #ff40b6;
-  margin-right: 620px;
-}
-
-.list-unstyled li {
-  font-size: 25px;
-  margin-right: 1650px;
-}
-
-.list-unstyled h3 {
-  font-size: 20px;
-  margin-right: 50px;
-  font-family: "stars e love bottom heairy";
-  margin-top: 5px;
-  margin-right: 1700px;
-}
-
+p,
 h6 {
-  font-size: 25px;
+  font-family: Arial;
+  text-shadow: 2px 2px 4px #ff40b6;
+}
+p {
+  font-size: 18px;
   text-align: center;
-  font-family: "stars e love bottom heairy";
-  text-shadow: 2px 2px 4px #000000;
-  margin-right: 620px;
+}
+h6 {
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
 }
 
+/* List styling */
 .list-inline {
   font-family: "stars e love bottom heairy";
 }
-
 .list-inline img {
-  border-radius: 100%;
-  height: 50px;
-  margin-left: 50px;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
 }
 
-.col-md-4 {
-  margin-left: 620px;
-}
-
-/*.list-unstyled a{
-        
-}*/
-
-.cabecarios {
+/* Header styling */
+.header {
   background-color: #ffd664;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
   font-size: 10px;
 }
-
-.cabecario1 {
+.header-item {
   margin-right: 100px;
 }
-
-.cabecario2 {
-  margin-right: 100px;
-}
-
-.cabecario3 {
-  margin-right: 100px;
-}
-
-.cabecario4 {
-  margin-right: 100px;
-}
-
-.cabecario5 {
-  margin-right: 100px;
-}
-
-.cabecario6 {
-  margin-right: 100px;
-}
-
-.cabecario7 {
-  margin-right: 100px;
-}
-
-.cafea {
+.menu-label {
   font-size: 25px;
 }
 
-.almoco {
-  font-size: 25px;
-}
-
-.cafe-da-tarde {
-  font-size: 25px;
-}
-
-.lanche-da-tarde {
-  font-size: 25px;
-}
-
-.jantar {
-  font-size: 25px;
-}
-
-.doces {
-  font-size: 25px;
-}
-
+/* Link styling */
 a {
-  color: rgb(0, 0, 0);
-}
-
-.cafea-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 40px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 120px;
-  border-radius: 20px;
-}
-
-.cafea-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.cafea:hover .cafea-menu {
-  display: block;
-}
-
-.almoco-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 120px;
-  border-radius: 20px;
-}
-
-.almoco-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.almoco:hover .almoco-menu {
-  display: block;
-}
-.cafe-tarde-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 30px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 120px;
-  border-radius: 20px;
-}
-
-.cafe-tarde-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.cafe-da-tarde:hover .cafe-tarde-menu {
-  display: block;
-}
-.lanche-tarde-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 40px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 120px;
-  border-radius: 20px;
-}
-
-.lanche-tarde-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.lanche-da-tarde:hover .lanche-tarde-menu {
-  display: block;
-}
-.janta-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 450px;
-  height: 120px;
-  border-radius: 20px;
-}
-
-.janta-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.jantar:hover .janta-menu {
-  display: block;
-}
-.doces-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  width: 300px;
-  height: 120px;
-  font-size: 18px;
-  border-radius: 20px;
-}
-
-.doces-menu a {
-  display: block;
-  color: rgb(228, 25, 25);
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.doces:hover .doces-menu {
-  display: block;
-}
-
-.banner {
-  margin-bottom: 10px;
-  margin-left: 300px;
-  margin-right: 50px;
-  height: 10px;
-  width: 100px;
-}
-
-.banner :hover {
-  cursor: pointer;
-}
-.menu a:-webkit-any-link {
-  color: black;
-  cursor: pointer;
+  color: #000;
   text-decoration: none;
 }
-a:-webkit-any-link {
+a:hover {
   color: #ff69b4;
-  cursor: pointer;
-  text-decoration: none;
 }
-.animação {
+.link-animation {
   display: block;
   position: relative;
-  padding: 0px;
-}
-.animação::after {
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 0.1em;
-  background-color: hotpink;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-
-.animação:hover::after,
-.animação:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
-.animação:focus {
-  text-underline-offset: 0.4em;
-}
-
-main {
-  background-color: #fff0f7;
-  margin-bottom: 100px;
-  margin-top: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 2000px;
-}
-.receitas2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px;
-  margin-top: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
-  height: 10px;
-}
-
-.receita5 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita5 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita6 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita6 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita7 {
-  margin-bottom: 1000px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita7 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita8 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-
-.receita8 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-#root {
-  background-color: #fff;
-}
-
-.menu {
-  display: flex;
-  margin-left: 20px;
-  font-size: 30px;
-  width: 500px;
-  height: 100px;
-}
-.menu-icon {
-  font-size: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.menu-icon:hover {
-  transform: scale(1.1);
-}
-.menu01-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  width: 100px;
-  font-size: 18px;
-}
-
-.menu01-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-}
-
-.menu01:hover .menu01-menu {
-  display: block;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  background-color: #ffced6;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.logo img {
-  width: 450px;
-  height: auto;
-}
-
-.caixa {
-  margin-left: 50px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.caixa input[type="text"] {
-  margin: 0 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 100px;
-  width: 300px;
-  height: 25px;
-}
-.caixa button {
-  padding: 5px 10px;
-  border-radius: 100px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  cursor: pointer;
-  height: 30px;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff8dd1;
-  transform: scale(1.1);
-}
-
-.main {
-  background-color: #fff1f3;
-  padding: 20px;
-}
-
-.receitas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px;
-  margin-top: 750px;
-  margin-right: 100px;
-  margin-left: 100px;
-}
-
-.receita1 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita1 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-}
-
-.receita2 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita2 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-}
-
-.receita3 {
-  margin-bottom: 1000px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita3 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-}
-
-.receita4 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-
-.receita4 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-}
-
-.receita h2 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-.receita p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-.footer {
-  background-color: #ff69b4;
-  color: white;
-  padding: 20px 0;
-}
-
-.footer h4 {
-  margin-bottom: 10px;
-  margin-left: 100px;
-}
-
-.footer ul {
   padding: 0;
-  margin-left: 100px;
 }
-
-.footer ul li {
-  list-style: none;
-}
-
-.footer p {
-  margin-left: 50px;
-}
-
-.footer ul li a {
-  color: white;
-  text-decoration: none;
-  margin-left: -50px;
-}
-
-.footer ul li a:hover {
-  text-decoration: underline;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.container-footer {
-  background-color: #ffced6;
-}
-
-.cabecarios {
-  background-color: rgb(255, 214, 100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 10px;
-}
-
-.cabecario1 {
-  margin-right: 100px;
-}
-
-.cabecario2 {
-  margin-right: 100px;
-}
-
-.cabecario3 {
-  margin-right: 100px;
-}
-
-.cabecario4 {
-  margin-right: 100px;
-}
-
-.cabecario5 {
-  margin-right: 100px;
-}
-
-.cabecario6 {
-  margin-right: 100px;
-}
-
-.cabecario7 {
-  margin-right: 100px;
-}
-
-.cafea {
-  font-size: 25px;
-}
-
-.almoco {
-  font-size: 25px;
-}
-
-.cafe-da-tarde {
-  font-size: 25px;
-}
-
-.lanche-da-tarde {
-  font-size: 25px;
-}
-
-.jantar {
-  font-size: 25px;
-}
-
-.doces {
-  font-size: 25px;
-}
-
-a {
-  color: rgb(0, 0, 0);
-}
-
-.cafea-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 40px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.cafea-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.cafea:hover .cafea-menu {
-  display: block;
-}
-
-.almoco-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.almoco-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.almoco:hover .almoco-menu {
-  display: block;
-}
-.cafe-tarde-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 30px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.cafe-tarde-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.cafe-da-tarde:hover .cafe-tarde-menu {
-  display: block;
-}
-.lanche-tarde-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  margin-left: 40px;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.lanche-tarde-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.lanche-da-tarde:hover .lanche-tarde-menu {
-  display: block;
-}
-.janta-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  font-size: 18px;
-  width: 300px;
-  height: 500px;
-  border-radius: 20px;
-}
-
-.janta-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.jantar:hover .janta-menu {
-  display: block;
-}
-.doces-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  width: 300px;
-  height: 500px;
-  font-size: 18px;
-  border-radius: 20px;
-}
-
-.doces-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.doces:hover .doces-menu {
-  display: block;
-}
-
-.banner {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  margin-left: 300px;
-  margin-right: 50px;
-  height: 10px;
-  width: 100px;
-}
-
-.banner :hover {
-  cursor: pointer;
-}
-.menu a:-webkit-any-link {
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-}
-a:-webkit-any-link {
-  color: #ff69b4;
-  cursor: pointer;
-  text-decoration: none;
-}
-.animação {
-  display: block;
-  position: relative;
-  padding: 0px;
-}
-.animação::after {
+.link-animation::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1050,301 +283,68 @@ a:-webkit-any-link {
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
-
-.animação:hover::after,
-.animação:focus::after {
+.link-animation:hover::after,
+.link-animation:focus::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
-.animação:focus {
+.link-animation:focus {
   text-underline-offset: 0.4em;
 }
-.receita5 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita5 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
 
-.receita6 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
+/* Banner styling */
+.banner {
+  margin: 50px auto;
+  height: 300px; /* Defina a altura desejada para o carrossel */
+  width: 500px; /* Defina a largura desejada para o carrossel */
 }
-.receita6 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita7 {
-  margin-bottom: 1000px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita7 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.receita8 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-
-.receita8 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-#root {
-  background-color: #fff;
-}
-
-.menu {
-  display: flex;
-  margin-left: 20px;
-  font-size: 30px;
-  width: 500px;
-  height: 100px;
-}
-.menu-icon {
-  font-size: 30px;
+.banner:hover {
   cursor: pointer;
-  transition: all 0.3s ease;
 }
-.menu-icon:hover {
-  transform: scale(1.1);
-}
-.menu01-menu {
-  position: absolute;
-  display: none;
-  margin-top: none;
-  background-color: rgb(255, 255, 255);
-  width: 100px;
-  font-size: 18px;
+.banner img {
+  width: 100%; /* As imagens ocuparão 100% da largura do elemento pai */
+  height: 100%; /* As imagens ocuparão 100% da altura do elemento pai */
+  object-fit: cover; /* Mantém a proporção da imagem, cobrindo todo o espaço disponível */
 }
 
-.menu01-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .recipes {
+    justify-content: center;
+  }
+  .recipe {
+    width: calc(33.33% - 20px);
+  }
 }
 
-.menu01:hover .menu01-menu {
-  display: block;
+@media (max-width: 768px) {
+  .search-box input[type="text"] {
+    width: 200px;
+  }
+  .recipe {
+    width: calc(50% - 20px);
+  }
+  .footer h6,
+  .footer ul,
+  .footer p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .footer img {
+    height: 25px;
+    width: 25px;
+  }
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  background-color: #ffced6;
-  padding: 10px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.logo img {
-  width: 450px;
-  height: auto;
-}
-
-.caixa {
-  margin-left: 50px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.caixa input[type="text"] {
-  margin: 0 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 100px;
-  width: 300px;
-  height: 25px;
-}
-.caixa button {
-  padding: 5px 10px;
-  border-radius: 100px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  cursor: pointer;
-  height: 30px;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #ff8dd1;
-  transform: scale(1.1);
-}
-
-.main {
-  background-color: lightpink;
-  padding: 20px;
-}
-
-.receitas3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px;
-  margin-top: 470px;
-  margin-right: 100px;
-  margin-left: 100px;
-  height: 0px;
-}
-
-.receita9 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita9 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-}
-
-.receita10 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita10 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-}
-
-.receita11 {
-  margin-bottom: 1000px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-.receita11 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  margin-left: 35px;
-  border-radius: 20px;
-}
-
-.receita12 {
-  margin-bottom: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 250px;
-  height: 300px;
-  text-align: center;
-}
-
-.receita12 img {
-  display: flex;
-  width: 250px;
-  height: 300px;
-  border-radius: 20px;
-}
-.menu01-menu {
-  position: absolute;
-  display: none;
-  background-color: rgb(255, 255, 255);
-  width: 100px;
-  font-size: 18px;
-  transition: all 0.3s ease; /* Adiciona uma transição suave */
-}
-
-.menu01-menu a {
-  display: block;
-  color: black;
-  margin-top: 10px;
-}
-
-.menu01-menu:hover {
-  transform: scale(1.1); /* Altera a escala ao passar o cursor */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
-}
-.menu01:hover .menu01-menu {
-  display: block;
-}
-
-.receita1 img,
-.receita2 img,
-.receita3 img,
-.receita4 img,
-.receita5 img,
-.receita6 img,
-.receita7 img,
-.receita8 img,
-.receita9 img,
-.receita10 img,
-.receita11 img,
-.receita12 img {
-  transition: transform 0.3s ease;
-}
-
-.receita1 img:hover,
-.receita2 img:hover,
-.receita3 img:hover,
-.receita4 img:hover,
-.receita5 img:hover,
-.receita6 img:hover,
-.receita7 img:hover,
-.receita8 img:hover,
-.receita9 img:hover,
-.receita10 img:hover,
-.receita11 img:hover,
-.receita12 img:hover {
-  transform: scale(1.1); /* Escala 10% maior ao passar o mouse */
-}
-
-li::marker {
-  color: #ffced6;
+@media (max-width: 576px) {
+  .footer h6,
+  .footer p {
+    text-align: center;
+  }
+  .footer ul {
+    flex-direction: column;
+  }
+  .footer ul li {
+    margin: 5px 0;
+  }
 }

@@ -1,4 +1,4 @@
-import "./siteBolo.css";
+import "./siteTorta.css";
 const recipeBoloChoco = {
   titulo: "Bolo de Chocolate",
   ingredientes: [

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import SiteInicio from './components/SiteInicio';
 import Login from './components/login';
 import RecipeBoloChoco from './components/siteBolo.tsx';

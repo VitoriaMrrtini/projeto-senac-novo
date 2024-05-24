@@ -1,4 +1,4 @@
-import "./siteCoxinha.css";
+import "./siteTorta.css";
 const recipeCoxinha = {
   titulo: "Coxinha de Frango",
   ingredientes: [

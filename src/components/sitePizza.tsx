@@ -1,4 +1,4 @@
-import "./sitePizza.css";
+import "./siteTorta.css";
 const recipePizzaCaseira = {
   titulo: "Pizza Caseira",
   ingredientes: [

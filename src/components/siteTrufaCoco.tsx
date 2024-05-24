@@ -1,4 +1,4 @@
-import "./siteTrufacoco.css";
+import "./siteTorta.css";
 const recipeTrufaCoco = {
   titulo: "Trufa de Coco",
   ingredientes: [

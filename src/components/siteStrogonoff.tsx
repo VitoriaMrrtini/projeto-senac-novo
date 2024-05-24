@@ -1,4 +1,4 @@
-import "./siteStrogonoff.css";
+import "./siteTorta.css";
 const recipeStrogonoff = {
   titulo: "Strogonoff",
   ingredientes: [

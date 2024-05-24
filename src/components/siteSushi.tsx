@@ -1,4 +1,4 @@
-import "./siteSushi.css";
+import "./siteTorta.css";
 const recipeSushi = {
   titulo: "Sushi",
   ingredientes: [

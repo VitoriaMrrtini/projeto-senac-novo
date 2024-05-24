@@ -1,4 +1,4 @@
-import "./siteQueijo.css";
+import "./siteTorta.css";
 const recipeQueijoPaoData = {
   titulo: "Pão de Queijo",
   ingredientes: [
