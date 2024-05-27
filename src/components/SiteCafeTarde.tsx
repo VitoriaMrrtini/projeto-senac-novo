@@ -3,6 +3,7 @@ import "./SiteInicio.css";
 import axios from "axios";
 
 interface image {
+  id: number;
   img: string;
 }
 
@@ -27,6 +28,14 @@ const SiteDoce = () => {
       });
   }, []);
 
+  const handleClick = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) => {
+    const id = event.currentTarget.id;
+    // alert(`ID: ${id}`);
+    localStorage.setItem("receitaID", id);
+  };
+
   return (
     <>
       <div className="logo">
@@ -34,14 +43,13 @@ const SiteDoce = () => {
           <a className="menu-icon" onClick={toggleMenu}>
             &#9776;
           </a>
-          <div
-            className={menuVisivel ? "menu-content" : "menu-content hide"}
-            id="menuContent"
-          >
-            <a href="/userConfi">Config</a>
-            <a href="/userProfile">Perfil</a>
-            <a href="/">Sair</a>
-          </div>
+          {menuAberto && (
+            <div className="content-menu">
+              <a href="/userConfi">Config</a>
+              <a href="/userProfile">Perfil</a>
+              <a href="/">Sair</a>
+            </div>
+          )}
         </div>
         <a href="/SiteInicio">
           <img src="src/assets/logo.png" alt="logo" />
@@ -122,7 +130,12 @@ const SiteDoce = () => {
         {imgs.map((img) => (
           <div className="receita">
             <a href="/siteTorta">
-              <img src={img.img} alt="Torta de Frango" />
+              <img
+                id={String(img.id)}
+                src={img.img}
+                alt="Receita"
+                onClick={handleClick}
+              />
             </a>
           </div>
         ))}

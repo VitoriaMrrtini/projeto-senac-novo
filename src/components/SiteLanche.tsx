@@ -3,15 +3,16 @@ import "./SiteInicio.css";
 import axios from "axios";
 
 interface image {
+  id: number;
   img: string;
 }
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<image[]>([]);
-  const [menuVisivel, setMenuVisivel] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
-    setMenuVisivel(!menuVisivel);
+    setMenuAberto(!menuAberto);
   };
 
   useEffect(() => {
@@ -23,9 +24,17 @@ const SiteDoce = () => {
         }
       })
       .catch((error) => {
-        console.error("Erro ao buscar dados dos doces:", error);
+        console.error("Erro ao buscar dados dos Lanches:", error);
       });
   }, []);
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) => {
+    const id = event.currentTarget.id;
+    // alert(`ID: ${id}`);
+    localStorage.setItem("receitaID", id);
+  };
 
   return (
     <>
@@ -34,14 +43,13 @@ const SiteDoce = () => {
           <a className="menu-icon" onClick={toggleMenu}>
             &#9776;
           </a>
-          <div
-            className={menuVisivel ? "menu-content" : "menu-content hide"}
-            id="menuContent"
-          >
-            <a href="/userConfi">Config</a>
-            <a href="/userProfile">Perfil</a>
-            <a href="/">Sair</a>
-          </div>
+          {menuAberto && (
+            <div className="content-menu">
+              <a href="/userConfi">Config</a>
+              <a href="/userProfile">Perfil</a>
+              <a href="/">Sair</a>
+            </div>
+          )}
         </div>
         <a href="/SiteInicio">
           <img src="src/assets/logo.png" alt="logo" />
@@ -119,10 +127,23 @@ const SiteDoce = () => {
           </a>
         </div> */}
 
-        {imgs.map((img) => (
+        {/* {imgs.map((img) => (
           <div className="receita">
             <a href="/siteTorta">
               <img src={img.img} alt="Torta de Frango" />
+            </a>
+          </div>
+        ))} */}
+
+        {imgs.map((img) => (
+          <div className="receita">
+            <a href="/siteTorta">
+              <img
+                id={String(img.id)}
+                src={img.img}
+                alt="Receita"
+                onClick={handleClick}
+              />
             </a>
           </div>
         ))}
