@@ -4,7 +4,6 @@ import { Carousel } from "react-bootstrap";
 import axios from "axios";
 
 interface Image {
-  id: number;
   img: string;
 }
 
@@ -28,12 +27,6 @@ const SiteInicio = () => {
         console.error("Erro ao buscar dados dos doces:", error);
       });
   }, []);
-
-  const handleClick = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
-    const id = event.currentTarget.id;
-    // alert(`ID: ${id}`);
-    localStorage.setItem("receitaID", id);
-  };
 
   return (
     <>
@@ -122,10 +115,10 @@ const SiteInicio = () => {
         </Carousel>
       </div>
       <main className="receitas-container">
-        {imgs.map((img) => (
+      {imgs.map((img) => (
           <div className="receita">
             <a href="/siteTorta">
-              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick}/>
+              <img src={img.img} alt="Torta de Frango" />
             </a>
           </div>
         ))}
