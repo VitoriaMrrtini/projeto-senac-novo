@@ -3,6 +3,7 @@ import "./SiteInicio.css";
 import axios from "axios";
 
 interface image {
+  id: number;
   img: string;
 }
 
@@ -26,6 +27,12 @@ const SiteDoce = () => {
         console.error("Erro ao buscar dados dos doces:", error);
       });
   }, []);
+
+  const handleClick = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+    const id = event.currentTarget.id;
+    // alert(`ID: ${id}`);
+    localStorage.setItem("receitaID", id);
+  };
 
   return (
     <>
@@ -119,10 +126,18 @@ const SiteDoce = () => {
           </a>
         </div> */}
 
-        {imgs.map((img) => (
+        {/* {imgs.map((img) => (
           <div className="receita">
             <a href="/siteTorta">
               <img src={img.img} alt="Torta de Frango" />
+            </a>
+          </div>
+        ))} */}
+
+        {imgs.map((img) => (
+          <div className="receita">
+            <a href="/siteTorta">
+              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick}/>
             </a>
           </div>
         ))}

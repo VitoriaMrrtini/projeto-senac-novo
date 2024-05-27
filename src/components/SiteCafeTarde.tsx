@@ -8,10 +8,10 @@ interface image {
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<image[]>([]);
-  const [menuVisivel, setMenuVisivel] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
-    setMenuVisivel(!menuVisivel);
+    setMenuAberto(!menuAberto);
   };
 
   useEffect(() => {

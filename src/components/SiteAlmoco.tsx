@@ -8,10 +8,10 @@ interface image {
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<image[]>([]);
-  const [menuVisivel, setMenuVisivel] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
-    setMenuVisivel(!menuVisivel);
+    setMenuAberto(!menuAberto);
   };
 
   useEffect(() => {
@@ -34,14 +34,13 @@ const SiteDoce = () => {
           <a className="menu-icon" onClick={toggleMenu}>
             &#9776;
           </a>
-          <div
-            className={menuVisivel ? "menu-content" : "menu-content hide"}
-            id="menuContent"
-          >
-            <a href="/userConfi">Config</a>
-            <a href="/userProfile">Perfil</a>
-            <a href="/">Sair</a>
-          </div>
+          {menuAberto &&
+            <div className="content-menu">
+              <a href="/userConfi">Config</a>
+              <a href="/userProfile">Perfil</a>
+              <a href="/">Sair</a>
+            </div>
+          }
         </div>
         <a href="/SiteInicio">
           <img src="src/assets/logo.png" alt="logo" />
