@@ -123,7 +123,6 @@
   transition: width 0.3s;
 }
 
-
 .cabecario a:hover::after {
   width: 100%;
 }
@@ -294,16 +293,16 @@ a:hover {
 
 /* Banner styling */
 .banner {
-  margin: 50px auto;
-  height: 300px; /* Defina a altura desejada para o carrossel */
-  width: 500px; /* Defina a largura desejada para o carrossel */
+  margin: 10px auto;
+  height: 700px; /* Defina a altura desejada para o carrossel */
+  width: 1500px; /* Defina a largura desejada para o carrossel */
 }
 .banner:hover {
   cursor: pointer;
 }
 .banner img {
-  width: 100%; /* As imagens ocuparão 100% da largura do elemento pai */
-  height: 100%; /* As imagens ocuparão 100% da altura do elemento pai */
+  width: 2500px; /* As imagens ocuparão 100% da largura do elemento pai */
+  height: 700px; /* As imagens ocuparão 100% da altura do elemento pai */
   object-fit: cover; /* Mantém a proporção da imagem, cobrindo todo o espaço disponível */
 }
 
