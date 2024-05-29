@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 import "./SiteInicio.css";
 import axios from "axios";
-
-interface image {
-  id: number;
-  img: string;
-}
+import { Image } from "../interfaces/interfaces";
 
 const SiteDoce = () => {
-  const [imgs, setImgs] = useState<image[]>([]);
+  const [imgs, setImgs] = useState<Image[]>([]);
   const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
@@ -32,7 +28,7 @@ const SiteDoce = () => {
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
     const id = event.currentTarget.id;
-    // alert(`ID: ${id}`);
+    // alert(`ID: ${id}`);  
     localStorage.setItem("receitaID", id);
   };
 

@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import "./SiteInicio.css";
 import axios from "axios";
-
-interface image {
-  img: string;
-}
+import { Image } from "../interfaces/interfaces";
 
 const SiteDoce = () => {
-  const [imgs, setImgs] = useState<image[]>([]);
+  const [imgs, setImgs] = useState<Image[]>([]);
   const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
@@ -26,6 +23,14 @@ const SiteDoce = () => {
         console.error("Erro ao buscar dados dos doces:", error);
       });
   }, []);
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLImageElement, MouseEvent>
+  ) => {
+    const id = event.currentTarget.id;
+    // alert(`ID: ${id}`);  
+    localStorage.setItem("receitaID", id);
+  };
 
   return (
     <>
@@ -121,7 +126,7 @@ const SiteDoce = () => {
         {imgs.map((img) => (
           <div className="receita">
             <a href="/siteTorta">
-              <img src={img.img} alt="Torta de Frango" />
+              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick}/>
             </a>
           </div>
         ))}
