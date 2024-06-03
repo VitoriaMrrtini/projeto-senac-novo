@@ -93,6 +93,9 @@ const SiteDoce = () => {
           </li>
         </ul>
       </nav>
+      <div className="obs">
+         <h5>Doces</h5> 
+      </div>
 
       <main className="receitas-container">
         {/* <div className="receita">

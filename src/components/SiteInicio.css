@@ -21,6 +21,10 @@
   text-decoration: none;
   padding: 8px 0; /* Espaçamento interno nos itens do menu */
   transition: color 0.3s; /* Transição suave para a cor do texto */
+  font-size: 15.5px;
+  background-color: #fff;
+  padding: 7px;
+  margin-left: 10px;
 }
 
 /* Estilos para os itens do menu quando hover */
@@ -45,7 +49,7 @@
 }
 .logo img {
   width: 100%;
-  max-width: 450px;
+  max-width: 550px;
   height: auto;
 }
 
@@ -64,7 +68,7 @@
   border: 1px solid #ccc;
   border-radius: 100px;
   width: 300px;
-  height: 25px;
+  height: 35px;
 }
 
 /* Estilizando o botão da caixa de pesquisa */
@@ -75,7 +79,7 @@
   color: white;
   border: none;
   cursor: pointer;
-  height: 30px;
+  height: 35px;
   transition: all 0.3s ease;
 }
 
@@ -90,6 +94,8 @@
 .cabecarios {
   background-color: #ffd780;
   padding: 10px; 
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Estilizando os itens da lista de navegação */
@@ -97,6 +103,7 @@
   list-style: none; 
   display: flex; 
   justify-content: space-around; 
+  margin-top: 10px;
 }
 
 /* Estilizando os links de navegação */
@@ -143,10 +150,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px;
+  margin-left: 50px;
 }
 
 .receita {
   padding: 10px;
+  margin-right: 50px;
+  margin-bottom: 50px;
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.3s ease;
@@ -157,10 +167,10 @@
 }
 
 .receita img {
-  width: 200px;
+  width: 300px;
   height: 300px;
   max-width: 100%;
-  max-height: 200px;
+  max-height: 100%;
   border-radius: 20px;
 }
 
@@ -346,4 +356,19 @@ a:hover {
   .footer ul li {
     margin: 5px 0;
   }
+}
+
+.obs{
+  background-color: #ffced6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+h5{
+  font-size: 50px;
+  font-family: "stars e love";
+  margin-left: 800px;
 }
