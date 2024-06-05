@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SiteInicio from './components/SiteInicio';
@@ -27,7 +27,7 @@ import SiteDoce from './components/SiteDoce.tsx';
 function App(){
   return(
     <>
-      <BrowserRouter>
+      <HashRouter>
             <Routes>
               <Route path="/" element={<Login/>}/>
               <Route path="/SiteInicio" element={<SiteInicio/>}/>
@@ -53,7 +53,7 @@ function App(){
               <Route path='/SiteJantar' element={<SiteJantar/>}/>
               <Route path='/SiteDoce' element={<SiteDoce/>}/>
             </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
   )
 }
