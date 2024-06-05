@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./siteTorta.css";
 import axios from "axios";
+import { SCA_API_URL } from "../utils/ApiConfig";
 
 interface Receita {
   id: number;
@@ -14,7 +15,7 @@ function RecipeTortaFrango() {
   const [receita, setReceita] = useState<Receita>()
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/doces?id=${localStorage.getItem("receitaID")}`).then((res) => {
+    axios.get(`${SCA_API_URL}/doces?id=${localStorage.getItem("receitaID")}`).then((res) => {
       setReceita(res.data[0]);
     }).catch((err) => {
       alert(err)
@@ -27,7 +28,7 @@ function RecipeTortaFrango() {
   return (
     <div className="fundo">
       <div className="body">
-        <a href="/Siteinicio">
+        <a href="#/Siteinicio">
           <div className="logo2">
             <img src="src/assets/logo.png" alt="Logo" />
           </div>

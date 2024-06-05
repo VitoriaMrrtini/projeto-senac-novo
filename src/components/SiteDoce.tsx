@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./SiteInicio.css";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
+import { SCA_API_URL } from "../utils/ApiConfig";
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -13,7 +14,7 @@ const SiteDoce = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/doces")
+      .get(`${SCA_API_URL}/doces`)
       .then((res) => {
         if (res.data.length > 0) {
           setImgs(res.data);

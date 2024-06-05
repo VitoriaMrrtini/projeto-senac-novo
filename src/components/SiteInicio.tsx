@@ -3,6 +3,7 @@ import "./SiteInicio.css";
 import { Carousel } from "react-bootstrap";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
+import { SCA_API_URL } from "../utils/ApiConfig";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -14,7 +15,7 @@ const SiteInicio = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/receitas")
+      .get(`${SCA_API_URL}/receitas`)
       .then((res) => {
         if (res.data.length > 0) {
           setImgs(res.data);

@@ -2,6 +2,7 @@ import axios from 'axios';
 import './login.css';
 import { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { SCA_API_URL } from '../utils/ApiConfig';
 
 
 
@@ -20,7 +21,7 @@ function Login() {
   };
 
   const handleOnclick = () => {
-    axios.get(`http://localhost:8080/users?nome=${user}`)
+    axios.get(`${SCA_API_URL}/users?nome=${user}`)
       .then((res) => {
 
         const id = res.data[0].id;
