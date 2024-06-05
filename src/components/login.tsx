@@ -21,6 +21,8 @@ function Login() {
   };
 
   const handleOnclick = () => {
+    alert(`${SCA_API_URL}/users?nome=${user}`)
+
     axios.get(`${SCA_API_URL}/users?nome=${user}`)
       .then((res) => {
 
