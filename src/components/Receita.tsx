@@ -9,7 +9,7 @@ const RecipePage = () => {
     instrucoes: []
   });
 
-  const [receitaId, setReceitaId] = useState(-1);
+  const [receitaId, ] = useState(-1);
 
   useEffect(() => {
     axios.get(`http://localhost:8080/receitas?id=${receitaId}`)
