@@ -41,13 +41,13 @@ const SiteDoce = () => {
           </a>
           {menuAberto &&
             <div className="content-menu">
-              <a href="/userConfi">Config</a>
-              <a href="/userProfile">Perfil</a>
-              <a href="/">Sair</a>
+              <a href="#/userConfi">Config</a>
+              <a href="#/userProfile">Perfil</a>
+              <a href="#/">Sair</a>
             </div>
           }
         </div>
-        <a href="/SiteInicio">
+        <a href="#/SiteInicio">
           <img src="src/assets/logo.png" alt="logo" />
         </a>
         <div className="caixa search-box">
@@ -62,32 +62,32 @@ const SiteDoce = () => {
       <nav className="cabecarios">
         <ul className="cabecarios-list">
           <li className="cabecario">
-            <a href="/SiteCafeManha" className="animação">
+            <a href="#/SiteCafeManha" className="animação">
               Café da manhã
             </a>
           </li>
           <li className="cabecario">
-            <a href="/SiteAlmoco" className="animação">
+            <a href="#/SiteAlmoco" className="animação">
               Almoço
             </a>
           </li>
           <li className="cabecario">
-            <a href="/SiteCafeTarde" className="animação">
+            <a href="#/SiteCafeTarde" className="animação">
               Café da tarde
             </a>
           </li>
           <li className="cabecario">
-            <a href="/SiteLanche" className="animação">
+            <a href="#/SiteLanche" className="animação">
               Lanche da tarde
             </a>
           </li>
           <li className="cabecario">
-            <a href="/SiteJantar" className="animação">
+            <a href="#/SiteJantar" className="animação">
               Jantar
             </a>
           </li>
           <li className="cabecario">
-            <a href="/SiteDoce" className="animação">
+            <a href="#/SiteDoce" className="animação">
               Doces
             </a>
           </li>
@@ -128,7 +128,7 @@ const SiteDoce = () => {
 
         {imgs.map((img) => (
           <div className="receita">
-            <a href="/siteTorta">
+            <a href="#/siteTorta">
               <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick}/>
             </a>
           </div>
