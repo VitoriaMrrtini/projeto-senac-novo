@@ -35,7 +35,7 @@ const SiteInicio = () => {
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
     const id = event.currentTarget.id;
-    // alert(`ID: ${id}`); DEHFDIUEWYFRIUYEWBGHGF
+    // alert(`ID: ${id}`);
     localStorage.setItem("receitaID", id);
   };
 
