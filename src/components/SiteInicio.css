@@ -592,7 +592,7 @@ a:hover {
 /* Banner styling */
 .banner {
   margin-top: 10px;
-  margin-bottom: 300px; /* Reduzi a margem inferior para ser mais responsiva */
+  margin-bottom: 500px; /* Reduzi a margem inferior para ser mais responsiva */
   margin-left: auto;
   margin-right: auto; /* Centraliza o banner horizontalmente */
   height: 300px; /* Altura desejada para o carrossel */
@@ -616,18 +616,21 @@ a:hover {
 @media (max-width: 992px) {
   .banner {
     height: 200px; /* Ajusta a altura para telas menores */
+    margin-bottom: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .banner {
     height: 150px; /* Ajusta a altura para telas menores */
+    margin-bottom: 200px;
   }
 }
 
 @media (max-width: 576px) {
   .banner {
     height: 100px; /* Ajusta a altura para telas menores */
+    margin-bottom: 100px;
   }
 }
 
