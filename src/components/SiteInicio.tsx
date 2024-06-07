@@ -35,7 +35,7 @@ const SiteInicio = () => {
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
     const id = event.currentTarget.id;
-    // alert(`ID: ${id}`);
+    // alert(`ID: ${id}`); DEHFDIUEWYFRIUYEWBGHGF
     localStorage.setItem("receitaID", id);
   };
 
@@ -55,8 +55,8 @@ const SiteInicio = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src={logo} alt="logo" />
-        </a>
+          <img src={logo} alt="logo" /> 
+        </a> 
         <div className="caixa search-box">
           <form action="/" method="GET">
             <input type="text" name="search" className="search-box__input" />
