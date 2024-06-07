@@ -7,7 +7,7 @@ import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from '../assets/logo.png';
 import banner from '../assets/banner.png';
 import banner1 from '../assets/banner1.png';
-import banner2 from '../assets/banner2.png'
+import banner2 from '../assets/banner2.png';
 
 
 const SiteInicio = () => {
@@ -35,7 +35,7 @@ const SiteInicio = () => {
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
     const id = event.currentTarget.id;
-    // alert(`ID: ${id}`);
+    // alert(`ID: ${id}`); DEHFDIUEWYFRIUYEWBGHGF
     localStorage.setItem("receitaID", id);
   };
 
@@ -55,8 +55,8 @@ const SiteInicio = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src={logo} alt="logo" />
-        </a>
+          <img src={logo} alt="logo" /> 
+        </a> 
         <div className="caixa search-box">
           <form action="/" method="GET">
             <input type="text" name="search" className="search-box__input" />
@@ -119,7 +119,7 @@ const SiteInicio = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src= {banner2} //mudança
+              src= {banner2}
               alt="Third slide"
             />
           </Carousel.Item>
