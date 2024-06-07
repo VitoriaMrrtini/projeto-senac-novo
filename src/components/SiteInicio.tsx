@@ -119,7 +119,7 @@ const SiteInicio = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src= {banner2}
+              src= {banner2} //mudança
               alt="Third slide"
             />
           </Carousel.Item>
