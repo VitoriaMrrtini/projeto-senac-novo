@@ -8,6 +8,10 @@ import logo from '../assets/logo.png';
 import banner from '../assets/banner.png';
 import banner1 from '../assets/banner1.png';
 import banner2 from '../assets/banner2.png';
+import whats from '../assets/whats.png';
+import pin from '../assets/pint.png';;
+import insta from '../assets/insta.png';
+import face from '../assets/face.png'
 
 
 const SiteInicio = () => {
@@ -150,22 +154,22 @@ const SiteInicio = () => {
               <ul className="list-inline">
                 <li>
                   <a href="https://www.facebook.com">
-                    <img src="src/assets/face.png" alt="Facebook" />
+                    <img src={face} alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/">
-                    <img src="src/assets/insta.png" alt="Instagram" />
+                    <img src={insta} alt="Instagram" />
                   </a>
                 </li>
                 <li>
                   <a href="https://br.pinterest.com/">
-                    <img src="src/assets/pint.png" alt="Pinterest" />
+                    <img src={pin} alt="Pinterest" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.whatsapp.com">
-                    <img src="src/assets/whats.png" alt="WhatsApp" />
+                    <img src={whats} alt="WhatsApp" />
                   </a>
                 </li>
               </ul>
