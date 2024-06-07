@@ -3,6 +3,8 @@ import "./SiteInicio.css";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
+import logo from '../assets/logo.png';
+
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -49,7 +51,7 @@ const SiteDoce = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src="src/assets/logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
           <form action="/" method="GET">

@@ -59,8 +59,8 @@ const SiteInicio = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src={logo} alt="logo" /> 
-        </a> 
+          <img src={logo} alt="logo" />
+        </a>
         <div className="caixa search-box">
           <form action="/" method="GET">
             <input type="text" name="search" className="search-box__input" />
@@ -109,31 +109,31 @@ const SiteInicio = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src= {banner}
+              src={banner}
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src= {banner1}
+              src={banner1}
               alt="Second slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src= {banner2}
+              src={banner2}
               alt="Third slide"
             />
           </Carousel.Item>
         </Carousel>
       </div>
       <main className="receitas-container">
-      {imgs.map((img) => (
+        {imgs.map((img) => (
           <div className="receita">
             <a href="#/siteTorta">
-              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick}/>
+              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick} />
             </a>
           </div>
         ))}
@@ -141,16 +141,19 @@ const SiteInicio = () => {
       <footer className="footer">
         <div className="container-footer">
           <div className="row">
-            <div className="col-md-4">
-              <p>
-                Explore uma variedade de receitas deliciosas e inspire-se na
-                cozinha com o nosso site. Descubra novas maneiras de preparar
-                pratos incríveis e compartilhe suas próprias criações
-                culinárias.
-              </p>
-            </div>
-            <div className="col-md-4">
-              <h6>Conecte-se Conosco</h6>
+            <div className="sep">
+              <div className="col-md-4">
+                <p>
+                  Explore uma variedade de receitas deliciosas e inspire-se na
+                  cozinha com o nosso site. Descubra novas maneiras de preparar
+                  pratos incríveis e compartilhe suas próprias criações
+                  culinárias.
+                </p>
+              </div>
+              <div className="col-md-4">
+                <h6>Conecte-se Conosco</h6>
+              </div>
+              </div>
               <ul className="list-inline">
                 <li>
                   <a href="https://www.facebook.com">
@@ -173,7 +176,6 @@ const SiteInicio = () => {
                   </a>
                 </li>
               </ul>
-            </div>
           </div>
         </div>
         <div
