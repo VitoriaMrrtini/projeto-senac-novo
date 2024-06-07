@@ -50,7 +50,7 @@ const SiteInicio = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src="https://img.freepik.com/vetores-gratis/vetor-de-gradiente-de-logotipo-colorido-de-passaro_343694-1365.jpg?size=338&ext=jpg&ga=GA1.1.672697106.1717459200&semt=ais_user" alt="logo" />
+          <img src="https://www.canva.com/design/DAGD0IxglJo/MQTzOdWqZQFIH8JQnMET4A/edit" alt="logo" />
         </a>
         <div className="caixa search-box">
           <form action="/" method="GET">
