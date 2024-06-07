@@ -56,7 +56,6 @@ const SiteInicio = () => {
         </div>
         <a href="#/SiteInicio">
           <img src={logo} alt="logo" />
-          <img src={banner}/>
         </a>
         <div className="caixa search-box">
           <form action="/" method="GET">
