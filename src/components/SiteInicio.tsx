@@ -5,9 +5,9 @@ import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from '../assets/logo.png';
-import banner from '..src/assets/banner.png';
-import banner1 from '..src/assets/banner1.png';
-import banner2 from '..src/assets/banner2.png'
+import banner from '../assets/banner.png';
+import banner1 from '../assets/banner1.png';
+import banner2 from '../assets/banner2.png'
 
 
 const SiteInicio = () => {
@@ -106,21 +106,21 @@ const SiteInicio = () => {
             <img
               className="d-block w-100"
               src= {banner}
-              alt="banner"
+              alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
               src= {banner1}
-              alt="banner1"
+              alt="Second slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
               src= {banner2} //mudança
-              alt="banner2"
+              alt="Third slide"
             />
           </Carousel.Item>
         </Carousel>
