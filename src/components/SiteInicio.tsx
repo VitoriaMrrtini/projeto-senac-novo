@@ -4,7 +4,11 @@ import { Carousel } from "react-bootstrap";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+import banner from '..src/assets/banner.png';
+import banner1 from '..src/assets/banner1.png';
+import banner2 from '..src/assets/banner2.png'
+
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -101,21 +105,21 @@ const SiteInicio = () => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="src/assets/banner.png"
+              src= {banner}
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="src/assets/banner1.png"
+              src= {banner1}
               alt="Second slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="src/assets/banner2.png"
+              src= {banner2}
               alt="Third slide"
             />
           </Carousel.Item>
