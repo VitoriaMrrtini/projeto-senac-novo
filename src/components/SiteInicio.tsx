@@ -106,21 +106,21 @@ const SiteInicio = () => {
             <img
               className="d-block w-100"
               src= {banner}
-              alt="First slide"
+              alt="banner"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
               src= {banner1}
-              alt="Second slide"
+              alt="banner1"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="d-block w-100"
               src= {banner2} //mudança
-              alt="Third slide"
+              alt="banner2"
             />
           </Carousel.Item>
         </Carousel>
