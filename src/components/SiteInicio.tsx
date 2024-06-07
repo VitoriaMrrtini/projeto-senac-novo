@@ -5,9 +5,9 @@ import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from '../assets/logo.png';
-import banner from '..src/assets/banner.png';
-import banner1 from '..src/assets/banner1.png';
-import banner2 from '..src/assets/banner2.png';
+import banner from '../assets/banner.png';
+import banner1 from '../assets/banner1.png';
+import banner2 from '../assets/banner2.png'
 
 
 const SiteInicio = () => {
@@ -149,22 +149,23 @@ const SiteInicio = () => {
               <h6>Conecte-se Conosco</h6>
               <ul className="list-inline">
                 <li>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1280px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" />
+                  <a href="https://www.facebook.com">
+                    <img src="src/assets/face.png" alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram" />
+                    <img src="src/assets/insta.png" alt="Instagram" />
                   </a>
                 </li>
                 <li>
                   <a href="https://br.pinterest.com/">
-                    <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/pinterest_logo_icon_169854.png" alt="Pinterest" />
+                    <img src="src/assets/pint.png" alt="Pinterest" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.whatsapp.com">
-                    <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1-1.png" alt="WhatsApp" />
+                    <img src="src/assets/whats.png" alt="WhatsApp" />
                   </a>
                 </li>
               </ul>
