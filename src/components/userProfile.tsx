@@ -1,6 +1,8 @@
 import './userProfile.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { SCA_API_URL } from '../utils/ApiConfig';
+import perfilPhoto from  '../assets/fotofemea.jpg';
 
 interface User{
   nome: string;
@@ -13,7 +15,7 @@ function UserProfile() {
   const [user, setUser] = useState<User>();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/users?id=${localStorage.getItem("userID")}`)
+    axios.get(`${SCA_API_URL}/users?id=${localStorage.getItem("userID")}`)
       .then((res) => {
         setUser(res.data[0]); 
       }).catch((err) => {
@@ -28,7 +30,7 @@ function UserProfile() {
   return (
     <div className="profileUser">
       <h2 className="tituloPerfil">Perfil do Usuário</h2>
-      <img src="src/assets/fotofemea.jpg" alt="Foto de perfil"></img>
+      <img src={perfilPhoto} alt="Foto de perfil"></img>
       <div className="nameUser">
         <p>Nome: {user.nome}</p>
       </div>

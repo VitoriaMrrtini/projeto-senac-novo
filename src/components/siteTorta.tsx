@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./siteTorta.css";
 import axios from "axios";
 import { SCA_API_URL } from "../utils/ApiConfig";
+import logo from "../assets/logo.png";
 
 interface Receita {
   id: number;
@@ -12,25 +13,30 @@ interface Receita {
 }
 
 function RecipeTortaFrango() {
-  const [receita, setReceita] = useState<Receita>()
+  const [receita, setReceita] = useState<Receita>();
 
   useEffect(() => {
-    axios.get(`${SCA_API_URL}/doces?id=${localStorage.getItem("receitaID")}`).then((res) => {
-      setReceita(res.data[0]);
-    }).catch((err) => {
-      alert(err)
-    })
-  }, [])
-  
-  const ingredientesArray = receita?.ingredientes.split(',');
-  const instruçõesArray = receita?.instrucoes.split(',');
+    axios
+      .get(`${SCA_API_URL}/doces?id=${localStorage.getItem("receitaID")}`)
+      .then((res) => {
+        setReceita(res.data[0]);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }, []);
+
+  const ingredientesArray = receita?.ingredientes.split(",");
+  const instruçõesArray = receita?.instrucoes.split(",");
 
   return (
     <div className="fundo">
       <div className="body">
         <a href="#/Siteinicio">
-          <div className="logo2">
-            <img src="src/assets/logo.png" alt="Logo" />
+          <div className="logoBackground">
+            <div className="logo2">
+              <img src={logo} alt="Logo" />
+            </div>
           </div>
         </a>
         <div className="recipe">

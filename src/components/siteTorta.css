@@ -6,31 +6,37 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.fundo{
+
+.fundo {
     background-color: #fff4f9;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
     color: #ff5e9c;
     text-align: center;
     margin-bottom: 20px;
 }
+
 ul {
-    font-size: 20px;
-    margin-left: 20px; 
-    text-decoration: none;
+    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+    margin-left: 0; /* Remove a margem lateral para listas não ordenadas */
+    padding-left: 20px; /* Adiciona padding à esquerda para listas não ordenadas */
 }
+
 h2 {
-    font-size: 24px;
+    font-size: 22px; /* Reduz o tamanho da fonte para telas menores */
     text-align: center;
-    margin-top: 20px; 
-    margin-bottom: 10px; 
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+
 ol {
-    font-size: 18px;
-    margin-left: 20px;
+    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+    margin-left: 0; /* Remove a margem lateral para listas ordenadas */
+    padding-left: 20px; /* Adiciona padding à esquerda para listas ordenadas */
 }
+
 li {
     margin-bottom: 10px;
 }
@@ -38,20 +44,55 @@ li {
 .logo2 {
     width: 100%;
     text-align: center;
-    display: flex;
     margin-bottom: 20px;
-    margin-left: 0px;
-    justify-content: center;
-    background-color: #FFCED6;
-
 }
+
 .logo2 img {
-    display: flex;
-    align-items: center;
-    margin-left: 100px;
-    max-width: 1000px;
-    height: auto;
-    background-color: #ffced6;
-    margin: 10px;
+    max-width: 100%; /* Ajusta a largura da imagem para ocupar a largura máxima disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Torna a imagem um bloco para permitir margens automáticas */
+    margin-top: 10px; /* Adiciona margem superior */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+.logoBackground{
+    background-color: #FFCED6;
+    margin-bottom: 15px;
+    padding: 5px;
 }
 
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título h1 */
+    }
+    
+    h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do título h2 */
+    }
+    
+    ul,
+    ol {
+        font-size: 14px; /* Ajusta o tamanho da fonte das listas */
+    }
+}
+
+/* Media Query para telas menores que 576px */
+@media (max-width: 576px) {
+    .recipe {
+        padding: 10px; /* Ajusta o padding do recipiente principal */
+    }
+    
+    h1 {
+        font-size: 20px; /* Ajusta o tamanho da fonte do título h1 */
+    }
+    
+    h2 {
+        font-size: 18px; /* Ajusta o tamanho da fonte do título h2 */
+    }
+    
+    ul,
+    ol {
+        font-size: 12px; /* Ajusta o tamanho da fonte das listas */
+    }
+}
