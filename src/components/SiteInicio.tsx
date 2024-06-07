@@ -7,7 +7,7 @@ import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from '../assets/logo.png';
 import banner from '../assets/banner.png';
 import banner1 from '../assets/banner1.png';
-import banner2 from '../assets/banner2.png';
+//import banner2 from '../assets/banner2.png';
 
 
 const SiteInicio = () => {
