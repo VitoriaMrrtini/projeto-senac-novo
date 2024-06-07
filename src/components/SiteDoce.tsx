@@ -3,6 +3,11 @@ import "./SiteInicio.css";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
+import logo from "../assets/logo.png";
+import whats from "../assets/whats.png";
+import pin from "../assets/pint.png";
+import insta from "../assets/insta.png";
+import face from "../assets/face.png";
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -49,7 +54,7 @@ const SiteDoce = () => {
           )}
         </div>
         <a href="#/SiteInicio">
-          <img src="src/assets/logo.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
           <form action="/" method="GET">
@@ -95,7 +100,7 @@ const SiteDoce = () => {
         </ul>
       </nav>
       <div className="obs">
-         <h5>Doces</h5> 
+        <h5>Doces</h5>
       </div>
 
       <main className="receitas-container">
@@ -157,22 +162,22 @@ const SiteDoce = () => {
               <ul className="list-inline">
                 <li>
                   <a href="https://www.facebook.com">
-                    <img src="src/assets/face.png" alt="Facebook" />
+                    <img src={face} alt="Facebook" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/">
-                    <img src="src/assets/insta.png" alt="Instagram" />
+                    <img src={insta} alt="Instagram" />
                   </a>
                 </li>
                 <li>
                   <a href="https://br.pinterest.com/">
-                    <img src="src/assets/pint.png" alt="Pinterest" />
+                    <img src={pin} alt="Pinterest" />
                   </a>
                 </li>
                 <li>
                   <a href="https://www.whatsapp.com">
-                    <img src="src/assets/whats.png" alt="WhatsApp" />
+                    <img src={whats} alt="WhatsApp" />
                   </a>
                 </li>
               </ul>
