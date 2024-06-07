@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
+import logo from '../assets/logo.png'
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -50,7 +51,7 @@ const SiteInicio = () => {
           }
         </div>
         <a href="#/SiteInicio">
-          <img src="https://www.canva.com/design/DAGD0IxglJo/MQTzOdWqZQFIH8JQnMET4A/edit" alt="logo" />
+          <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
           <form action="/" method="GET">
