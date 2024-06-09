@@ -1,4 +1,10 @@
-const VideoComponent = ({ videoId }) => {
+import React from 'react';
+
+interface VideoComponentProps {
+  videoId: string;
+}
+
+const VideoComponent: React.FC<VideoComponentProps> = ({ videoId }) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
   return (

@@ -5,8 +5,7 @@ import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from "../assets/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import VideoComponent from '../components/VideoComponent.tsx';
-
+import VideoComponent from '../components/VideoComponent';
 
 interface Receita {
   id: number;
@@ -17,8 +16,7 @@ interface Receita {
   video?: string;
 }
 
-
-function RecipeTortaFrango() {
+function Recipe() {
   const [receita, setReceita] = useState<Receita>();
 
   useEffect(() => {
@@ -32,11 +30,11 @@ function RecipeTortaFrango() {
       });
   }, []);
 
+  // Extracting videoIdFromDatabase and ensuring it's a string or null
+  const videoIdFromDatabase: string | null = receita?.video || null;
 
   const ingredientesArray = receita?.ingredientes.split(",");
   const instruçõesArray = receita?.instrucoes.split(",");
-
-  const videoIdFromDatabase = receita?.video;
 
   return (
     <div className="fundo">
@@ -56,17 +54,18 @@ function RecipeTortaFrango() {
           <h2>Ingredientes</h2>
           <ul>
             {ingredientesArray?.map((ingrediente, index) => (
-              <li key={index}>{ingrediente.trim()}</li> // Use trim() para remover espaços em branco
+              <li key={index}>{ingrediente.trim()}</li>
             ))}
           </ul>
           <h2>Instruções</h2>
           <ul>
-            {instruçõesArray?.map((ingrediente, index) => (
-              <li key={index}>{ingrediente.trim()}</li> // Use trim() para remover espaços em branco
+            {instruçõesArray?.map((instrucao, index) => (
+              <li key={index}>{instrucao.trim()}</li>
             ))}
           </ul>
           <div className="videoReceita">
-          <VideoComponent videoId={videoIdFromDatabase} />
+            {/* Render VideoComponent only if videoIdFromDatabase is not null */}
+            {videoIdFromDatabase && <VideoComponent videoId={videoIdFromDatabase} />}
           </div>
         </div>
       </div>
@@ -74,4 +73,4 @@ function RecipeTortaFrango() {
   );
 }
 
-export default RecipeTortaFrango;
+export default Recipe;
