@@ -12,87 +12,146 @@
 }
 
 h1 {
-    font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 28px;
+    /* Reduz o tamanho da fonte para telas menores */
     color: #ff5e9c;
     text-align: center;
     margin-bottom: 20px;
 }
 
 ul {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
-    margin-left: 0; /* Remove a margem lateral para listas não ordenadas */
-    padding-left: 20px; /* Adiciona padding à esquerda para listas não ordenadas */
+    font-size: 16px;
+    /* Reduz o tamanho da fonte para telas menores */
+    margin-left: 0;
+    /* Remove a margem lateral para listas não ordenadas */
+    padding-left: 20px;
+    /* Adiciona padding à esquerda para listas não ordenadas */
 }
 
 h2 {
-    font-size: 22px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 22px;
+    /* Reduz o tamanho da fonte para telas menores */
     text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 ol {
-    font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
-    margin-left: 0; /* Remove a margem lateral para listas ordenadas */
-    padding-left: 20px; /* Adiciona padding à esquerda para listas ordenadas */
+    font-size: 16px;
+    /* Reduz o tamanho da fonte para telas menores */
+    margin-left: 0;
+    /* Remove a margem lateral para listas ordenadas */
+    padding-left: 20px;
+    /* Adiciona padding à esquerda para listas ordenadas */
 }
 
 li {
     margin-bottom: 10px;
 }
 
-.logo2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+
+.logoReceita {
+    max-width: 50%;
+    /* Ajusta a largura da imagem para ocupar a largura máxima disponível */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
+    display: block;
+    /* Torna a imagem um bloco para permitir margens automáticas */
+    margin-top: 10px;
+    /* Adiciona margem superior */
+    margin-bottom: 10px;
+    /* Adiciona margem inferior */
 }
 
-.logo2 img {
-    max-width: 100%; /* Ajusta a largura da imagem para ocupar a largura máxima disponível */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    display: block; /* Torna a imagem um bloco para permitir margens automáticas */
-    margin-top: 10px; /* Adiciona margem superior */
-    margin-bottom: 10px; /* Adiciona margem inferior */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    /* Alinha os itens verticalmente */
+    justify-content: center;
+    /* Alinha os itens horizontalmente */
 }
-.logoBackground{
+
+.logoReceita img {
+    max-width: 50%;
+    /* Ajusta a largura da imagem para ocupar a largura máxima disponível */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
+    display: block;
+    /* Torna a imagem um bloco para permitir margens automáticas */
+    margin-top: 10px;
+    /* Adiciona margem superior */
+    margin-bottom: 10px;
+    /* Adiciona margem inferior */
+}
+
+.logoBackground {
     background-color: #FFCED6;
     margin-bottom: 15px;
     padding: 5px;
 }
 
+.arrowIcon {
+    margin-left: 10px;
+    /* Adiciona um espaço entre a imagem e o ícone */
+}
+
 /* Media Query para telas menores que 768px */
 @media (max-width: 768px) {
     h1 {
-        font-size: 24px; /* Ajusta o tamanho da fonte do título h1 */
+        font-size: 24px;
+        /* Ajusta o tamanho da fonte do título h1 */
     }
-    
+
     h2 {
-        font-size: 20px; /* Ajusta o tamanho da fonte do título h2 */
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do título h2 */
     }
-    
+
     ul,
     ol {
-        font-size: 14px; /* Ajusta o tamanho da fonte das listas */
+        font-size: 14px;
+        /* Ajusta o tamanho da fonte das listas */
     }
 }
 
 /* Media Query para telas menores que 576px */
 @media (max-width: 576px) {
     .recipe {
-        padding: 10px; /* Ajusta o padding do recipiente principal */
+        padding: 10px;
+        /* Ajusta o padding do recipiente principal */
     }
-    
+
     h1 {
-        font-size: 20px; /* Ajusta o tamanho da fonte do título h1 */
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do título h1 */
     }
-    
+
     h2 {
-        font-size: 18px; /* Ajusta o tamanho da fonte do título h2 */
+        font-size: 18px;
+        /* Ajusta o tamanho da fonte do título h2 */
     }
-    
+
     ul,
     ol {
-        font-size: 12px; /* Ajusta o tamanho da fonte das listas */
+        font-size: 12px;
+        /* Ajusta o tamanho da fonte das listas */
     }
 }
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Proporção de aspecto 16:9 (h / w * 100%) */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  

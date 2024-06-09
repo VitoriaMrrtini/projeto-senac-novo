@@ -43,3 +43,7 @@ section h2 {
 section p {
   color: #70626a;
 }
+.arrowIcon {
+  margin-left: 10px;
+  /* Adiciona um espaço entre a imagem e o ícone */
+}

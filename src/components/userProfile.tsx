@@ -2,9 +2,11 @@ import './userProfile.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { SCA_API_URL } from '../utils/ApiConfig';
-import perfilPhoto from  '../assets/fotofemea.jpg';
+import perfilPhoto from '../assets/fotofemea.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
-interface User{
+interface User {
   nome: string;
   email: string;
   idade: string;
@@ -17,7 +19,7 @@ function UserProfile() {
   useEffect(() => {
     axios.get(`${SCA_API_URL}/users?id=${localStorage.getItem("userID")}`)
       .then((res) => {
-        setUser(res.data[0]); 
+        setUser(res.data[0]);
       }).catch((err) => {
         console.error('Erro ao buscar dados do usuário:', err);
       });
@@ -29,6 +31,9 @@ function UserProfile() {
 
   return (
     <div className="profileUser">
+      <a href="#/SiteInicio" className="link">
+        <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
+      </a>
       <h2 className="tituloPerfil">Perfil do Usuário</h2>
       <img src={perfilPhoto} alt="Foto de perfil"></img>
       <div className="nameUser">

@@ -1,8 +1,13 @@
 import "./userConfi.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 function UserConfi() {
   return (
     <div className="App">
+      <a href="#/SiteInicio" className="link">
+        <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
+      </a>
       <header>
         <h1>Configurações do Site</h1>
       </header>

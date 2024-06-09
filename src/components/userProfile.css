@@ -91,3 +91,7 @@ p {
     font-size: 14px; /* Reduz o tamanho da fonte dos textos */
   }
 }
+.arrowIcon {
+  margin-left: 10px;
+  /* Adiciona um espaço entre a imagem e o ícone */
+}

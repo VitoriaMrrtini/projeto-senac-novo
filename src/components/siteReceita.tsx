@@ -3,6 +3,9 @@ import "./siteReceita.css";
 import axios from "axios";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from "../assets/logo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import VideoComponent from '../components/VideoComponent.tsx';
 
 
 interface Receita {
@@ -11,7 +14,9 @@ interface Receita {
   ingredientes: string;
   instrucoes: string;
   img: string;
+  video?: string;
 }
+
 
 function RecipeTortaFrango() {
   const [receita, setReceita] = useState<Receita>();
@@ -27,16 +32,22 @@ function RecipeTortaFrango() {
       });
   }, []);
 
+
   const ingredientesArray = receita?.ingredientes.split(",");
   const instruçõesArray = receita?.instrucoes.split(",");
+
+  const videoIdFromDatabase = receita?.video;
 
   return (
     <div className="fundo">
       <div className="body">
         <a href="#/Siteinicio">
           <div className="logoBackground">
-            <div className="logo2">
-              <img src={logo} alt="Logo" />
+            <div className="logoBackground">
+              <div className="logoContainer">
+                <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
+                <img src={logo} alt="Logo" className="logoReceita" />
+              </div>
             </div>
           </div>
         </a>
@@ -54,6 +65,9 @@ function RecipeTortaFrango() {
               <li key={index}>{ingrediente.trim()}</li> // Use trim() para remover espaços em branco
             ))}
           </ul>
+          <div className="videoReceita">
+          <VideoComponent videoId={videoIdFromDatabase} />
+          </div>
         </div>
       </div>
     </div>
