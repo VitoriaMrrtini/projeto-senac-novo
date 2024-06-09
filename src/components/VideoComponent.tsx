@@ -6,7 +6,7 @@ interface VideoComponentProps {
 
 const VideoComponent: React.FC<VideoComponentProps> = ({ videoId }) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-
+  
   return (
     <div className="video-container">
       <iframe
