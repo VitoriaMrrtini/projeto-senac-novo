@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Root element styling */
 #root {
   background-color: #fff;
@@ -7,8 +9,8 @@
   display: flex;
   flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha se necessário */
   margin-left: 20px;
+  margin-right: 20px;
   font-size: 30px;
-  width: 100%; /* Faz o menu ocupar 100% da largura disponível */
   max-width: 500px; /* Limita a largura máxima do menu */
   height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
 }
@@ -36,16 +38,16 @@
   .menu {
     flex-direction: column; /* Empilha os itens verticalmente em telas menores */
   }
-  
+
   .menu-icon {
     display: block; /* Mostra o ícone do menu em telas menores */
   }
-  
+
   .content-menu {
     display: none; /* Esconde o menu por padrão em telas menores */
     flex-direction: column;
   }
-  
+
   .menu-icon.active + .content-menu {
     display: flex; /* Mostra o menu quando o ícone é clicado */
   }
@@ -55,13 +57,12 @@
   .menu {
     font-size: 25px; /* Ajusta o tamanho da fonte para telas menores */
   }
-  
+
   .content-menu a {
     font-size: 14px; /* Ajusta o tamanho da fonte dos links do menu */
     margin-left: 0; /* Remove a margem esquerda em telas menores */
   }
 }
-
 
 /* Estilos para os itens do menu quando hover */
 .content-menu a:hover {
@@ -82,13 +83,13 @@
   background-color: #ffced6;
   padding: 10px;
   text-align: center;
-  margin: 10px;
+  margin-bottom: 10px;
   width: 100%; /* Faz a logo ocupar 100% da largura disponível */
   box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
 }
 
 .logo img {
-  width: 100%;
+  width: 80%;
   max-width: 550px;
   height: auto;
 }
@@ -99,7 +100,7 @@
   }
 
   .logo img {
-    max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível em telas menores */
+    max-width: 80%; /* Garante que a imagem ocupe toda a largura disponível em telas menores */
   }
 }
 
@@ -114,23 +115,13 @@
   }
 }
 
-/* Estilizando a caixa de pesquisa */
-.caixa.search-box {
-  margin-left: 50px;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
-}
-
 /* Estilizando a entrada de texto da caixa de pesquisa */
 .caixa.search-box input[type="text"] {
   margin: 0 10px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 100px;
-  width: 300px;
+  width: 200px; /* Reduzindo a largura para 200px */
   height: 35px;
   box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
 }
@@ -147,51 +138,23 @@
   transition: all 0.3s ease;
 }
 
-/* Estilizando o botão da caixa de pesquisa quando passa o mouse */
-.caixa.search-box button:hover {
-  background-color: #ff8dd1;
-  transform: scale(1.1);
-}
-
 @media (max-width: 768px) {
-  .caixa.search-box {
-    margin-left: 20px;
-    margin-right: 10px;
-    flex-direction: column; /* Alinha os itens verticalmente em telas menores */
-  }
-
   .caixa.search-box input[type="text"] {
-    width: 100%; /* Faz a entrada de texto ocupar toda a largura disponível */
-    margin: 5px 0; /* Ajusta a margem para telas menores */
-  }
-
-  .caixa.search-box button {
-    width: 100%; /* Faz o botão ocupar toda a largura disponível */
-    margin: 5px 0; /* Ajusta a margem para telas menores */
+    width: 150px; /* Reduzindo a largura para 150px em telas menores que 768px */
   }
 }
 
 @media (max-width: 576px) {
-  .caixa.search-box {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
   .caixa.search-box input[type="text"] {
-    width: calc(100% - 20px); /* Ajusta a largura da entrada de texto para telas muito pequenas */
-  }
-
-  .caixa.search-box button {
-    width: calc(100% - 20px); /* Ajusta a largura do botão para telas muito pequenas */
+    width: 120px; /* Reduzindo a largura para 120px em telas menores que 576px */
   }
 }
+
 
 /* Estilizando a barra de navegação */
 .cabecarios {
   background-color: #ffd780;
-  padding: 10px; 
-  margin-left: 10px;
-  margin-right: 10px;
+  padding: 10px;
 }
 
 /* Estilizando os itens da lista de navegação */
@@ -212,21 +175,21 @@
   padding: 5px 10px;
   border-radius: 5px;
   transition: color 0.3s;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
 }
 
 /* Estilizando a linha sublinhada */
 .cabecario a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
-  left: 0; 
+  left: 0;
   width: 0;
   height: 2px;
-  background-color: #FF69B4;
+  background-color: #ff69b4;
   transition: width 0.3s;
 }
-
 
 .cabecario a:hover::after {
   width: 100%;
@@ -307,7 +270,7 @@
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.3s ease;
-  flex: 1 1 calc(33.333% - 40px); /* Ocupa um terço da linha com espaço */
+  flex: 1 1 calc(23.333% - 40px); /* Ocupa um terço da linha com espaço */
   max-width: calc(33.333% - 40px);
 }
 
@@ -332,9 +295,17 @@
 
 @media (max-width: 768px) {
   .receita {
-    flex: 1 1 calc(100% - 40px); /* Ocupa toda a linha em telas pequenas */
-    max-width: calc(100% - 40px);
+    flex: 1 1 calc(50% - 40px); /* Ocupa toda a linha em telas pequenas */
+    max-width: calc(50% - 40px);
     margin-bottom: 20px; /* Ajusta a margem inferior */
+  }
+
+  @media (max-width: 500px) {
+    .receita {
+      flex: 1 1 calc(50% - 40px); /* Ocupa toda a linha em telas pequenas */
+      max-width: calc(50% - 40px);
+      margin-bottom: 10px; /* Ajusta a margem inferior */
+    }
   }
 }
 
@@ -352,7 +323,7 @@
 
   .receita img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 15px; /* Ajusta o raio da borda para telas pequenas */
   }
 }
@@ -407,7 +378,9 @@
 }
 
 .footer img:hover {
-  transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+  transform: scale(
+    1.1
+  ); /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
 }
 
 @media (max-width: 576px) {
@@ -442,9 +415,9 @@
 }
 
 p,
-h6 {
-  font-family: Arial;
-  text-shadow: 2px 2px 4px #ff40b6;
+h5 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   margin: 10px 0; /* Define margens verticais para espaçamento */
   text-align: center; /* Centraliza o texto */
 }
@@ -453,9 +426,8 @@ p {
   font-size: 18px;
 }
 
-h6 {
+h5 {
   font-size: 20px;
-  text-shadow: 2px 2px 4px #000;
 }
 
 @media (max-width: 768px) {
@@ -481,15 +453,15 @@ h6 {
     font-size: 14px; /* Ajusta o tamanho da fonte para telas muito pequenas */
   }
 
-  h6 {
+  h5 {
     font-size: 16px; /* Ajusta o tamanho da fonte para telas muito pequenas */
   }
 }
 
-
 /* List styling */
 .list-inline {
-  font-family: "stars e love bottom heairy";
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   display: flex;
   justify-content: center; /* Centraliza os itens horizontalmente */
   align-items: center; /* Centraliza os itens verticalmente */
@@ -517,7 +489,6 @@ h6 {
     margin: 5px; /* Adiciona margem entre os itens para melhor espaçamento em telas pequenas */
   }
 }
-
 
 /* Header styling */
 .header {
@@ -554,7 +525,6 @@ h6 {
     font-size: 18px; /* Ajusta o tamanho da fonte do rótulo do menu para telas pequenas */
   }
 }
-
 
 /* Link styling */
 a {
@@ -630,7 +600,7 @@ a:hover {
 @media (max-width: 576px) {
   .banner {
     height: 100px; /* Ajusta a altura para telas menores */
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 }
 
@@ -664,7 +634,7 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-  .footer h6,
+  .footer h5,
   .footer p {
     text-align: center;
   }
@@ -685,28 +655,41 @@ a:hover {
 
 h5 {
   font-size: 40px; /* Reduz o tamanho da fonte */
-  font-family: "stars e love";
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   text-align: center; /* Centraliza o texto */
   margin-left: 0; /* Remove a margem lateral */
 }
 
 .sep {
-  text-align: center; /* Centraliza o texto */
-  margin-left: 0; /* Remove a margem lateral */
+  text-align: center;
+  margin-left: -10px; 
+  margin-right: -10px;
 }
 
 @media (max-width: 768px) {
   h5 {
     font-size: 30px; /* Ajusta o tamanho da fonte para telas menores */
   }
-
-  .sep {
-    margin-top: 10px; /* Adiciona margem superior para separador em telas menores */
-  }
 }
+
 
 @media (max-width: 576px) {
   h5 {
     font-size: 25px; /* Ajusta ainda mais o tamanho da fonte para telas muito pequenas */
   }
+}
+.tituloReceita{
+  margin: 0;
+  padding: 0;
+}
+.tituloReceita p{
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+}
+.tituloReceita p{
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  margin: 5px auto;
 }

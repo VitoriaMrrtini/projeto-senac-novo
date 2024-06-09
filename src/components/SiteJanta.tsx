@@ -134,13 +134,16 @@ const SiteDoce = () => {
 
         {imgs.map((img) => (
           <div className="receita">
-            <a href="#/siteTorta">
+            <a href="#/siteReceita">
               <img
                 id={String(img.id)}
                 src={img.img}
                 alt="Receita"
                 onClick={handleClick}
               />
+              <div className="tituloReceita">
+                <p>{img.titulo}</p>
+              </div>
             </a>
           </div>
         ))}

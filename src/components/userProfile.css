@@ -11,7 +11,8 @@
 .tituloPerfil {
   font-size: 40px; /* Reduz o tamanho da fonte do título */
   margin-bottom: 20px;
-  font-family: 'love stars';
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   color: #000000;
   text-align: center; /* Centraliza o texto */
 }
@@ -65,7 +66,8 @@
 p {
   font-size: 15px;
   text-align: center;
-  font-family: 'stars e love bottom heairy';
+  font-family: "Lato", sans-serif;
+  font-style: normal;
   text-shadow: none;
 }
 

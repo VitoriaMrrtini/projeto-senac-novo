@@ -132,15 +132,18 @@ const SiteInicio = () => {
       <main className="receitas-container">
         {imgs.map((img) => (
           <div className="receita">
-            <a href="#/siteTorta">
+            <a href="#/siteReceita">
               <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick} />
+              <div className="tituloReceita">
+              <p>{img.titulo}</p>
+              </div>
             </a>
           </div>
         ))}
       </main>
       <footer className="footer">
         <div className="container-footer">
-          <div className="row">
+          <div className="row justify-content-center">
             <div className="sep">
               <div className="col-md-4">
                 <p>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import "./siteTorta.css";
+import "./siteReceita.css";
 import axios from "axios";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from "../assets/logo.png";
+
 
 interface Receita {
   id: number;
