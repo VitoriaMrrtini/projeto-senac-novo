@@ -1,6 +1,6 @@
 const VideoComponent = ({ videoId }) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-
+  
   return (
     <div className="video-container">
       <iframe

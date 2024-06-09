@@ -18,7 +18,7 @@ interface Receita {
 }
 
 
-function RecipeTortaFrango() {
+function Recipe() {
   const [receita, setReceita] = useState<Receita>();
 
   useEffect(() => {
@@ -74,4 +74,4 @@ function RecipeTortaFrango() {
   );
 }
 
-export default RecipeTortaFrango;
+export default Recipe;
