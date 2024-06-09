@@ -1,6 +1,6 @@
 .profileUser {
   max-width: 400px;
-  margin: 75px auto 20px; /* Altera a margem superior para 75px e centraliza horizontalmente */
+  margin: 75px auto 20px;
   padding: 20px;
   border: 2px solid #000000;
   border-radius: 8px;
@@ -9,12 +9,12 @@
 }
 
 .tituloPerfil {
-  font-size: 40px; /* Reduz o tamanho da fonte do título */
+  font-size: 40px;
   margin-bottom: 20px;
   font-family: "Lato", sans-serif;
   font-style: normal;
   color: #000000;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 .nameUser h3 {
@@ -54,13 +54,13 @@
 }
 
 .profileUser img {
-  width: 100%; /* Altera a largura da imagem para ocupar a largura máxima do container */
-  max-width: 300px; /* Define uma largura máxima para a imagem */
+  width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
-  margin-left: 30px; /* Centraliza a imagem horizontalmente */
-  margin-right: auto; /* Centraliza a imagem horizontalmente */
+  margin-left: 30px;
+  margin-right: auto;
 }
 
 p {
@@ -74,24 +74,24 @@ p {
 /* Media Query para telas menores que 576px */
 @media (max-width: 576px) {
   .profileUser {
-    margin-top: 50px; /* Reduz a margem superior */
+    margin-top: 50px;
   }
-  
+
   .tituloPerfil {
-    font-size: 30px; /* Reduz o tamanho da fonte do título */
+    font-size: 30px;
   }
-  
+
   .descriptionUser h3,
   .dadoUser h3 {
-    font-size: 16px; /* Reduz o tamanho da fonte dos títulos */
+    font-size: 16px;
   }
-  
+
   .descriptionUser p,
   .dadoUser li {
-    font-size: 14px; /* Reduz o tamanho da fonte dos textos */
+    font-size: 14px;
   }
 }
+
 .arrowIcon {
   margin-left: 10px;
-  /* Adiciona um espaço entre a imagem e o ícone */
 }

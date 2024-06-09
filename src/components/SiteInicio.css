@@ -9,14 +9,11 @@
 .menu {
   display: flex;
   flex-wrap: wrap;
-  /* Permite que os itens do menu quebrem para a próxima linha se necessário */
   margin-left: 20px;
   margin-right: 20px;
   font-size: 30px;
   max-width: 500px;
-  /* Limita a largura máxima do menu */
   height: auto;
-  /* Ajusta a altura automaticamente conforme o conteúdo */
 }
 
 .menu-icon {
@@ -30,9 +27,7 @@
   color: #000000;
   text-decoration: none;
   padding: 8px 0;
-  /* Espaçamento interno nos itens do menu */
   transition: color 0.3s;
-  /* Transição suave para a cor do texto */
   font-size: 15.5px;
   background-color: #fff;
   padding: 7px;
@@ -42,58 +37,47 @@
 .content-menu {
   display: flex;
   flex-direction: column;
-  /* Empilha os itens verticalmente por padrão */
 }
 
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
-    /* Empilha os itens verticalmente em telas menores */
   }
 
   .menu-icon {
     display: block;
-    /* Mostra o ícone do menu em telas menores */
   }
 
   .content-menu {
     display: none;
-    /* Esconde o menu por padrão em telas menores */
     flex-direction: column;
   }
 
   .menu-icon.active+.content-menu {
     display: flex;
-    /* Mostra o menu quando o ícone é clicado */
   }
 }
 
 @media (max-width: 576px) {
   .menu {
     font-size: 25px;
-    /* Ajusta o tamanho da fonte para telas menores */
   }
 
   .content-menu a {
     font-size: 14px;
-    /* Ajusta o tamanho da fonte dos links do menu */
     margin-left: 0;
-    /* Remove a margem esquerda em telas menores */
   }
 }
 
 /* Estilos para os itens do menu quando hover */
 .content-menu a:hover {
   color: #ff69b4;
-  /* Altera a cor do texto ao passar o mouse */
 }
 
 /* Estilos para exibir o submenu quando o menu é clicado */
 .menu:hover .content-menu {
   display: block;
-  /* Exibe o submenu ao passar o mouse */
   opacity: 1;
-  /* Torna o submenu totalmente visível */
 }
 
 /* Logo styling */
@@ -101,15 +85,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Centraliza o conteúdo horizontalmente */
   background-color: #ffced6;
   padding: 10px;
   text-align: center;
   margin-bottom: 10px;
   width: 100%;
-  /* Faz a logo ocupar 100% da largura disponível */
   box-sizing: border-box;
-  /* Inclui o padding e a borda no cálculo da largura */
 }
 
 .logo img {
@@ -121,26 +102,21 @@
 @media (max-width: 768px) {
   .logo {
     flex-direction: column;
-    /* Alinha os itens verticalmente em telas menores */
   }
 
   .logo img {
     max-width: 80%;
-    /* Garante que a imagem ocupe toda a largura disponível em telas menores */
   }
 }
 
 @media (max-width: 576px) {
   .logo {
     padding: 5px;
-    /* Reduz o padding em telas muito pequenas */
     margin: 5px;
-    /* Reduz a margem em telas muito pequenas */
   }
 
   .logo img {
     max-width: 90%;
-    /* Reduz a largura máxima da imagem em telas muito pequenas */
   }
 }
 
@@ -151,10 +127,8 @@
   border: 1px solid #ccc;
   border-radius: 100px;
   width: 200px;
-  /* Reduzindo a largura para 200px */
   height: 35px;
   box-sizing: border-box;
-  /* Inclui o padding e a borda no cálculo da largura */
 }
 
 /* Estilizando o botão da caixa de pesquisa */
@@ -172,14 +146,12 @@
 @media (max-width: 768px) {
   .caixa.search-box input[type="text"] {
     width: 150px;
-    /* Reduzindo a largura para 150px em telas menores que 768px */
   }
 }
 
 @media (max-width: 576px) {
   .caixa.search-box input[type="text"] {
     width: 120px;
-    /* Reduzindo a largura para 120px em telas menores que 576px */
   }
 }
 
@@ -196,9 +168,7 @@
   display: flex;
   justify-content: space-around;
   margin: 10px 0;
-  /* Ajusta a margem superior e inferior */
   padding: 0;
-  /* Remove o padding padrão */
 }
 
 /* Estilizando os links de navegação */
@@ -239,16 +209,12 @@
 
   .cabecarios-list {
     flex-direction: column;
-    /* Empilha os itens verticalmente em telas menores */
     align-items: center;
-    /* Centraliza os itens verticalmente */
   }
 
   .cabecario a {
     padding: 10px 15px;
-    /* Aumenta o padding para melhor usabilidade em telas sensíveis ao toque */
     margin: 5px 0;
-    /* Adiciona margem entre os itens */
   }
 }
 
@@ -261,14 +227,11 @@
 
   .cabecarios-list {
     margin-top: 5px;
-    /* Reduz a margem superior em telas muito pequenas */
   }
 
   .cabecario a {
     padding: 8px 12px;
-    /* Ajusta o padding para telas muito pequenas */
     font-size: 14px;
-    /* Reduz o tamanho da fonte para melhor ajuste */
   }
 }
 
@@ -281,24 +244,19 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   box-sizing: border-box;
-  /* Inclui padding e bordas no cálculo da largura */
 }
 
 @media (max-width: 768px) {
   .main {
     padding: 15px;
-    /* Reduz o padding para telas menores */
     margin: 0 5px;
-    /* Ajusta as margens para telas menores */
   }
 }
 
 @media (max-width: 576px) {
   .main {
     padding: 10px;
-    /* Reduz ainda mais o padding para telas muito pequenas */
     margin: 0 3px;
-    /* Ajusta as margens para telas muito pequenas */
   }
 }
 
@@ -307,10 +265,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Alinha os itens ao centro */
   margin: 20px;
   gap: 20px;
-  /* Adiciona espaço entre os itens */
 }
 
 .receita {
@@ -320,7 +276,6 @@
   text-align: center;
   transition: transform 0.3s ease;
   flex: 1 1 calc(23.333% - 40px);
-  /* Ocupa um terço da linha com espaço */
   max-width: calc(33.333% - 40px);
 }
 
@@ -339,7 +294,6 @@
 @media (max-width: 1024px) {
   .receita {
     flex: 1 1 calc(50% - 40px);
-    /* Ocupa metade da linha em telas médias */
     max-width: calc(50% - 40px);
   }
 }
@@ -347,19 +301,15 @@
 @media (max-width: 768px) {
   .receita {
     flex: 1 1 calc(50% - 40px);
-    /* Ocupa toda a linha em telas pequenas */
     max-width: calc(50% - 40px);
     margin-bottom: 20px;
-    /* Ajusta a margem inferior */
   }
 
   @media (max-width: 500px) {
     .receita {
       flex: 1 1 calc(50% - 40px);
-      /* Ocupa toda a linha em telas pequenas */
       max-width: calc(50% - 40px);
       margin-bottom: 10px;
-      /* Ajusta a margem inferior */
     }
   }
 }
@@ -372,17 +322,14 @@
 
   .receita {
     flex: 1 1 calc(100% - 20px);
-    /* Ocupa toda a linha em telas muito pequenas */
     max-width: calc(100% - 20px);
     margin-bottom: 10px;
-    /* Ajusta a margem inferior */
   }
 
   .receita img {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    /* Ajusta o raio da borda para telas pequenas */
   }
 }
 
@@ -393,15 +340,10 @@
   font-style: normal;
   display: flex;
   justify-content: center;
-  /* Centraliza os itens horizontalmente */
   align-items: center;
-  /* Centraliza os itens verticalmente */
   margin: 0;
-  /* Remove as margens padrão */
   padding: 0;
-  /* Remove o padding padrão */
   list-style: none;
-  /* Remove os marcadores da lista */
 }
 
 
@@ -411,45 +353,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Alinha os elementos espaçados horizontalmente */
   padding: 10px 20px;
-  /* Adiciona padding para espaçamento interno */
   box-sizing: border-box;
-  /* Inclui padding e bordas no cálculo da largura */
   font-size: 14px;
-  /* Ajusta o tamanho da fonte */
 }
 
 .header-item {
   margin-right: 20px;
-  /* Reduz a margem entre os itens */
 }
 
 .menu-label {
   font-size: 20px;
-  /* Ajusta o tamanho da fonte do rótulo do menu */
 }
 
 @media (max-width: 576px) {
   .header {
     flex-direction: column;
-    /* Empilha os elementos verticalmente em telas pequenas */
     align-items: flex-start;
-    /* Alinha os elementos à esquerda em telas pequenas */
     padding: 10px;
-    /* Ajusta o padding para telas pequenas */
   }
 
   .header-item {
     margin-right: 0;
-    /* Remove a margem direita para empilhar os itens verticalmente */
     margin-bottom: 10px;
-    /* Adiciona margem inferior entre os itens em telas pequenas */
   }
 
   .menu-label {
     font-size: 18px;
-    /* Ajusta o tamanho da fonte do rótulo do menu para telas pequenas */
   }
 }
 
@@ -495,16 +425,11 @@ a:hover {
 .banner {
   margin-top: 10px;
   margin-bottom: 500px;
-  /* Reduzi a margem inferior para ser mais responsiva */
   margin-left: auto;
   margin-right: auto;
-  /* Centraliza o banner horizontalmente */
   height: 300px;
-  /* Altura desejada para o carrossel */
   width: 100%;
-  /* Faz o banner ocupar 100% da largura disponível */
   max-width: 1400px;
-  /* Limita a largura máxima do banner */
 }
 
 .banner:hover {
@@ -513,24 +438,19 @@ a:hover {
 
 .banner img {
   width: 100%;
-  /* As imagens ocuparão 100% da largura do elemento pai */
   height: 100%;
-  /* As imagens ocuparão 100% da altura do elemento pai */
   object-fit: cover;
-  /* Mantém a proporção da imagem, cobrindo todo o espaço disponível */
 }
 
 @media (max-width: 1200px) {
   .banner {
     height: 250px;
-    /* Ajusta a altura para telas menores */
   }
 }
 
 @media (max-width: 992px) {
   .banner {
     height: 200px;
-    /* Ajusta a altura para telas menores */
     margin-bottom: 300px;
   }
 }
@@ -538,7 +458,6 @@ a:hover {
 @media (max-width: 768px) {
   .banner {
     height: 150px;
-    /* Ajusta a altura para telas menores */
     margin-bottom: 200px;
   }
 }
@@ -546,7 +465,6 @@ a:hover {
 @media (max-width: 576px) {
   .banner {
     height: 100px;
-    /* Ajusta a altura para telas menores */
     margin-bottom: 150px;
   }
 }
@@ -581,14 +499,12 @@ a:hover {
 .footer ul,
 .footer p {
   margin: 10px;
-  /* Reduz as margens internas para uma aparência mais compacta */
 }
 
 .footer ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  /* Permite que os itens quebrem para a próxima linha */
   justify-content: center;
 }
 
@@ -604,7 +520,6 @@ a:hover {
 
 .footer ul li a:hover {
   text-decoration: none;
-  /* Remove a linha sublinhada ao passar o mouse */
 }
 
 .footer img {
@@ -613,37 +528,31 @@ a:hover {
   height: 30px;
   width: 30px;
   transition: transform 0.3s;
-  /* Adiciona uma transição suave ao passar o mouse */
 }
 
 .footer img:hover {
   transform: scale(1.1);
-  /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
 }
 
 @media (max-width: 576px) {
   .footer {
     padding: 10px 0;
-    /* Ajusta ainda mais o padding para telas muito pequenas */
   }
 
 
   .footer h6,
   .footer p {
     margin: 5px;
-    /* Reduz as margens para telas muito pequenas */
   }
 
 
   .footer ul li {
     margin: 3px 0;
-    /* Adiciona menos margem vertical entre os itens */
   }
 
 
   .footer img {
     height: 25px;
-    /* Ajusta o tamanho da imagem para telas muito pequenas */
     width: 25px;
   }
 }
@@ -658,9 +567,7 @@ h5 {
   font-family: "Lato", sans-serif;
   font-style: normal;
   margin: 10px 0;
-  /* Define margens verticais para espaçamento */
   text-align: center;
-  /* Centraliza o texto */
 }
 
 p {
@@ -680,40 +587,33 @@ h5 {
 @media (max-width: 768px) {
   .container-footer {
     padding: 15px;
-    /* Ajusta o padding para telas menores */
   }
 
   p {
     font-size: 16px;
-    /* Ajusta o tamanho da fonte para telas menores */
   }
 
   h6 {
     font-size: 18px;
-    /* Ajusta o tamanho da fonte para telas menores */
   }
 }
 
 @media (max-width: 576px) {
   .container-footer {
     padding: 10px;
-    /* Ajusta ainda mais o padding para telas muito pequenas */
   }
 
   p {
     font-size: 14px;
-    /* Ajusta o tamanho da fonte para telas muito pequenas */
   }
 
   h5 {
     font-size: 16px;
-    /* Ajusta o tamanho da fonte para telas muito pequenas */
   }
 }
 
 .list-inline li {
   margin: 0 5px;
-  /* Adiciona margem entre os itens */
 }
 
 .list-inline img {
@@ -799,9 +699,9 @@ footer h5 {
 }
 
 .sep {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 
 @media (max-width: 768px) {

@@ -4,15 +4,14 @@ import { Carousel } from "react-bootstrap";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
-import logo from '../assets/logo.png';
-import banner from '../assets/banner.png';
-import banner1 from '../assets/banner1.png';
-import banner2 from '../assets/banner2.png';
-import whats from '../assets/whats.png';
-import pin from '../assets/pint.png';;
-import insta from '../assets/insta.png';
-import face from '../assets/face.png'
-
+import logo from "../assets/logo.png";
+import banner from "../assets/banner.png";
+import banner1 from "../assets/banner1.png";
+import banner2 from "../assets/banner2.png";
+import whats from "../assets/whats.png";
+import pin from "../assets/pint.png";
+import insta from "../assets/insta.png";
+import face from "../assets/face.png";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -50,13 +49,13 @@ const SiteInicio = () => {
           <a className="menu-icon" onClick={toggleMenu}>
             &#9776;
           </a>
-          {menuAberto &&
+          {menuAberto && (
             <div className="content-menu">
               <a href="#/userConfi">Config</a>
               <a href="#/userProfile">Perfil</a>
               <a href="#/">Sair</a>
             </div>
-          }
+          )}
         </div>
         <a href="#/SiteInicio">
           <img src={logo} alt="logo" />
@@ -107,25 +106,13 @@ const SiteInicio = () => {
       <div className="banner">
         <Carousel>
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={banner}
-              alt="First slide"
-            />
+            <img className="d-block w-100" src={banner} alt="First slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={banner1}
-              alt="Second slide"
-            />
+            <img className="d-block w-100" src={banner1} alt="Second slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={banner2}
-              alt="Third slide"
-            />
+            <img className="d-block w-100" src={banner2} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
       </div>
@@ -133,9 +120,14 @@ const SiteInicio = () => {
         {imgs.map((img) => (
           <div className="receita">
             <a href="#/siteReceita">
-              <img id={String(img.id)} src={img.img} alt="Torta de Frango" onClick={handleClick} />
+              <img
+                id={String(img.id)}
+                src={img.img}
+                alt="Torta de Frango"
+                onClick={handleClick}
+              />
               <div className="tituloReceita">
-              <p>{img.titulo}</p>
+                <p>{img.titulo}</p>
               </div>
             </a>
           </div>
@@ -153,32 +145,32 @@ const SiteInicio = () => {
                   culinárias.
                 </p>
               </div>
-              <div className="col-md-4">
-                <h6>Conecte-se Conosco</h6>
-              </div>
-              </div>
-              <ul className="list-inline">
-                <li>
-                  <a href="https://www.facebook.com">
-                    <img src={face} alt="Facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <img src={insta} alt="Instagram" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://br.pinterest.com/">
-                    <img src={pin} alt="Pinterest" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.whatsapp.com">
-                    <img src={whats} alt="WhatsApp" />
-                  </a>
-                </li>
-              </ul>
+            </div>
+            <div className="col-md-4">
+              <h6>Conecte-se Conosco</h6>
+            </div>
+            <ul className="list-inline">
+              <li>
+                <a href="https://www.facebook.com">
+                  <img src={face} alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/">
+                  <img src={insta} alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="https://br.pinterest.com/">
+                  <img src={pin} alt="Pinterest" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.whatsapp.com">
+                  <img src={whats} alt="WhatsApp" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div

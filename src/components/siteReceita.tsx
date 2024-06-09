@@ -6,6 +6,10 @@ import logo from "../assets/logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import VideoComponent from '../components/VideoComponent';
+import whats from '../assets/whats.png';
+import pin from '../assets/pint.png';;
+import insta from '../assets/insta.png';
+import face from '../assets/face.png'
 
 interface Receita {
   id: number;
@@ -30,7 +34,6 @@ function Recipe() {
       });
   }, []);
 
-  // Extracting videoIdFromDatabase and ensuring it's a string or null
   const videoIdFromDatabase: string | null = receita?.video || null;
 
   const ingredientesArray = receita?.ingredientes.split(",");
@@ -38,7 +41,7 @@ function Recipe() {
 
   return (
     <div className="fundo">
-      <div className="body">
+      <div className="bodyReceita">
         <a href="#/Siteinicio">
           <div className="logoBackground">
             <div className="logoBackground">
@@ -64,11 +67,57 @@ function Recipe() {
             ))}
           </ul>
           <div className="videoReceita">
-            {/* Render VideoComponent only if videoIdFromDatabase is not null */}
             {videoIdFromDatabase && <VideoComponent videoId={videoIdFromDatabase} />}
           </div>
         </div>
       </div>
+      <footer className="footer">
+        <div className="container-footer">
+          <div className="row justify-content-center">
+            <div className="sep">
+              <div className="col-md-4">
+                <p>
+                  Explore uma variedade de receitas deliciosas e inspire-se na
+                  cozinha com o nosso site. Descubra novas maneiras de preparar
+                  pratos incríveis e compartilhe suas próprias criações
+                  culinárias.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <h6>Conecte-se Conosco</h6>
+            </div>
+            <ul className="list-inline">
+              <li>
+                <a href="https://www.facebook.com">
+                  <img src={face} alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/">
+                  <img src={insta} alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="https://br.pinterest.com/">
+                  <img src={pin} alt="Pinterest" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.whatsapp.com">
+                  <img src={whats} alt="WhatsApp" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          className="text-center p-3"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+        >
+          &copy; 2024 Panela criativa. Todos os direitos reservados.
+        </div>
+      </footer>
     </div>
   );
 }
