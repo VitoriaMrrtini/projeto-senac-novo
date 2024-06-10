@@ -1,14 +1,14 @@
-import React from 'react';
-
 interface VideoComponentProps {
   videoId: string;
 }
 
-const VideoComponent: React.FC<VideoComponentProps> = ({ videoId }) => {
+function VideoComponent({ videoId } : VideoComponentProps) {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
   
+  console.log("Embed URL:", embedUrl);
+
   return (
-    <div className="video-container">
+    // <div className="video-container">
       <iframe
         src={embedUrl}
         title="YouTube Video Player"
@@ -16,7 +16,7 @@ const VideoComponent: React.FC<VideoComponentProps> = ({ videoId }) => {
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </div>
+    // </div>
   );
 }
 

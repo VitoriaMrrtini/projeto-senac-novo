@@ -36,6 +36,8 @@ function Recipe() {
 
   const videoIdFromDatabase: string | null = receita?.video || null;
 
+  // const [videoIdFromDatabase, setVideoIdFromDatabase] = useState<string>('')
+
   const ingredientesArray = receita?.ingredientes.split(",");
   const instruçõesArray = receita?.instrucoes.split(",");
 

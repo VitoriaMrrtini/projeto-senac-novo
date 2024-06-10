@@ -323,7 +323,7 @@
   .receita {
     flex: 1 1 calc(100% - 20px);
     max-width: calc(100% - 20px);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 
   .receita img {
