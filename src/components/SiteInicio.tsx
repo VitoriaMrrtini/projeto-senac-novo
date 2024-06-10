@@ -16,6 +16,7 @@ import face from "../assets/face.png";
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
   const [menuAberto, setMenuAberto] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -41,6 +42,14 @@ const SiteInicio = () => {
     // alert(`ID: ${id}`);
     localStorage.setItem("receitaID", id);
   };
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastItem = currentPage * 5;
+  const indexOfFirstItem = indexOfLastItem - 5;
+  const currentItems = imgs.slice(indexOfFirstItem, indexOfLastItem);
 
   return (
     <>
@@ -117,7 +126,7 @@ const SiteInicio = () => {
         </Carousel>
       </div>
       <main className="receitas-container">
-        {imgs.map((img) => (
+        {currentItems.map((img) => (
           <div className="receita">
             <a href="#/siteReceita">
               <img
@@ -133,6 +142,20 @@ const SiteInicio = () => {
           </div>
         ))}
       </main>
+      <div className="pagination">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Anterior
+        </button>
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === Math.ceil(imgs.length / 5)}
+        >
+          Próxima
+        </button>
+      </div>
       <footer className="footer">
         <div className="container-footer">
           <div className="row justify-content-center">
