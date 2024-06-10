@@ -270,13 +270,15 @@
 }
 
 .receita {
-  padding: 10px;
+  padding: 0px;
   margin: 0;
   box-sizing: border-box;
   text-align: center;
   transition: transform 0.3s ease;
-  flex: 1 1 calc(23.333% - 40px);
   max-width: calc(33.333% - 40px);
+  box-shadow: #00000015 3px 3px 3px 3px ;
+  border-radius: 15px;
+  
 }
 
 .receita:hover {
@@ -288,7 +290,8 @@
   height: 300px;
   max-width: 100%;
   max-height: 100%;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -323,7 +326,7 @@
   .receita {
     flex: 1 1 calc(100% - 20px);
     max-width: calc(100% - 20px);
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   .receita img {
@@ -424,7 +427,7 @@ a:hover {
 /* Banner styling */
 .banner {
   margin-top: 10px;
-  margin-bottom: 500px;
+  margin-bottom: 420px;
   margin-left: auto;
   margin-right: auto;
   height: 300px;
