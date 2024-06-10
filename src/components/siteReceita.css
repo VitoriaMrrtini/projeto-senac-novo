@@ -1,130 +1,131 @@
-.bodyReceita{
-    margin-bottom: 20px;
+.bodyReceita {
+  margin-bottom: 20px;
 }
 .recipe {
-    min-width: 300px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .fundo {
-    background-color: #fff4f9;
+  background-color: #fff4f9;
 }
 
 h1 {
-    font-size: 28px;
-    color: #ff5e9c;
-    text-align: center;
-    margin-bottom: 20px;
+  font-size: 28px;
+  color: #ff5e9c;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 ul {
-    font-size: 16px;
-    margin-left: 0;
-    padding-left: 20px;
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 20px;
 }
 
 h2 {
-    font-size: 22px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 ol {
-    font-size: 16px;
-    margin-left: 0;
-    padding-left: 20px;
+  font-size: 16px;
+  margin-left: 0;
+  padding-left: 20px;
 }
 
 li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-
 .logoReceita {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoReceita img {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .logoBackground {
-    background-color: #FFCED6;
-    margin-bottom: 15px;
-    padding: 5px;
+  background-color: #ffced6;
+  margin-bottom: 15px;
+  padding: 5px;
 }
 
 .arrowIcon {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* Media Query para telas menores que 768px */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
+  h1 {
+    font-size: 24px;
+  }
 
-    h2 {
-        font-size: 20px;
-    }
+  h2 {
+    font-size: 20px;
+  }
 
-    ul,
-    ol {
-        font-size: 14px;
-    }
+  ul,
+  ol {
+    font-size: 14px;
+  }
 }
 
 /* Media Query para telas menores que 576px */
 @media (max-width: 576px) {
-    .recipe {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    ul,
-    ol {
-        font-size: 15px;
-    }
-}
-.video-container {
-    position: relative;
-    overflow: hidden;
+  .recipe {
+    padding: 10px;
   }
-  
-  .video-container iframe {
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul,
+  ol {
+    font-size: 15px;
+  }
+}
+.videoReceita {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+.videoReceita iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  
+}
