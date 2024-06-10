@@ -95,3 +95,14 @@ p {
 .arrowIcon {
   margin-left: 10px;
 }
+.Carregamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Carregamento .fa-spinner {
+  font-size: 4rem;
+}

@@ -3,13 +3,13 @@ import "./siteReceita.css";
 import axios from "axios";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import logo from "../assets/logo.png";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import VideoComponent from '../components/VideoComponent';
-import whats from '../assets/whats.png';
-import pin from '../assets/pint.png';;
-import insta from '../assets/insta.png';
-import face from '../assets/face.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import VideoComponent from "../components/VideoComponent";
+import whats from "../assets/whats.png";
+import pin from "../assets/pint.png";
+import insta from "../assets/insta.png";
+import face from "../assets/face.png";
 
 interface Receita {
   id: number;
@@ -41,6 +41,14 @@ function Recipe() {
   const ingredientesArray = receita?.ingredientes.split(",");
   const instruçõesArray = receita?.instrucoes.split(",");
 
+  if (!receita) {
+    return (
+      <div className="Carregamento">
+        <FontAwesomeIcon icon={faSpinner} spinPulse />
+      </div>
+    );
+  }
+
   return (
     <div className="fundo">
       <div className="bodyReceita">
@@ -48,7 +56,9 @@ function Recipe() {
           <div className="logoBackground">
             <div className="logoBackground">
               <div className="logoContainer">
-                <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
+                <a href="#/SiteInicio" className="link">
+                  <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
+                </a>
                 <img src={logo} alt="Logo" className="logoReceita" />
               </div>
             </div>
@@ -69,7 +79,9 @@ function Recipe() {
             ))}
           </ul>
           <div className="videoReceita">
-            {videoIdFromDatabase && <VideoComponent videoId={videoIdFromDatabase} />}
+            {videoIdFromDatabase && (
+              <VideoComponent videoId={videoIdFromDatabase} />
+            )}
           </div>
         </div>
       </div>

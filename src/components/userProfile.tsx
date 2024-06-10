@@ -4,7 +4,7 @@ import axios from 'axios';
 import { SCA_API_URL } from '../utils/ApiConfig';
 import perfilPhoto from '../assets/fotofemea.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 interface User {
   nome: string;
@@ -26,7 +26,11 @@ function UserProfile() {
   }, []);
 
   if (!user) {
-    return <div>Carregando...</div>;
+    return (
+      <div className="Carregamento">
+        <FontAwesomeIcon icon={faSpinner} spinPulse />
+      </div>
+    );
   }
 
   return (
