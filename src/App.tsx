@@ -12,6 +12,7 @@ import SiteCafeTarde from './components/SiteCafeTarde.tsx';
 import SiteLanche from './components/SiteLanche.tsx';
 import SiteJantar from './components/SiteJanta.tsx';
 import SiteDoce from './components/SiteDoce.tsx';
+import Cadastro from './components/Cadastro.tsx';
 
 
 function App(){
@@ -19,7 +20,8 @@ function App(){
     <>
       <HashRouter>
             <Routes>
-              <Route path="/" element={<Login/>}/>
+              <Route path="/Login" element={<Login/>}/>
+              <Route path="/" element={<Cadastro/>}/>
               <Route path="/SiteInicio" element={<SiteInicio/>}/>
               <Route path='/siteReceita' element={<Recipe/>}/>
               <Route path='/userProfile' element={<UserProfile/>}/>

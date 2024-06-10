@@ -2,7 +2,7 @@ import React from 'react';
 import './CustomAlert.css';
 
 interface CustomAlertProps {
-  message: string;
+  message: React.ReactNode;
   type?: 'success' | 'error' | 'info' | 'warning';
   onClose: () => void;
 }

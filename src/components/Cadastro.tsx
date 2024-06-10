@@ -5,13 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import CustomAlert from "./CustomAlert";
 import Swal from "sweetalert2";
-//import Modal from '../components/Modal.tsx';
+import { Link } from 'react-router-dom';
 
 function Cadastro() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState<number | null>(null);
+  const [gender, setGender] = useState("");
   const [showAlert, setShowAlert] = useState(true);
-  //const [showModal, setShowModal] = useState(false); // Estado para controlar a exibição do modal
 
   const navigate = useNavigate();
 
@@ -23,72 +25,127 @@ function Cadastro() {
     setPassword(e.target.value);
   };
 
-  const handleOnclick = () => {
-    axios
-      .get(`${SCA_API_URL}/users?nome=${user}`)
-      .then((res) => {
-        const id = res.data[0].id;
-        const usr = res.data[0].nome;
-        const pass = res.data[0].senha;
+  const handleEmailOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
 
-        if (user === usr && password === pass) {
-          //setShowModal(true); // Exibir o modal
-          Swal.fire({
-            title: "Cadastro bem ",
-            text: "Aproveite o quanto quiser!",
-            icon: "success"
-          });
-          localStorage.setItem("userID", id);
-          navigate("/SiteInicio");
-        } else {
-          setUser("");
-          setPassword("");
-          Swal.fire({
-            icon: "error",
-            title: "Erro",
-            text: "falho!"
-          });
-        }
+  const handleAgeOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAge(parseInt(e.target.value, 10));
+  };
+
+  const handleGenderChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setGender(e.target.value);
+  };
+
+  const handleOnclick = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!user || !password || !email || age === null || !gender) {
+      Swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Por favor, preencha todos os campos!"
+      });
+      return;
+    }
+
+    const newUser = {
+      nome: user,
+      senha: password,
+      email: email,
+      idade: age,
+      genero: gender
+    };
+
+    axios.post(`${SCA_API_URL}/receitas`, newUser)
+      .then((res) => {
+        const responseData = res.data;
+        Swal.fire({
+          title: "Cadastro realizado com sucesso!",
+          text: "Você agora pode fazer login.",
+          icon: "success"
+        });
+        navigate("/");
       })
       .catch((err) => {
         alert(err);
+        Swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Ocorreu um erro ao cadastrar. Por favor, tente novamente."
+        });
       });
   };
 
-  // Lidar com o fechamento do modal
-  /*const handleModalClose = () => {
-    setShowModal(false);
-  };*/
-
   return (
-    <div className="container">
-      <div className="login-form">
-        <h2>Login</h2>
+    <div className="cadastro-container">
+      <form className="cadastro-form" onSubmit={handleOnclick}>
+        <h2>Cadastro</h2>
         <input
           onChange={handleUserOnchange}
           type="text"
           name="username"
           placeholder="Usuário"
+          value={user}
         />
         <input
           onChange={handlePasswordOnChange}
           type="password"
           name="password"
           placeholder="Senha"
+          value={password}
         />
-        <input onClick={handleOnclick} type="submit" value="Entrar" />
-        {/*<Modal show={showModal} onClose={handleModalClose} />*/}
+        <input
+          onChange={handleEmailOnChange}
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={email}
+        />
+        <input
+          onChange={handleAgeOnChange}
+          type="number"
+          name="age"
+          placeholder="Idade"
+          value={age !== null ? age : ""}
+        />
+        <div>
+          <label>
+            <input
+              type="radio"
+              value="masculino"
+              checked={gender === 'masculino'}
+              onChange={handleGenderChange}
+            />
+            Masculino
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="radio"
+              value="feminino"
+              checked={gender === 'feminino'}
+              onChange={handleGenderChange}
+            />
+            Feminino
+          </label>
+        </div>
+        <input type="submit" value="Cadastrar" />
         <div className="Alert">
           {showAlert && (
             <CustomAlert
-              message="Seja bem-vindo(a) ao nosso livro de receitas!"
+              message={
+                <>
+                  Já possui login? Entre <Link to="/Login">aqui!</Link>
+                </>
+              }
               type="success"
               onClose={() => setShowAlert(false)}
             />
-            
           )}
         </div>
-      </div>
+      </form>
     </div>
   );
 }

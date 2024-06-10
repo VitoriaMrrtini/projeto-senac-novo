@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import CustomAlert from "./CustomAlert";
 import Swal from "sweetalert2";
+import { Link } from 'react-router-dom';
 //import Modal from '../components/Modal.tsx';
 
 function Login() {
@@ -81,7 +82,11 @@ function Login() {
         <div className="Alert">
           {showAlert && (
             <CustomAlert
-              message="Seja bem-vindo(a) ao nosso livro de receitas!"
+              message={
+                <>
+                  Não possui login? Entre <Link to="/">aqui!</Link>
+                </>
+              }
               type="success"
               onClose={() => setShowAlert(false)}
             />
