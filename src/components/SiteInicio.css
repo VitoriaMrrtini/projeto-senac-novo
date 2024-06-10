@@ -718,3 +718,44 @@ footer h5 {
     font-size: 25px;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.pagination button {
+  background-color: #ff0077bb; /* cor de fundo padrão */
+  border: none;
+  outline: none;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+  transition: background-color 0.3s; /* animação de transição suave */
+}
+
+.pagination button:last-child[disabled] {
+  display: none;
+}
+
+.pagination button:first-child[disabled] {
+  display: none;
+}
+
+.pagination button:hover {
+  background-color: #c44ef3; /* cor de fundo mais escura quando o botão é hover */
+}
+
+.pagination button:active {
+  background-color: #b83dd9; /* cor de fundo mais escura quando o botão é clicado */
+}
+
+.pagination button.selected {
+  background-color: #8721a7; /* cor de fundo mais escura para o botão selecionado */
+}
+
+.pagination button svg {
+  color: white;
+}

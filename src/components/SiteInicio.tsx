@@ -12,6 +12,8 @@ import whats from "../assets/whats.png";
 import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -147,13 +149,13 @@ const SiteInicio = () => {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          Anterior
+          <FontAwesomeIcon icon={faArrowLeft} />
         </button>
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === Math.ceil(imgs.length / 5)}
         >
-          Próxima
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>
       <footer className="footer">
