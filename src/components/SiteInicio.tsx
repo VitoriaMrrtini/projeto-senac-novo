@@ -17,6 +17,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [menuAberto, setMenuAberto] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -37,11 +38,32 @@ const SiteInicio = () => {
       });
   }, []);
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    axios
+      .get(`${SCA_API_URL}/receitas`, {
+        params: {
+          search: searchTerm,
+        },
+      })
+      .then((res) => {
+        setImgs(res.data);
+        setCurrentPage(1); // Reset the current page to 1 after search
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar receitas:", error);
+      });
+  };
+
   const handleClick = (
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
   ) => {
     const id = event.currentTarget.id;
-    // alert(`ID: ${id}`);
     localStorage.setItem("receitaID", id);
   };
 
@@ -72,8 +94,15 @@ const SiteInicio = () => {
           <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
-          <form action="/" method="GET">
-            <input type="text" name="search" className="search-box__input" />
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              name="search"
+              className="search-box__input"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              placeholder="Procurar receitas..."
+            />
             <button type="submit" className="search-box__button">
               Procurar
             </button>
@@ -129,12 +158,12 @@ const SiteInicio = () => {
       </div>
       <main className="receitas-container">
         {currentItems.map((img) => (
-          <div className="receita">
+          <div className="receita" key={img.id}>
             <a href="#/siteReceita">
               <img
                 id={String(img.id)}
                 src={img.img}
-                alt="Torta de Frango"
+                alt={img.titulo}
                 onClick={handleClick}
               />
               <div className="tituloReceita">
@@ -186,13 +215,13 @@ const SiteInicio = () => {
                 </a>
               </li>
               <li>
-                <a href="https://br.pinterest.com/">
-                  <img src={pin} alt="Pinterest" />
+                <a href="https://www.whatsapp.com/">
+                  <img src={whats} alt="WhatsApp" />
                 </a>
               </li>
               <li>
-                <a href="https://www.whatsapp.com">
-                  <img src={whats} alt="WhatsApp" />
+                <a href="https://www.pinterest.com/">
+                  <img src={pin} alt="Pinterest" />
                 </a>
               </li>
             </ul>

@@ -39,7 +39,7 @@ function Cadastro() {
 
   const handleOnclick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+  
     if (!user || !password || !email || age === null || !gender) {
       Swal.fire({
         icon: "error",
@@ -48,7 +48,16 @@ function Cadastro() {
       });
       return;
     }
-
+  
+    if (age < 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Idade não pode ser negativa!"
+      });
+      return;
+    }
+  
     const newUser = {
       nome: user,
       senha: password,
@@ -56,10 +65,9 @@ function Cadastro() {
       idade: age,
       genero: gender
     };
-
+  
     axios.post(`${SCA_API_URL}/receitas`, newUser)
-      .then((res) => {
-        const responseData = res.data;
+      .then((_) => {
         Swal.fire({
           title: "Cadastro realizado com sucesso!",
           text: "Você agora pode fazer login.",
@@ -67,8 +75,7 @@ function Cadastro() {
         });
         navigate("/");
       })
-      .catch((err) => {
-        alert(err);
+      .catch((_) => {
         Swal.fire({
           icon: "error",
           title: "Erro",
