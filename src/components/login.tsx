@@ -53,6 +53,7 @@ function Login() {
       })
       .catch((err) => {
         alert(err);
+        console.error(err);
       });
   };
 

@@ -37,8 +37,8 @@ function Cadastro() {
     setGender(e.target.value);
   };
 
-  const handleOnclick = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleOnclick = async () => {
+    // e.preventDefault();
   
     if (!user || !password || !email || age === null || !gender) {
       Swal.fire({
@@ -65,23 +65,27 @@ function Cadastro() {
       idade: age,
       genero: gender
     };
-  
-    axios.post(`${SCA_API_URL}/receitas`, newUser)
-      .then((_) => {
-        Swal.fire({
-          title: "Cadastro realizado com sucesso!",
-          text: "Você agora pode fazer login.",
-          icon: "success"
-        });
-        navigate("/");
-      })
-      .catch((_) => {
-        Swal.fire({
-          icon: "error",
-          title: "Erro",
-          text: "Ocorreu um erro ao cadastrar. Por favor, tente novamente."
-        });
-      });
+
+    if (user && email && password && age && gender) {
+      try{
+          const response = await axios.post(`${SCA_API_URL}/users/verificarcadastro`, newUser);
+          console.log(response.data);
+          Swal.fire({
+            title: "Cadastro realizado com sucesso!",
+            text: "Você agora pode fazer login.",
+            icon: "success"
+          });
+          // // localStorage.setItem("userID", id);
+          navigate("/SiteInicio");
+        }
+        catch (error){
+          Swal.fire({
+            icon: "error",
+            title: "Erro",
+            text: "Ocorreu um erro ao cadastrar. Por favor, tente novamente."
+          });
+        };
+    }
   };
 
   return (
