@@ -21,6 +21,7 @@ const SiteInicio = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [menuAberto, setMenuAberto] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -38,8 +39,6 @@ const SiteInicio = () => {
         console.error("Erro ao buscar dados dos doces:", error);
       });
   }, []);
-
-  const navigate = useNavigate();
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
@@ -59,6 +58,10 @@ const SiteInicio = () => {
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
+  };
+
+  const navigateToCategory = (category: string) => {
+    navigate(`/site${category}`);
   };
 
   const indexOfLastItem = currentPage * 5;
@@ -98,41 +101,59 @@ const SiteInicio = () => {
             </button>
           </form>
         </div>
+        <nav className="cabecarios">
+          <ul className="cabecarios-list">
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("CafeManha")}
+              >
+                Café da manhã
+              </button>
+            </li>
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("Almoco")}
+              >
+                Almoço
+              </button>
+            </li>
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("CafeTarde")}
+              >
+                Café da tarde
+              </button>
+            </li>
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("Lanche")}
+              >
+                Lanche da tarde
+              </button>
+            </li>
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("Jantar")}
+              >
+                Jantar
+              </button>
+            </li>
+            <li className="cabecario">
+              <button
+                className="animação"
+                onClick={() => navigateToCategory("Doce")}
+              >
+                Doces
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav className="cabecarios">
-        <ul className="cabecarios-list">
-          <li className="cabecario">
-            <a href="#/SiteCafeManha" className="animação">
-              Café da manhã
-            </a>
-          </li>
-          <li className="cabecario">
-            <a href="#/SiteAlmoco" className="animação">
-              Almoço
-            </a>
-          </li>
-          <li className="cabecario">
-            <a href="#/SiteCafeTarde" className="animação">
-              Café da tarde
-            </a>
-          </li>
-          <li className="cabecario">
-            <a href="#/SiteLanche" className="animação">
-              Lanche da tarde
-            </a>
-          </li>
-          <li className="cabecario">
-            <a href="#/SiteJantar" className="animação">
-              Jantar
-            </a>
-          </li>
-          <li className="cabecario">
-            <a href="#/SiteDoce" className="animação">
-              Doces
-            </a>
-          </li>
-        </ul>
-      </nav>
       <div className="banner">
         <Carousel>
           <Carousel.Item>

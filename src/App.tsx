@@ -13,6 +13,7 @@ import SiteLanche from './components/SiteLanche.tsx';
 import SiteJantar from './components/SiteJanta.tsx';
 import SiteDoce from './components/SiteDoce.tsx';
 import Cadastro from './components/Cadastro.tsx';
+import SearchResults from "./components/SearchResults";
 
 
 function App(){
@@ -32,6 +33,7 @@ function App(){
               <Route path='/SiteLanche' element={<SiteLanche/>}/>
               <Route path='/SiteJantar' element={<SiteJantar/>}/>
               <Route path='/SiteDoce' element={<SiteDoce/>}/>
+              <Route path='/SiteDoce' element={<SearchResults/>}/>
             </Routes>
     </HashRouter>
     </>
