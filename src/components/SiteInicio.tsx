@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./SiteInicio.css";
 import { Carousel } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { SCA_API_URL } from "../utils/ApiConfig";
@@ -18,7 +17,6 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
-  const [searchTerm, setSearchTerm] = useState("");
   const [menuAberto, setMenuAberto] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -38,17 +36,6 @@ const SiteInicio = () => {
         console.error("Erro ao buscar dados dos doces:", error);
       });
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    navigate(`/search?search=${searchTerm}`);
-  };
 
   const handleClick = (
     event: React.MouseEvent<HTMLImageElement, MouseEvent>
@@ -84,14 +71,12 @@ const SiteInicio = () => {
           <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
-          <form onSubmit={handleSearchSubmit}>
+          <form>
             <input
               type="text"
               name="search"
               className="search-box__input"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              placeholder="Procurar receitas..."
+              placeholder="Procurar"
             />
             <button type="submit" className="search-box__button">
               Procurar
