@@ -123,38 +123,50 @@
 /* Estilizando a entrada de texto da caixa de pesquisa */
 .caixa.search-box input[type="text"] {
   margin: 0 10px;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 100px;
-  width: 200px;
-  height: 35px;
+  border-radius: 50px;
+  width: 300px;
+  height: 45px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 /* Estilizando o botão da caixa de pesquisa */
-.caixa.search-box button {
-  padding: 5px 10px;
-  border-radius: 100px;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
+.caixa.search-box {
+  display: inline-block;
+  position: relative;
   cursor: pointer;
-  height: 35px;
-  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .caixa.search-box input[type="text"] {
-    width: 150px;
+.caixa.search-box a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.caixa.search-box a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .caixa.search-box a {
+    font-size: 20px;
   }
 }
 
-@media (max-width: 576px) {
-  .caixa.search-box input[type="text"] {
-    width: 120px;
+@media (min-width: 601px) and (max-width: 1024px) {
+  .caixa.search-box a {
+    font-size: 22px;
   }
 }
 
+@media (min-width: 1025px) {
+  .caixa.search-box a {
+    font-size: 26px;
+  }
+}
 
 /* Estilizando a barra de navegação */
 .cabecarios {
@@ -276,13 +288,13 @@
   text-align: center;
   transition: transform 0.3s ease;
   max-width: calc(33.333% - 40px);
-  box-shadow: #00000015 3px 3px 3px 3px ;
+  box-shadow: #00000015 3px 3px 3px 3px;
   border-radius: 15px;
-  
+
 }
 
 .receita:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .receita img {
@@ -292,6 +304,7 @@
   max-height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {
@@ -501,6 +514,7 @@ a:hover {
 .footer ul,
 .footer p {
   margin: 10px;
+  color: #000000;
 }
 
 .footer ul {
@@ -724,15 +738,18 @@ footer h5 {
   align-items: center;
   margin-bottom: 25px;
 }
+
 .pagination button {
-  background-color: #ff0077bb; /* cor de fundo padrão */
+  background-color: #ff0077bb;
+  /* cor de fundo padrão */
   border: none;
   outline: none;
   margin: 0 10px;
   padding: 10px;
   border-radius: 15px;
   display: inline-block;
-  transition: background-color 0.3s; /* animação de transição suave */
+  transition: background-color 0.3s;
+  /* animação de transição suave */
 }
 
 .pagination button:last-child[disabled] {
@@ -744,15 +761,18 @@ footer h5 {
 }
 
 .pagination button:hover {
-  background-color: #c44ef3; /* cor de fundo mais escura quando o botão é hover */
+  background-color: #c44ef3;
+  /* cor de fundo mais escura quando o botão é hover */
 }
 
 .pagination button:active {
-  background-color: #b83dd9; /* cor de fundo mais escura quando o botão é clicado */
+  background-color: #b83dd9;
+  /* cor de fundo mais escura quando o botão é clicado */
 }
 
 .pagination button.selected {
-  background-color: #8721a7; /* cor de fundo mais escura para o botão selecionado */
+  background-color: #8721a7;
+  /* cor de fundo mais escura para o botão selecionado */
 }
 
 .pagination button svg {

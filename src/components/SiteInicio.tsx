@@ -13,7 +13,11 @@ import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -71,17 +75,9 @@ const SiteInicio = () => {
           <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
-          <form>
-            <input
-              type="text"
-              name="search"
-              className="search-box__input"
-              placeholder="Procurar"
-            />
-            <button type="submit" className="search-box__button">
-              Procurar
-            </button>
-          </form>
+          <a href="#/searchReceitas">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </a>
         </div>
       </div>
       <nav className="cabecarios">

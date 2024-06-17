@@ -1,36 +1,35 @@
 .Search {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     margin-top: 100px;
-}
-
-.Search h1 {
+  }
+  
+  .Search h1 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-}
-
-.Search form {
+  }
+  
+  .Search form {
     display: flex;
-    flex-wrap: wrap; /* Permite que os elementos dentro do form quebrem linha quando necessário */
-    justify-content: center; /* Centraliza os elementos */
+    justify-content: center;
     margin-bottom: 20px;
-}
-
-.Search input[type="text"] {
+  }
+  
+  .Search input[type="text"] {
     flex: 1;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
-    margin-bottom: 10px; /* Espaçamento entre o input e o botão */
-}
-
-.Search button {
+    margin-bottom: 10px;
+  }
+  
+  .Search button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -38,51 +37,56 @@
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    margin-bottom: 10px; /* Espaçamento entre o botão e o input */
-}
-
-.Search button:disabled {
+    margin-bottom: 10px;
+  }
+  
+  .Search button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
-}
-
-.Search .results {
+  }
+  
+  .Search .results {
     margin-top: 20px;
-}
-
-.Search .receita {
+  }
+  
+  .Search .receita {
+    display: inline-block; /* Alterado para inline-block */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
-}
-
-.Search .receita h2 {
+    text-align: center; /* Centraliza o conteúdo */
+    width: calc(33.33% - 20px); /* Ajuste para ocupar aproximadamente 1/3 da largura */
+    margin-right: 20px; /* Espaço entre as receitas */
+  }
+  
+  .Search .receita h2 {
     font-size: 20px;
     margin-bottom: 10px;
-}
-
-.Search .receita-img {
+    cursor: pointer;
+  }
+  
+  .Search .receita-img {
     width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: 200px; /* Defina a altura desejada */
+    object-fit: cover; /* Mantém a proporção da imagem */
     border-radius: 5px;
-}
-
-/* Media queries para ajustar o layout em dispositivos menores */
-@media (max-width: 768px) {
+    cursor: pointer;
+  }
+  
+  
+  /* Media queries para ajustar o layout em dispositivos menores */
+  @media (max-width: 768px) {
     .Search {
-        max-width: 100%;
-        margin-top: 50px;
-        border-radius: 0;
+      max-width: 100%;
+      border-radius: 0;
     }
-
-    .Search input[type="text"] {
-        border-radius: 5px;
-        margin-bottom: 10px;
+  
+    .Search .receita {
+      width: calc(50% - 20px); /* Ajuste para ocupar aproximadamente metade da largura */
+      margin-right: 0;
+      margin-bottom: 20px; /* Espaço entre as receitas */
     }
-
-    .Search button {
-        border-radius: 5px;
-        margin-bottom: 10px;
-    }
-}
+  }
+  
