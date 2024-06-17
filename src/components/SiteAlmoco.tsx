@@ -8,6 +8,8 @@ import whats from "../assets/whats.png";
 import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 
 const SiteAlmoco = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
@@ -57,12 +59,9 @@ const SiteAlmoco = () => {
           <img src={logo} alt="logo" />
         </a>
         <div className="caixa search-box">
-          <form action="/" method="GET">
-            <input type="text" name="search" className="search-box__input" />
-            <button type="submit" className="search-box__button">
-              Procurar
-            </button>
-          </form>
+          <a href="#/searchReceitas">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </a>
         </div>
       </div>
       <nav className="cabecarios">
@@ -148,43 +147,44 @@ const SiteAlmoco = () => {
           </div>
         ))}
       </main>
-
       <footer className="footer">
         <div className="container-footer">
-          <div className="row">
-            <div className="col-md-4">
-              <p>
-                Explore uma variedade de receitas deliciosas e inspire-se na
-                cozinha com o nosso site. Descubra novas maneiras de preparar
-                pratos incríveis e compartilhe suas próprias criações
-                culinárias.
-              </p>
+          <div className="row justify-content-center">
+            <div className="sep">
+              <div className="col-md-4">
+                <p>
+                  Explore uma variedade de receitas deliciosas e inspire-se na
+                  cozinha com o nosso site. Descubra novas maneiras de preparar
+                  pratos incríveis e compartilhe suas próprias criações
+                  culinárias.
+                </p>
+              </div>
             </div>
             <div className="col-md-4">
               <h6>Conecte-se Conosco</h6>
-              <ul className="list-inline">
-                <li>
-                  <a href="https://www.facebook.com">
-                    <img src={face} alt="Facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <img src={insta} alt="Instagram" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://br.pinterest.com/">
-                    <img src={pin} alt="Pinterest" />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.whatsapp.com">
-                    <img src={whats} alt="WhatsApp" />
-                  </a>
-                </li>
-              </ul>
             </div>
+            <ul className="list-inline">
+              <li>
+                <a href="https://www.facebook.com">
+                  <img src={face} alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/">
+                  <img src={insta} alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.whatsapp.com/">
+                  <img src={whats} alt="WhatsApp" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/">
+                  <img src={pin} alt="Pinterest" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div

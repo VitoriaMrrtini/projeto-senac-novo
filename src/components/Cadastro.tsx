@@ -76,7 +76,7 @@ function Cadastro() {
             icon: "success"
           });
           // // localStorage.setItem("userID", id);
-          navigate("/SiteInicio");
+          navigate("/Login");
         }
         catch (error){
           Swal.fire({
