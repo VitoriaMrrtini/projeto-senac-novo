@@ -12,6 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .login-form {
@@ -99,4 +101,22 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.fundoLogin {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fundoLogin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/Fundo.jpg");
+  background-size: cover;
+  filter: blur(5px);
 }

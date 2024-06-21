@@ -63,8 +63,8 @@ function Login() {
   };*/
 
   return (
-    <div className="fundo">
-    <div className="container">
+    <div className="fundoLogin">
+      <div className="container">
         <div className="login-form">
           <h2>Login</h2>
           <input
