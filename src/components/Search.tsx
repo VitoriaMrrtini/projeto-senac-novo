@@ -11,40 +11,30 @@ function Search() {
   const [imgs, setImgs] = useState<Image[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [searchDone, setSearchDone] = useState(false);
 
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (searchTerm.trim() === "") {
+      setError("Por favor, insira um termo de pesquisa.");
+      return;
+    }
+
     setLoading(true);
     setError("");
-    // e.preventDefault();
-    // setLoading(true);
-
-    // try {
-    // //   const response = await fetch(`${SCA_API_URL}/searchReceitas?search=${searchTerm}`);
-
-    //     if (!response.ok) {
-    //         throw new Error("Não foi possível obter os resultados");
-    //     }
-    //     const data = await response.json();
-    //     setResults(data);
-    //     setError(null);
-    // } catch (error) {
-    //     console.error("Erro ao buscar receitas:", error);
-    //     setError("Erro ao buscar receitas. Por favor, tente novamente.");
-    //     setResults([]);
-    // } finally {
-    //     setLoading(false);
-    // }
+    setSearchDone(false);
 
     axios
       .get(`${SCA_API_URL}/receitas?search=${searchTerm}`)
       .then((res) => {
-        // alert(res.data);
         setImgs(res.data);
         setError("");
+        setSearchDone(true);
       })
       .catch(() => {
         setError("Erro ao buscar receitas. Por favor, tente novamente.");
+        setImgs([]);
       })
       .finally(() => {
         setLoading(false);
@@ -85,9 +75,13 @@ function Search() {
       {loading && <p>Carregando...</p>}
       {error && <p className="error-message">{error}</p>}
 
+      {!loading && searchDone && imgs.length === 0 && (
+        <p>Nenhuma receita encontrada.</p>
+      )}
+
       {imgs.map((receita) => (
-        <a href="#/siteReceita">
-          <div key={receita.id} className="receita">
+        <a href="#/siteReceita" key={receita.id}>
+          <div className="receita">
             <h2
               onClick={() => handleTitleClick(String(receita.id))}
               style={{ cursor: "pointer" }}

@@ -165,22 +165,22 @@ const SiteAlmoco = () => {
             </div>
             <ul className="list-inline">
               <li>
-                <a href="https://www.facebook.com">
+                <a href="https://www.facebook.com" target="_blank">
                   <img src={face} alt="Facebook" />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/" target="_blank">
                   <img src={insta} alt="Instagram" />
                 </a>
               </li>
               <li>
-                <a href="https://www.whatsapp.com/">
+                <a href="https://www.whatsapp.com/" target="_blank">
                   <img src={whats} alt="WhatsApp" />
                 </a>
               </li>
               <li>
-                <a href="https://www.pinterest.com/">
+                <a href="https://www.pinterest.com/" target="_blank">
                   <img src={pin} alt="Pinterest" />
                 </a>
               </li>

@@ -648,7 +648,7 @@ h5 {
   }
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness 
 @media (max-width: 1200px) {
   .recipes {
     justify-content: center;
@@ -658,7 +658,7 @@ h5 {
     width: calc(33.33% - 20px);
   }
 }
-
+*/
 @media (max-width: 768px) {
   .search-box input[type="text"] {
     width: 200px;
