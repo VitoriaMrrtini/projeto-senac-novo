@@ -37,6 +37,10 @@
 .content-menu {
   display: flex;
   flex-direction: column;
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transição de opacidade e transformação */
+  transform-origin: top; /* Define a origem da transformação para o topo */
+  transform: scaleY(0); /* Inicialmente escondido com escala 0 */
 }
 
 @media (max-width: 768px) {
@@ -53,8 +57,10 @@
     flex-direction: column;
   }
 
-  .menu-icon.active+.content-menu {
+  .menu-icon.active + .content-menu {
     display: flex;
+    opacity: 1; /* Mostra com opacidade */
+    transform: scaleY(1); /* Aumenta a escala para mostrar */
   }
 }
 
@@ -77,8 +83,15 @@
 /* Estilos para exibir o submenu quando o menu é clicado */
 .menu:hover .content-menu {
   display: block;
-  opacity: 1;
+  opacity: 1; /* Mostra com opacidade */
+  transform: scaleY(1); /* Aumenta a escala para mostrar */
 }
+
+/* Aumenta a escala do ícone quando o menu é clicado */
+.menu-icon.active {
+  transform: scale(1.2); /* Exemplo de aumento de escala */
+}
+
 
 /* Logo styling */
 .logo {
@@ -140,6 +153,7 @@
 }
 
 .caixa.search-box a {
+  display: inline-block; /* Garante que o <a> ocupa o espaço necessário */
   color: white;
   font-size: 24px;
   text-decoration: none;
@@ -147,7 +161,7 @@
 }
 
 .caixa.search-box a:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Aplique a transformação no hover do <a> */
 }
 
 @media (max-width: 600px) {
@@ -762,17 +776,14 @@ footer h5 {
 
 .pagination button:hover {
   background-color: #c44ef3;
-  /* cor de fundo mais escura quando o botão é hover */
 }
 
 .pagination button:active {
   background-color: #b83dd9;
-  /* cor de fundo mais escura quando o botão é clicado */
 }
 
 .pagination button.selected {
   background-color: #8721a7;
-  /* cor de fundo mais escura para o botão selecionado */
 }
 
 .pagination button svg {

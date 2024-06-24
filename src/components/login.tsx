@@ -6,13 +6,11 @@ import { SCA_API_URL } from "../utils/ApiConfig";
 import CustomAlert from "./CustomAlert";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-//import Modal from '../components/Modal.tsx';
 
 function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [showAlert, setShowAlert] = useState(true);
-  //const [showModal, setShowModal] = useState(false); // Estado para controlar a exibição do modal
 
   const navigate = useNavigate();
 
@@ -33,7 +31,6 @@ function Login() {
         const pass = res.data[0].senha;
 
         if (user === usr && password === pass) {
-          //setShowModal(true); // Exibir o modal
           Swal.fire({
             title: "Bem vindo!",
             text: "Aproveite o quanto quiser!",
@@ -57,11 +54,6 @@ function Login() {
       });
   };
 
-  // Lidar com o fechamento do modal
-  /*const handleModalClose = () => {
-    setShowModal(false);
-  };*/
-
   return (
     <div className="fundoLogin">
       <div className="container">
@@ -72,15 +64,16 @@ function Login() {
             type="text"
             name="username"
             placeholder="Usuário"
+            value={user}
           />
           <input
             onChange={handlePasswordOnChange}
             type="password"
             name="password"
             placeholder="Senha"
+            value={password}
           />
           <input onClick={handleOnclick} type="submit" value="Entrar" />
-          {/*<Modal show={showModal} onClose={handleModalClose} />*/}
           <div className="Alert">
             {showAlert && (
               <CustomAlert

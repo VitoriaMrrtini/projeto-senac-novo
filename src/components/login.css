@@ -120,3 +120,86 @@ body {
   background-size: cover;
   filter: blur(2px);
 }
+/* Defina as animações no CSS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Estilos do formulário de login */
+.login-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+}
+
+.login-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7eb9;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: pulse 1s infinite; /* Animação de pulsação */
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #ff5e9c;
+  animation: none; /* Remove a animação de pulsação ao passar o mouse */
+}
+
+/* Estilos de alerta */
+.Alert {
+  margin-top: 20px;
+  animation: slideIn 0.5s ease-in-out; /* Animação de entrada do alerta */
+}
+
+.Alert.hidden {
+  animation: slideOut 0.5s ease-in-out; /* Animação de saída do alerta */
+}
