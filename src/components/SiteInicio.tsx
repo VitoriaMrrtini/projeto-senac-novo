@@ -61,7 +61,6 @@ const SiteInicio = () => {
           </a>
           {menuAberto && (
             <div className="content-menu">
-              <a href="#/userConfi">Config</a>
               <a href="#/userProfile">Perfil</a>
               <a href="#/">Sair</a>
             </div>
