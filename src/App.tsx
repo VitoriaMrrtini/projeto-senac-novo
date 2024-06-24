@@ -5,7 +5,6 @@ import SiteInicio from './components/SiteInicio';
 import Login from './components/login';
 import Recipe from './components/siteReceita.tsx';
 import UserProfile from './components/userProfile.tsx';
-import UserConfi from './components/userConfi.tsx';
 import SiteCafeManha from './components/SiteCafeManha.tsx'
 import SiteAlmoco from './components/SiteAlmoco.tsx';
 import SiteCafeTarde from './components/SiteCafeTarde.tsx';
@@ -27,7 +26,6 @@ function App(){
               <Route path="/SiteInicio" element={<SiteInicio/>}/>
               <Route path='/siteReceita' element={<Recipe/>}/>
               <Route path='/userProfile' element={<UserProfile/>}/>
-              <Route path='/userConfi' element={<UserConfi/>}/>
               <Route path='/SiteCafeManha' element={<SiteCafeManha/>}/>
               <Route path='/SiteAlmoco' element={<SiteAlmoco/>}/>
               <Route path='/SiteCafeTarde' element={<SiteCafeTarde/>}/>
