@@ -9,11 +9,15 @@ import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SiteDoce = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
   const [menuAberto, setMenuAberto] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -26,9 +30,11 @@ const SiteDoce = () => {
         if (res.data.length > 0) {
           setImgs(res.data);
         }
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Erro ao buscar dados dos doces:", error);
+        setLoading(false);
       });
   }, []);
 
@@ -39,6 +45,14 @@ const SiteDoce = () => {
     // alert(`ID: ${id}`);
     localStorage.setItem("receitaID", id);
   };
+
+  if (loading) {
+    return (
+      <div className="Carregamento">
+        <FontAwesomeIcon icon={faSpinner} spinPulse />
+      </div>
+    );
+  }
 
   return (
     <>

@@ -56,9 +56,12 @@ function Recipe() {
           <div className="logoBackground">
             <div className="logoBackground">
               <div className="logoContainer">
-                <a href="#/SiteInicio" className="link">
+                <button
+                  onClick={() => window.history.back()}
+                  className="backButton"
+                >
                   <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
-                </a>
+                </button>
                 <img src={logo} alt="Logo" className="logoReceita" />
               </div>
             </div>

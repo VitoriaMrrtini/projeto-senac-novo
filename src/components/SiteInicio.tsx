@@ -13,12 +13,19 @@ import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faArrowLeft,faArrowRight,faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faMagnifyingGlass,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
 
 const SiteInicio = () => {
   const [imgs, setImgs] = useState<Image[]>([]);
   const [menuAberto, setMenuAberto] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(true);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -31,9 +38,11 @@ const SiteInicio = () => {
         if (res.data.length > 0) {
           setImgs(res.data);
         }
+        setLoading(false); // Carregamento concluído
       })
       .catch((error) => {
         console.error("Erro ao buscar dados dos doces:", error);
+        setLoading(false);
       });
   }, []);
 
@@ -48,9 +57,21 @@ const SiteInicio = () => {
     setCurrentPage(pageNumber);
   };
 
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
   const indexOfLastItem = currentPage * 5;
   const indexOfFirstItem = indexOfLastItem - 5;
   const currentItems = imgs.slice(indexOfFirstItem, indexOfLastItem);
+
+  if (loading) {
+    return (
+      <div className="Carregamento">
+        <FontAwesomeIcon icon={faSpinner} spinPulse />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -125,12 +146,19 @@ const SiteInicio = () => {
       <main className="receitas-container">
         {currentItems.map((img) => (
           <div className="receita" key={img.id}>
+            {imageLoading && (
+              <div className="spinner-grow" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            )}
             <a href="#/siteReceita">
               <img
                 id={String(img.id)}
                 src={img.img}
                 alt={img.titulo}
                 onClick={handleClick}
+                onLoad={handleImageLoad}
+                style={{ display: imageLoading ? "none" : "block" }}
               />
               <div className="tituloReceita">
                 <p>{img.titulo}</p>

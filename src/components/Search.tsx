@@ -5,6 +5,7 @@ import axios from "axios";
 import { Image } from "../interfaces/interfaces";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import BackButton from "./BackButton";
 
 function Search() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,9 +56,7 @@ function Search() {
   return (
     <div className="Search">
       <div className="search-header">
-        <a href="#/SiteInicio" className="link">
-          <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
-        </a>
+        <BackButton></BackButton>
         <h1>Buscar Receitas</h1>
       </div>
       <form onSubmit={handleSearch} className="search-form">
@@ -67,7 +66,11 @@ function Search() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          className={`SearchButton ${loading ? "disabled" : ""}`}
+          disabled={loading}
+        >
           Buscar
         </button>
       </form>

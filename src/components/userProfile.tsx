@@ -47,9 +47,9 @@ function UserProfile() {
   return (
     <div className="profileUserContainer">
       <div className="profileUser">
-        <a href="#/SiteInicio" className="link">
+        <button onClick={() => window.history.back()} className="backButton">
           <FontAwesomeIcon icon={faArrowLeft} className="arrowIcon" />
-        </a>
+        </button>
         <h2 className="tituloPerfil">Perfil do Usuário</h2>
         <img src={perfilPhoto} alt="Foto de perfil"></img>
         <div className="nameUser">

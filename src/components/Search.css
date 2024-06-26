@@ -29,7 +29,7 @@
     margin-bottom: 10px;
   }
   
-  .Search button {
+  .SearchButton {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -40,10 +40,11 @@
     margin-bottom: 10px;
   }
   
-  .Search button:disabled {
+  .SearchButton.disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
+  
   
   .Search .results {
     margin-top: 20px;
