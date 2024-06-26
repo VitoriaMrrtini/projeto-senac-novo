@@ -9,10 +9,8 @@ import pin from "../assets/pint.png";
 import insta from "../assets/insta.png";
 import face from "../assets/face.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faSpinner,
-} from "@fortawesome/free-solid-svg-icons";
+import {faMagnifyingGlass, faSpinner} from "@fortawesome/free-solid-svg-icons";
+
 
 const SiteAlmoco = () => {
   const [imgs, setImgs] = useState<Image[]>([]);

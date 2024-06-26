@@ -147,8 +147,10 @@ const SiteInicio = () => {
         {currentItems.map((img) => (
           <div className="receita" key={img.id}>
             {imageLoading && (
-              <div className="spinner-grow" role="status">
-                <span className="visually-hidden">Loading...</span>
+              <div className="spinner">
+                <div className="spinner-grow" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
               </div>
             )}
             <a href="#/siteReceita">
