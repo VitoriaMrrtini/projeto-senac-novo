@@ -3,8 +3,6 @@ import "./Search.css";
 import { SCA_API_URL } from "../utils/ApiConfig";
 import axios from "axios";
 import { Image } from "../interfaces/interfaces";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import BackButton from "./BackButton";
 
 function Search() {
