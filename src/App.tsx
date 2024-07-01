@@ -15,7 +15,6 @@ import Cadastro from './components/Cadastro.tsx';
 import Search from './components/Search.tsx';
 
 
-
 function App(){
   return(
     <>

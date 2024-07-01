@@ -1,0 +1,18 @@
+/*.favoritos-container {
+  padding: 20px;
+}
+
+.receitas-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.receita {
+  width: 30%;
+  margin: 10px;
+}
+
+.tituloReceita {
+  text-align: center;
+}
+*/
